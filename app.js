@@ -3,10 +3,14 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-
 var app = express();
+
+app.use("/auth", require("./src/services/addCustomer.service"));
+app.use("/auth", require("./src/services/addTruckOwner.service"));
+app.use("/auth", require("./src/services/login.service"));
+app.use("/auth", require("./src/services/addtruck.service"));
+app.use("/auth", require("./src/services/addtrip.service"));
+ 
 
 app.use(logger('dev'));
 app.use(express.json());
