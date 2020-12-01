@@ -1,13 +1,13 @@
-const { getTrucks } = require('../services/getTruckServices')
+const { getTruckServices } = require('../services/getTruckServices')
 
-const getTrucks = async (req, res) => {
+module.exports.getTrucks = async (req, res) => {
     // using the data givin we need to find trucks
     // thats can travel between user's location,
     // destination and during the given data.
     const [ userPhoneNo, destination, tripData ] = req;
 
     try {
-        const trucks = await findTrucks(userPhoneNo, destination, tripData);
+        const trucks = await getTruckServices(userPhoneNo, destination, tripData);
 
         return trucks;
     } catch (error) {
@@ -19,5 +19,3 @@ const getTrucks = async (req, res) => {
         });
     }
 };
-
-module.exports = [ getTrucks ];

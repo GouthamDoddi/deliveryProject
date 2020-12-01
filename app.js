@@ -6,6 +6,10 @@ const logger = require('morgan');
 
 const app = express();
 
+const routes = require('./src/routes/routes');
+
+app.use('/', routes);
+
 
 app.use(logger('dev'));
 app.use(express.json());

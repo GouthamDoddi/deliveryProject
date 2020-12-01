@@ -3,7 +3,7 @@ const bcrypt = require('bcrypt');
 const jwtCustomer = require('../utils/jwtCustomer');
 
 
-module.exports.registerCoustomer = async (req, res) => {
+const registerCoustomer = async (req, res) => {
     try {
         const { first_name, last_name, mobile_num, password, email, is_kyc_enabled, aadhar_no, pan_no, addressline1, addressline2, city, state } = req.body;
 
@@ -24,10 +24,11 @@ module.exports.registerCoustomer = async (req, res) => {
         const token = jwtCustomer(newUser.rows[0].customer_id);
 
 
-        res.json({ msg: 'registration sucess', customer_details: newUser.rows[0], jwt: token }); // user details + token
+        return res.json({ msg: 'registration sucess', customer_details: newUser.rows[0], jwt: token }); // user details + token
     } catch (err) {
         console.error(err.message);
         res.status(500).send('server error');
     }
 };
 
+module.exports = [ registerCoustomer ];
