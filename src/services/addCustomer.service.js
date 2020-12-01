@@ -1,11 +1,9 @@
-const express = require('express');
-const router = express.Router();
-const pool = require('../db');
+const pool = require('../config/db');
 const bcrypt = require('bcrypt');
 const jwtCustomer = require('../utils/jwtCustomer');
 
 
-router.post('/customerregister', async (req, res) => {
+module.exports.registerCoustomer = async (req, res) => {
     try {
         const { first_name, last_name, mobile_num, password, email, is_kyc_enabled, aadhar_no, pan_no, addressline1, addressline2, city, state } = req.body;
 
@@ -31,6 +29,5 @@ router.post('/customerregister', async (req, res) => {
         console.error(err.message);
         res.status(500).send('server error');
     }
-});
+};
 
-module.exports = router;
