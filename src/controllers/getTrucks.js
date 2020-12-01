@@ -1,3 +1,23 @@
+const { getTrucks } = require('../services/getTruckServices')
+
 const getTrucks = async (req, res) => {
-    const [user_phoneNo, destination, tripData] = req;
+    // using the data givin we need to find trucks
+    // thats can travel between user's location,
+    // destination and during the given data.
+    const [ userPhoneNo, destination, tripData ] = req;
+
+    try {
+        const trucks = await findTrucks(userPhoneNo, destination, tripData);
+
+        return trucks;
+    } catch (error) {
+        console.log(error);
+
+        return res.json({
+            status: 401,
+            message: "Couldn't find any trucks",
+        });
+    }
 };
+
+module.exports = [ getTrucks ];
