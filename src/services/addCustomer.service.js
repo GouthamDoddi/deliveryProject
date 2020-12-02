@@ -5,7 +5,8 @@ const jwtCustomer = require('../utils/jwtCustomer');
 
 const registerCoustomer = async (req, res) => {
     try {
-        const { first_name, last_name, mobile_num, password, email, is_kyc_enabled, aadhar_no, pan_no, addressline1, addressline2, city, state } = req.body;
+        const { firstName } = req.body;
+        const { last_name, mobile_num, password, email, is_kyc_enabled, aadhar_no, pan_no, addressline1, addressline2, city, state } = req.body;
 
         const user = await pool.query('SELECT * FROM customer WHERE mobile_num = $1', [ mobile_num ]);
 
@@ -19,7 +20,7 @@ const registerCoustomer = async (req, res) => {
 
         const bcryptPassword = await bcrypt.hash(password, salt);
 
-        const newUser = await pool.query('INSERT INTO customer (first_name, last_name, mobile_num, password, email, is_kyc_enabled, aadhar_no, pan_no, addressline1, addressline2, city, state) VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING *', [ first_name, last_name, mobile_num, bcryptPassword, email, is_kyc_enabled, aadhar_no, pan_no, addressline1, addressline2, city, state ]);
+        const newUser = await pool.query('INSERT INTO customer (first_name, last_name, mobile_num, password, email, is_kyc_enabled, aadhar_no, pan_no, addressline1, addressline2, city, state) VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING *', [ firstName, last_name, mobile_num, bcryptPassword, email, is_kyc_enabled, aadhar_no, pan_no, addressline1, addressline2, city, state ]);
 
         const token = jwtCustomer(newUser.rows[0].customer_id);
 
