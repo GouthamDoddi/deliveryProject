@@ -1,4 +1,4 @@
-const pool = require('..config/db');
+const pool = require('../config/db');
 
 async function getTrucks (source, destination, tripdate) {
     // this function uses uses sql queries to get trucks
