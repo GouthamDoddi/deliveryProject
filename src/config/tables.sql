@@ -4,10 +4,10 @@ CREATE TABLE "SUT".customer (
     customer_id serial PRIMARY KEY,
     first_name VARCHAR (50) NOT NULL,
     last_name VARCHAR (50) NOT NULL,
-    mobile_num INTEGER (12) UNIQUE NOT NULL,
+    mobile_num NUMERIC (12) UNIQUE NOT NULL,
     email VARCHAR UNIQUE NOT NULL,
     is_kyc_enabled BOOLEAN,
-    adhar_no INTEGER (12) UNIQUE,
+    adhar_no NUMERIC (12) UNIQUE,
     pan_no VARCHAR (10) UNIQUE,
     addressline1 VARCHAR (100),
     addressline2 VARCHAR (100),
@@ -53,7 +53,7 @@ CREATE TABLE "SUT".trip_details (
 
 CREATE TABLE "SUT".truck_package_maping (
     mapping_id SERIAL PRIMARY KEY,
-    truck_no INTEGER NOT NULL 
+    truck_no INTEGER NOT NULL
         REFERENCES "SUT".truck_details(truck_no),
     package_id INTEGER NOT NULL
         REFERENCES "SUT".package_details(package_id),

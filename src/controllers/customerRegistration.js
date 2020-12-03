@@ -1,46 +1,62 @@
-const encryptPassword = require('../middleware/encryptPass');
-const checkCustomer = require('../services/customerServices');
 const insertCustomer = require('../services/customerServices');
+// const { logger } = require('../middleware/logger');
+const winston = require('winston');
+const bcrypt = require('bcrypt');
 
+const logger = winston.createLogger({
+    customer: [
+        new winston.transports.File({
+            level: 'info',
+            filename: 'logs/customer',
+            json: true,
+            format: winston.format.combine(winston.format.timestamp(),
+                winston.format.json()),
+        }),
+    ],
+});
 
 const customerRegister = async (req, res) => {
-    console.log('check req', req.body);
-    const { firstName, lastName, mobileNum, password, email,
-        isKycEnabled, aadharNo, panNo, addressline1, addressline2, city, state } = req.body;
+    // get the customer details from req.body
 
-    const result = checkCustomer(mobileNum);
-
-    console.log(result);
-    if (result) {
-        const encryptedPassword = encryptPassword(password);
-
-        const customerDetails = {
-            firstName,
-            lastName,
-            mobileNum,
-            encryptedPassword,
-            email,
-            isKycEnabled,
-            aadharNo,
-            panNo,
-            addressline1,
-            addressline2,
-            city,
-            state,
-        };
-
-        const addCustomer = await insertCustomer(customerDetails);
-
-        res.json({ addCustomer });
+    // using logger to record activity
+    logger.info(`recived register request from customer with mobile number ${req.body.mobileNum}`);
 
 
-        // const token = jwtCustomer(newUser.rows[0].customer_id);
+    // using one line promises lets encrypt the password and
+    // store it in a var
+    const encryptedPassword = await bcrypt.hash(req.body.password, 10)
+        .then(hash => hash,
+            error => console.log(error));
 
+    const customerDetails = {
+        firstName: req.body.firstName,
+        lastName: req.body.lastName,
+        mobileNum: req.body.mobileNum,
+        email: req.body.email,
+        isKycEnabled: req.body.isKycEnabled,
+        aadharNo: req.body.aadharNo,
+        encryptedPassword,
+        panNo: req.body.panNo,
+        addressline1: req.body.addressline1,
+        addressline2: req.body.addressline2,
+        city: req.body.city,
+        state: req.body.state,
+    };
 
-        // return res.json({ msg: 'registration sucess', customer_details: newUser.rows[0], jwt: token }); // user details + token
+    const addCustomer = await insertCustomer(customerDetails);
+
+    // if the insert function failed the it would return a false
+    if (addCustomer) {
+        res.status(201)
+            .json({ statusCode: 409,
+                message: 'User registered!' });
     }
-    console.error('Customer with that number already exists');
-    res.status(409).send('User with the mobile number already registered.');
+    res.status(409)
+        .json({ statusCode: 409,
+            message: 'Customer with the details already exists' });
+
+
+    // const token = jwtCustomer(newUser.rows[0].customer_id);
 };
 
 module.exports = customerRegister;
