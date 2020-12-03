@@ -51,5 +51,4 @@ async function insertTruckowner (truckownerDetails) {
     }
 }
 
-module.exports = getTruckowner;
-module.exports = insertTruckowner;
+module.exports = { insertTruckowner, getTruckowner };

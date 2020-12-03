@@ -41,5 +41,4 @@ const insertTrip = async tripDetails => {
     }
 };
 
-module.exports = checkTrip;
-module.exports = insertTrip;
+module.exports = { checkTrip, insertTrip };

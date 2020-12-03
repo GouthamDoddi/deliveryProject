@@ -1,0 +1,23 @@
+{"message":"Username not found in database","level":"info","timestamp":"2020-12-03T09:13:51.642Z"}
+{"message":"Username not found in database","level":"info","timestamp":"2020-12-03T09:16:35.195Z"}
+{"message":"username is found in the database!","level":"info","timestamp":"2020-12-03T09:16:35.197Z"}
+{"message":"Username not found in database","level":"info","timestamp":"2020-12-03T09:26:36.419Z"}
+{"message":"Username not found in database","level":"info","timestamp":"2020-12-03T09:29:48.813Z"}
+{"message":"Username not found in database","level":"info","timestamp":"2020-12-03T09:31:22.828Z"}
+{"message":"Username not found in database","level":"info","timestamp":"2020-12-03T09:35:33.370Z"}
+{"message":"Username not found in database","level":"info","timestamp":"2020-12-03T09:37:16.387Z"}
+{"message":"Username not found in database","level":"info","timestamp":"2020-12-03T09:39:03.764Z"}
+{"message":"username is found in the database!","level":"info","timestamp":"2020-12-03T09:39:40.837Z"}
+{"message":"user unauthorized!, 401","level":"info","timestamp":"2020-12-03T09:39:40.972Z"}
+{"message":"customer is found in the database!","level":"info","timestamp":"2020-12-03T09:43:44.274Z"}
+{"message":"passwords matched!, User authenticated !","level":"info","timestamp":"2020-12-03T09:43:44.432Z"}
+{"message":"customer is found in the database!","level":"info","timestamp":"2020-12-03T09:45:03.632Z"}
+{"message":"passwords matched!, User authenticated !","level":"info","timestamp":"2020-12-03T09:45:03.767Z"}
+{"message":"customer is found in the database!","level":"info","timestamp":"2020-12-03T09:45:55.220Z"}
+{"message":"passwords matched!, User authenticated !","level":"info","timestamp":"2020-12-03T09:45:55.347Z"}
+{"message":"user authorized!, 200","level":"info","timestamp":"2020-12-03T09:45:55.355Z"}
+{"message":"customer is found in the database!","level":"info","timestamp":"2020-12-03T10:18:29.898Z"}
+{"message":"user unauthorized!, 401","level":"info","timestamp":"2020-12-03T10:18:29.971Z"}
+{"message":"customer is found in the database!","level":"info","timestamp":"2020-12-03T10:18:55.210Z"}
+{"message":"passwords matched!, User authenticated !","level":"info","timestamp":"2020-12-03T10:18:55.272Z"}
+{"message":"user authorized!, 200","level":"info","timestamp":"2020-12-03T10:18:55.274Z"}

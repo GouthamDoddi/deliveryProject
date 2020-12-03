@@ -1,4 +1,4 @@
-const insertTrip = require('../services/tripServices');
+const { insertTrip } = require('../services/tripServices');
 
 
 const tripRegister = async (req, res) => {

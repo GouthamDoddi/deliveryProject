@@ -1,4 +1,4 @@
-const insertCustomer = require('../services/customerServices');
+const { insertCustomer } = require('../services/customerServices');
 // const { logger } = require('../middleware/logger');
 const winston = require('winston');
 const bcrypt = require('bcrypt');

@@ -1,4 +1,4 @@
-const insertTruckowner = require('../services/truckownerServices');
+const { insertTruckowner } = require('../services/truckownerServices');
 // const { logger } = require('../middleware/logger');
 const winston = require('winston');
 const bcrypt = require('bcrypt');

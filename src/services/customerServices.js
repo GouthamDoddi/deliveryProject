@@ -4,15 +4,17 @@ async function getCustomer (mobileNumber) {
     const query = {
         name: 'Check customer exists',
         text: 'SELECT * FROM "SUT".customer WHERE mobile_num = $1',
-        value: mobileNumber,
+        values: [ mobileNumber ],
     };
 
+    console.log(`select query called! ${mobileNumber}`);
+
     try {
-        const result = await pool.query(query);
+        return await pool.query(query);
 
-        console.log(`query result is ${result}`);
+        // console.log(`query result is ${result}`);
 
-        return result.rows.length;
+        // return result.rows.length;
     } catch (error) {
         console.log(error);
 
@@ -42,6 +44,8 @@ async function insertCustomer (customerDetails) {
         ],
     };
 
+    console.log('insert querry called');
+
     try {
         return await pool.query(query);
     } catch (error) {
@@ -51,5 +55,4 @@ async function insertCustomer (customerDetails) {
     }
 }
 
-module.exports = getCustomer;
-module.exports = insertCustomer;
+module.exports = { getCustomer, insertCustomer };
