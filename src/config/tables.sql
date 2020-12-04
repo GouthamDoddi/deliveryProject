@@ -1,18 +1,25 @@
 /* now lets create all tables */
 
-CREATE TABLE "SUT".customer (
-    customer_id serial PRIMARY KEY,
-    first_name VARCHAR (50) NOT NULL,
-    last_name VARCHAR (50) NOT NULL,
-    mobile_num NUMERIC (12) UNIQUE NOT NULL,
-    email VARCHAR UNIQUE NOT NULL,
-    is_kyc_enabled BOOLEAN,
-    adhar_no NUMERIC (12) UNIQUE,
-    pan_no VARCHAR (10) UNIQUE,
-    addressline1 VARCHAR (100),
-    addressline2 VARCHAR (100),
-    city VARCHAR (50),
-    "state" VARCHAR (50)
+CREATE TABLE "SUT".customer
+(
+    customer_id integer NOT NULL DEFAULT nextval('"SUT".customer_customer_id_seq'::regclass),
+    first_name character varying(50) COLLATE pg_catalog."default" NOT NULL,
+    last_name character varying(50) COLLATE pg_catalog."default" NOT NULL,
+    mobile_num numeric(12,0) NOT NULL,
+    email character varying COLLATE pg_catalog."default" NOT NULL,
+    is_kyc_enabled boolean,
+    aadhar_no numeric(12,0),
+    pan_no character varying(10) COLLATE pg_catalog."default",
+    addressline1 character varying(100) COLLATE pg_catalog."default",
+    addressline2 character varying(100) COLLATE pg_catalog."default",
+    city character varying(50) COLLATE pg_catalog."default",
+    state character varying(50) COLLATE pg_catalog."default",
+    password character varying COLLATE pg_catalog."default",
+    CONSTRAINT customer_pkey PRIMARY KEY (customer_id),
+    CONSTRAINT customer_adhar_no_key UNIQUE (aadhar_no),
+    CONSTRAINT customer_email_key UNIQUE (email),
+    CONSTRAINT customer_mobile_num_key UNIQUE (mobile_num),
+    CONSTRAINT customer_pan_no_key UNIQUE (pan_no)
 )
 
 CREATE TABLE "SUT".truck_details (
@@ -28,34 +35,90 @@ CREATE TABLE "SUT".truck_details (
     registerd_name VARCHAR NOT NULL
 )
 
-CREATE TABLE "SUT".package_details (
-    package_id serial PRIMARY KEY,
-    package_name VARCHAR (50) NOT NULL,
-    CONSTRAINT customer_id
-        FOREIGN KEY(customer_id)
-            REFERENCES "SUT".customer(customer_id)
-            ON DELETE CASCADE,
-    package_type VARCHAR NOT NULL,
-    package_weight INTEGER NOT NULL,
-    package_space INTEGER NOT NULL,
-    package_value INTEGER NOT NULL
+CREATE TABLE "SUT".package_details
+(
+    package_id integer NOT NULL DEFAULT nextval('"SUT".package_details_package_id_seq'::regclass),
+    package_name character varying(50) COLLATE pg_catalog."default" NOT NULL,
+    package_type character varying COLLATE pg_catalog."default" NOT NULL,
+    package_weight integer NOT NULL,
+    package_space integer NOT NULL,
+    package_value integer NOT NULL,
+    customer_mobile_num numeric,
+    CONSTRAINT package_details_pkey PRIMARY KEY (package_id),
+    CONSTRAINT customer_mobile_num FOREIGN KEY (customer_mobile_num)
+        REFERENCES "SUT".customer (mobile_num) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION
 )
 
-CREATE TABLE "SUT".trip_details (
-    trip_id SERIAL PRIMARY KEY,
-    truck_no INTEGER NOT NULL,
-    source VARCHAR,
-    destination VARCHAR NOT NULL,
-    "start_date" DATE NOT NULL,
-    reach_date DATE,
-    trip_duration_in_hours VARCHAR
+CREATE TABLE "SUT".trip_details
+(
+    trip_id integer NOT NULL DEFAULT nextval('"SUT".trip_details_trip_id_seq'::regclass),
+    truck_no character varying COLLATE pg_catalog."default" NOT NULL,
+    source character varying COLLATE pg_catalog."default",
+    destination character varying COLLATE pg_catalog."default" NOT NULL,
+    start_date date NOT NULL,
+    reach_date date,
+    trip_duration_in_hours character varying COLLATE pg_catalog."default",
+    CONSTRAINT trip_details_pkey PRIMARY KEY (trip_id)
 )
 
-CREATE TABLE "SUT".truck_package_maping (
-    mapping_id SERIAL PRIMARY KEY,
-    truck_no INTEGER NOT NULL
-        REFERENCES "SUT".truck_details(truck_no),
-    package_id INTEGER NOT NULL
-        REFERENCES "SUT".package_details(package_id),
-    "date" DATE NOT NULL,
+CREATE TABLE "SUT".truck_owner
+(
+    customer_id integer NOT NULL DEFAULT nextval('"SUT".truck_owner_customer_id_seq'::regclass),
+    first_name character varying(50) COLLATE pg_catalog."default" NOT NULL,
+    last_name character varying(50) COLLATE pg_catalog."default" NOT NULL,
+    mobile_num numeric(12,0) NOT NULL,
+    email character varying COLLATE pg_catalog."default" NOT NULL,
+    is_kyc_enabled boolean,
+    aadhar_no numeric(12,0),
+    pan_no character varying(10) COLLATE pg_catalog."default",
+    addressline1 character varying(100) COLLATE pg_catalog."default",
+    addressline2 character varying(100) COLLATE pg_catalog."default",
+    city character varying(50) COLLATE pg_catalog."default",
+    state character varying(50) COLLATE pg_catalog."default",
+    password character varying COLLATE pg_catalog."default",
+    CONSTRAINT truck_owner_pkey PRIMARY KEY (customer_id),
+    CONSTRAINT truck_owner_aadhar_no_key UNIQUE (aadhar_no),
+    CONSTRAINT truck_owner_email_key UNIQUE (email),
+    CONSTRAINT truck_owner_mobile_num_key UNIQUE (mobile_num),
+    CONSTRAINT truck_owner_pan_no_key UNIQUE (pan_no)
+)
+
+CREATE TABLE "SUT".truck_package_maping
+(
+    mapping_id integer NOT NULL DEFAULT nextval('"SUT".truck_package_maping_mapping_id_seq'::regclass),
+    truck_no character varying COLLATE pg_catalog."default" NOT NULL,
+    package_id integer NOT NULL,
+    date date NOT NULL,
+    CONSTRAINT truck_package_maping_pkey PRIMARY KEY (mapping_id),
+    CONSTRAINT truck_package_maping_package_id_fkey FOREIGN KEY (package_id)
+        REFERENCES "SUT".package_details (package_id) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION,
+    CONSTRAINT truck_package_maping_truck_no_fkey FOREIGN KEY (truck_no)
+        REFERENCES "SUT".truckdetails (truck_no) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION
+)
+
+CREATE TABLE "SUT".truckdetails
+(
+    truck_id integer NOT NULL DEFAULT nextval('"SUT".truckdetails_truck_id_seq'::regclass),
+    truck_name character varying(50) COLLATE pg_catalog."default" NOT NULL,
+    truck_no character varying(10) COLLATE pg_catalog."default" NOT NULL,
+    truck_model character varying(30) COLLATE pg_catalog."default" NOT NULL,
+    chasis_no character varying(20) COLLATE pg_catalog."default" NOT NULL,
+    capacity_inkgs integer,
+    capacity_inspace integer,
+    booked_weight integer,
+    booked_space integer,
+    truckowner_mobile_num numeric,
+    CONSTRAINT truckdetails_pkey PRIMARY KEY (truck_id),
+    CONSTRAINT truckdetails_chasis_no_key UNIQUE (chasis_no),
+    CONSTRAINT truckdetails_truck_no_key UNIQUE (truck_no),
+    CONSTRAINT truckdetails_truckdriver_mobile_num_fkey FOREIGN KEY (truckowner_mobile_num)
+        REFERENCES "SUT".truck_owner (mobile_num) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION
 )

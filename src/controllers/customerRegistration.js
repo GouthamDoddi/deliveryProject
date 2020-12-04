@@ -49,7 +49,7 @@ const customerRegister = async (req, res) => {
     // if the insert function failed the it would return a false
     if (addCustomer) {
         res.status(201)
-            .json({ statusCode: 409,
+            .json({ statusCode: 200,
                 message: 'User registered!' });
     }
     res.status(409)
