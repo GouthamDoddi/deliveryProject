@@ -7,6 +7,7 @@ const truckOwnerRegister = require('../controllers/truckownerRegistration');
 const customerLogin = require('../controllers/customerLogin');
 const packageRegister = require('../controllers/packageRegistration');
 const truckRegister = require('../controllers/truckRegisteration');
+const getAvilableSpaceAndWeight = require('../controllers/getAvilableSpaceAndWeight');
 
 
 // router.get('/get_trucks', getTrucks);
@@ -16,5 +17,6 @@ router.post('/truckOwnerRegister', truckOwnerRegister);
 router.post('/customerlogin', customerLogin);
 router.post('/packageRegister', packageRegister);
 router.post('/truckRegister', truckRegister);
+router.post('/getAvailableSpace', getAvilableSpaceAndWeight);
 
 module.exports = router;

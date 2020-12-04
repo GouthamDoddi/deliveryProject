@@ -30,4 +30,22 @@ const insertTruck = async truckDetails => {
     }
 };
 
-module.exports = { insertTruck };
+const getTruck = truckNo => {
+    // use truckNo to get the total space
+
+    const query = {
+        name: 'Get truck details',
+        text: 'SELECT * FROM "SUT".truckdetails WHERE truck_no = $1',
+        values: [ truckNo ],
+    };
+
+    try {
+        return pool.query(query);
+    } catch (error) {
+        console.error(error);
+
+        return error;
+    }
+};
+
+module.exports = { insertTruck, getTruck };
