@@ -48,4 +48,26 @@ const getTruck = truckNo => {
     }
 };
 
-module.exports = { insertTruck, getTruck };
+
+const updateTruckWeightandSpace = updatedValues => {
+    const query = {
+        name: 'Update weight and space',
+        text: `UPDATE "SUT".truckdetails
+                SET  booked_weight = $1,
+                     booked_space = $2
+                WHERE truck_no = $3`,
+        values: [ updatedValues.updatedWeight,
+            updatedValues.updatedSpace,
+            updatedValues.truckNo ],
+    };
+
+    try {
+        return pool.query(query);
+    } catch (error) {
+        console.error(error);
+
+        return error;
+    }
+};
+
+module.exports = { insertTruck, getTruck, updateTruckWeightandSpace };

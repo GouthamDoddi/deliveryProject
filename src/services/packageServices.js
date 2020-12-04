@@ -1,18 +1,14 @@
 const pool = require('../config/db');
 
-async function getPackage (mobileNumber) {
+function getPackage (packageId) {
     const query = {
         name: 'Check package exists',
-        text: 'SELECT * FROM "SUT".package_details WHERE mobile_num = $1',
-        value: mobileNumber,
+        text: 'SELECT * FROM "SUT".package_details WHERE package_id = $1',
+        values: [ packageId ],
     };
 
     try {
-        const result = await pool.query(query);
-
-        console.log(`query result is ${result}`);
-
-        return result.rows.length;
+        return pool.query(query);
     } catch (error) {
         console.log(error);
 

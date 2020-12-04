@@ -4,7 +4,7 @@ async function getTruckowner (mobileNumber) {
     const query = {
         name: 'Check customer exists',
         text: 'SELECT * FROM "SUT".truck_owner WHERE mobile_num = $1',
-        value: mobileNumber,
+        values: mobileNumber,
     };
 
     try {

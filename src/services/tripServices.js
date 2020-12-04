@@ -5,7 +5,7 @@ async function checkTrip (truck_no) {
     const query = {
         name: 'Check truckowner exists',
         text: 'SELECT * FROM trip_details WHERE truck_no = $1',
-        value: truck_no,
+        values: truck_no,
     };
 
     try {
