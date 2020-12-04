@@ -35,6 +35,8 @@ async function insertPackage (packageDetails) {
         ],
     };
 
+    console.log(packageDetails.mobileNum);
+
     try {
         return await pool.query(query);
     } catch (error) {

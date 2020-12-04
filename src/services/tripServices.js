@@ -1,6 +1,7 @@
 const pool = require('../config/db');
 
 async function checkTrip (truck_no) {
+    // wrong code, search trip with tripId
     const query = {
         name: 'Check truckowner exists',
         text: 'SELECT * FROM trip_details WHERE truck_no = $1',

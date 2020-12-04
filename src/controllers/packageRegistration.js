@@ -18,12 +18,12 @@ const packageRegister = async (req, res) => {
     // get the truck owner details from req.body
 
     // using logger to record activity
-    logger.info(`received package register request for customer ${req.body.MobileNum}`);
+    logger.info(`received package register request for customer ${req.body.mobileNum}`);
 
 
     const packageDetails = {
         packageName: req.body.packageName,
-        customerId: req.body.mobileNum,
+        mobileNum: req.body.mobileNum,
         packageType: req.body.packageType,
         packageWeight: req.body.packageWeight,
         packageSpace: req.body.packageSpace,
