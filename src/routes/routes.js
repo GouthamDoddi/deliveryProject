@@ -11,12 +11,12 @@ const getAvailableSpaceAndWeight = require('../controllers/getAvailableSpaceAndW
 const assignPackage = require('../controllers/assignPackage');
 const sendSMS = require('../controllers/sendSMS');
 
-
 // router.get('/get_trucks', getTrucks);
 router.post('/customerregister', customerRegister);
 router.post('/tripRegister', tripRegister);
 router.post('/truckOwnerRegister', truckOwnerRegister);
 router.post('/customerlogin', customerLogin);
+router.post('/truckownerLogin'),
 router.post('/packageRegister', packageRegister);
 router.post('/truckRegister', truckRegister);
 router.post('/getAvailableSpace', getAvailableSpaceAndWeight);
