@@ -2,19 +2,19 @@
 
 CREATE TABLE "SUT".customer
 (
-    customer_id integer NOT NULL DEFAULT nextval('"SUT".customer_customer_id_seq'::regclass),
-    first_name character varying(50) COLLATE pg_catalog."default" NOT NULL,
-    last_name character varying(50) COLLATE pg_catalog."default" NOT NULL,
+    customer_id integer NOT NULL,
+    first_name character varying(50) NOT NULL,
+    last_name character varying(50) NOT NULL,
     mobile_num numeric(12,0) NOT NULL,
-    email character varying COLLATE pg_catalog."default" NOT NULL,
+    email character varying NOT NULL,
     is_kyc_enabled boolean,
     aadhar_no numeric(12,0),
-    pan_no character varying(10) COLLATE pg_catalog."default",
-    addressline1 character varying(100) COLLATE pg_catalog."default",
-    addressline2 character varying(100) COLLATE pg_catalog."default",
-    city character varying(50) COLLATE pg_catalog."default",
-    state character varying(50) COLLATE pg_catalog."default",
-    password character varying COLLATE pg_catalog."default",
+    pan_no character varying(10) ,
+    addressline1 character varying(100),
+    addressline2 character varying(100) ,
+    city character varying(50),
+    state character varying(50),
+    password character varying,
     CONSTRAINT customer_pkey PRIMARY KEY (customer_id),
     CONSTRAINT customer_adhar_no_key UNIQUE (aadhar_no),
     CONSTRAINT customer_email_key UNIQUE (email),
@@ -38,8 +38,8 @@ CREATE TABLE "SUT".truck_details (
 CREATE TABLE "SUT".package_details
 (
     package_id integer NOT NULL DEFAULT nextval('"SUT".package_details_package_id_seq'::regclass),
-    package_name character varying(50) COLLATE pg_catalog."default" NOT NULL,
-    package_type character varying COLLATE pg_catalog."default" NOT NULL,
+    package_name character varying(50) NOT NULL,
+    package_type character varying NOT NULL,
     package_weight integer NOT NULL,
     package_space integer NOT NULL,
     package_value integer NOT NULL,
@@ -53,31 +53,31 @@ CREATE TABLE "SUT".package_details
 
 CREATE TABLE "SUT".trip_details
 (
-    trip_id integer NOT NULL DEFAULT nextval('"SUT".trip_details_trip_id_seq'::regclass),
-    truck_no character varying COLLATE pg_catalog."default" NOT NULL,
-    source character varying COLLATE pg_catalog."default",
-    destination character varying COLLATE pg_catalog."default" NOT NULL,
+    trip_id integer NOT NULL,
+    truck_no character varying NOT NULL,
+    source character varying,
+    destination character varying NOT NULL,
     start_date date NOT NULL,
     reach_date date,
-    trip_duration_in_hours character varying COLLATE pg_catalog."default",
+    trip_duration_in_hours character varying,
     CONSTRAINT trip_details_pkey PRIMARY KEY (trip_id)
 )
 
 CREATE TABLE "SUT".truck_owner
 (
-    customer_id integer NOT NULL DEFAULT nextval('"SUT".truck_owner_customer_id_seq'::regclass),
-    first_name character varying(50) COLLATE pg_catalog."default" NOT NULL,
-    last_name character varying(50) COLLATE pg_catalog."default" NOT NULL,
+    customer_id integer NOT NULL,
+    first_name character varying(50) NOT NULL,
+    last_name character varying(50) NOT NULL,
     mobile_num numeric(12,0) NOT NULL,
-    email character varying COLLATE pg_catalog."default" NOT NULL,
+    email character varying NOT NULL,
     is_kyc_enabled boolean,
     aadhar_no numeric(12,0),
-    pan_no character varying(10) COLLATE pg_catalog."default",
-    addressline1 character varying(100) COLLATE pg_catalog."default",
-    addressline2 character varying(100) COLLATE pg_catalog."default",
-    city character varying(50) COLLATE pg_catalog."default",
-    state character varying(50) COLLATE pg_catalog."default",
-    password character varying COLLATE pg_catalog."default",
+    pan_no character varying(10),
+    addressline1 character varying(100),
+    addressline2 character varying(100),
+    city character varying(50),
+    state character varying(50),
+    password character varying,
     CONSTRAINT truck_owner_pkey PRIMARY KEY (customer_id),
     CONSTRAINT truck_owner_aadhar_no_key UNIQUE (aadhar_no),
     CONSTRAINT truck_owner_email_key UNIQUE (email),
@@ -87,8 +87,8 @@ CREATE TABLE "SUT".truck_owner
 
 CREATE TABLE "SUT".truck_package_maping
 (
-    mapping_id integer NOT NULL DEFAULT nextval('"SUT".truck_package_maping_mapping_id_seq'::regclass),
-    truck_no character varying COLLATE pg_catalog."default" NOT NULL,
+    mapping_id integer NOT NULL,
+    truck_no character varying NOT NULL,
     package_id integer NOT NULL,
     date date NOT NULL,
     CONSTRAINT truck_package_maping_pkey PRIMARY KEY (mapping_id),
@@ -104,11 +104,11 @@ CREATE TABLE "SUT".truck_package_maping
 
 CREATE TABLE "SUT".truckdetails
 (
-    truck_id integer NOT NULL DEFAULT nextval('"SUT".truckdetails_truck_id_seq'::regclass),
-    truck_name character varying(50) COLLATE pg_catalog."default" NOT NULL,
-    truck_no character varying(10) COLLATE pg_catalog."default" NOT NULL,
-    truck_model character varying(30) COLLATE pg_catalog."default" NOT NULL,
-    chasis_no character varying(20) COLLATE pg_catalog."default" NOT NULL,
+    truck_id integer NOT NULL ,
+    truck_name character varying(50) NOT NULL,
+    truck_no character varying(10) NOT NULL,
+    truck_model character varying(30) NOT NULL,
+    chasis_no character varying(20) NOT NULL,
     capacity_inkgs integer,
     capacity_inspace integer,
     booked_weight integer,

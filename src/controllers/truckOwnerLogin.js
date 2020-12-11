@@ -10,7 +10,7 @@ const logger = winston.createLogger({
     transports: [
         new winston.transports.File({
             level: 'info',
-            filename: 'logs/truckownerlogin.log',
+            filename: 'logs/login.log',
             json: true,
             format: winston.format.combine(winston.format.timestamp(),
                 winston.format.json()),
