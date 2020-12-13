@@ -3,9 +3,7 @@ const { getCustomer } = require('../services/customerServices');
 const Bcrypt = require('bcrypt');
 const winston = require('winston');
 
-// log4js helps us to create a logfile which contains all the info related
-// loging activity. So we can can have data about all the activity that
-// has ever happened.
+
 const logger = winston.createLogger({
     transports: [
         new winston.transports.File({

@@ -23,7 +23,7 @@ router.post('/packageRegister', verifyToken, packageRegister);
 router.post('/truckRegister', verifyToken, truckRegister);
 router.post('/getAvailableSpace', verifyToken, getAvailableSpaceAndWeight);
 router.post('/assignPackage', verifyToken, assignPackage);
-router.post('/sendSMS', sendSMS);
+router.post('/SMSLogin', sendSMS);
 // router.post('/verifyJWT', verifyToken);
 
 module.exports = router;

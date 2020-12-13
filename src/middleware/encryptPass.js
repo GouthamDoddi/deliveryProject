@@ -1,12 +1,15 @@
-const bcrypt = require('Bcrypt');
+const bcrypt = require('bcrypt');
 
-const encryptPassword = password => {
-    const saltRound = 10;
-    const salt = bcrypt.genSalt(saltRound);
+function encryptPassword (password) {
+    const encryptedPassword = bcrypt.hash(password, 10)
+        .then(hash => hash,
+            error => {
+                console.log(error);
 
-    const encryptedPassword = bcrypt.hash(password, salt);
+                return false;
+            });
 
     return encryptedPassword;
-};
+}
 
 module.exports = encryptPassword;

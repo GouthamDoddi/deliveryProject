@@ -24,3 +24,7 @@
 {"message":"customer is found in the database!","level":"info","timestamp":"2020-12-12T10:46:48.108Z"}
 {"message":"passwords matched!, User authenticated !","level":"info","timestamp":"2020-12-12T10:46:48.190Z"}
 {"message":"user authorized!, 200","level":"info","timestamp":"2020-12-12T10:46:48.195Z"}
+{"message":"customer with mobile number 79810743325 is found in the database!","level":"info","timestamp":"2020-12-13T09:43:00.551Z"}
+{"message":"customer with mobile number 79810743325 is found in the database!","level":"info","timestamp":"2020-12-13T09:44:09.464Z"}
+{"message":"passwords matched!, User authenticated !","level":"info","timestamp":"2020-12-13T09:44:09.601Z"}
+{"message":"user authorized!, 200","level":"info","timestamp":"2020-12-13T09:44:09.609Z"}

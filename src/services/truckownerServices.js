@@ -2,17 +2,13 @@ const pool = require('../config/db');
 
 async function getTruckowner (mobileNumber) {
     const query = {
-        name: 'Check customer exists',
+        name: 'Check truckowner exists',
         text: 'SELECT * FROM "SUT".truck_owner WHERE mobile_num = $1',
-        values: mobileNumber,
+        values: [ mobileNumber ],
     };
 
     try {
-        const result = await pool.query(query);
-
-        console.log(`query result is ${result}`);
-
-        return result.rows.length;
+        return await pool.query(query);
     } catch (error) {
         console.log(error);
 

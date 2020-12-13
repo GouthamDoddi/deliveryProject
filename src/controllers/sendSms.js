@@ -1,19 +1,38 @@
 const { getCustomer } = require('../services/customerServices');
+const { getTruckowner } = require('../services/truckownerServices');
+const winston = require('winston');
+const jwt = require('jsonwebtoken');
+
+
+const logger = winston.createLogger({
+    transports: [
+        new winston.transports.File({
+            level: 'info',
+            filename: 'logs/OTP.log',
+            json: true,
+            format: winston.format.combine(winston.format.timestamp(),
+                winston.format.json()),
+        }),
+    ],
+});
 
 const sendSMS = async (req, res) => {
-    const result = await getCustomer(req.body.mobileNum);
+    const secret = '!@#DWe$%^gge&&**';
 
-    console.log(result);
+    logger.info(`${req.body.mobileNum} requested an otp.`);
+    const result1 = await getCustomer(req.body.mobileNum);
+
+    const result2 = await getTruckowner(req.body.mobileNum);
 
 
-    if (!result.rowCount) {
+    if (!result1.rowCount && !result2.rowCount) {
         console.log('No user found');
+        logger.info(`${req.body.mobileNum} does not exist in either
+        customer or truckowner database`);
 
         return res.json({ statusCode: 404,
             message: 'Error! User is not found.' });
     }
-
-    console.log('customer found');
 
     function createOTP () {
         const digits = '0123456789';
@@ -27,9 +46,18 @@ const sendSMS = async (req, res) => {
 
     const otp = createOTP();
 
+    logger.info(`${req.body.mobileNo} recived and OTP ${otp}`);
+
+    // also sending JWT token
+
+    const token = jwt.sign({ sub: req.body.mobileNum }, secret, {
+        expiresIn: 86400, // expires in 24 hours
+    });
+
     return res.json({
         statusCode: 200,
         otp,
+        token,
     });
 };
 

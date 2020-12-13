@@ -1,7 +1,6 @@
 const { insertCustomer } = require('../services/customerServices');
-// const { logger } = require('../middleware/logger');
 const winston = require('winston');
-const bcrypt = require('bcrypt');
+const encryptPassword = require('../middleware/encryptPass');
 
 const logger = winston.createLogger({
     transports: [
@@ -24,9 +23,15 @@ const customerRegister = async (req, res) => {
 
     // using one line promises lets encrypt the password and
     // store it in a var
-    const encryptedPassword = await bcrypt.hash(req.body.password, 10)
-        .then(hash => hash,
-            error => console.log(error));
+    if (req.body.password) {
+        var encryptedPassword = await encryptPassword(req.body.password);
+        if (!encryptPassword) {
+            return res.json({
+                statusCode: 500,
+                message: 'There is an error in encrypting password',
+            });
+        }
+    }
 
     // storing all the customer data in one object to use it as a parameter
     const customerDetails = {
@@ -49,11 +54,13 @@ const customerRegister = async (req, res) => {
     // if the insert function failed the it would return a false
     if (addCustomer) {
         logger.info(`Customer with mobile number  ${req.body.mobileNum} registered`);
-        res.status(201)
+
+        return res.status(201)
             .json({ statusCode: 200,
                 message: 'User registered!' });
     }
-    res.status(409)
+
+    return res.status(409)
         .json({ statusCode: 409,
             message: 'Customer with the details already exists' });
 
