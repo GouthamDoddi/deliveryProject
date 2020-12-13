@@ -24,9 +24,15 @@ const truckOwnerRegister = async (req, res) => {
 
     // using one line promises lets encrypt the password and
     // store it in a var
-    const encryptedPassword = await bcrypt.hash(req.body.password, 10)
-        .then(hash => hash,
-            error => console.log(error));
+    if (req.body.password) {
+        var encryptedPassword = await encryptPassword(req.body.password);
+        if (!encryptPassword) {
+            return res.json({
+                statusCode: 500,
+                message: 'There is an error in encrypting password',
+            });
+        }
+    }
 
     const truckownerDetails = {
         firstName: req.body.firstName,
@@ -49,6 +55,7 @@ const truckOwnerRegister = async (req, res) => {
     if (addTruckowner) {
         res.json({ statusCode: 201,
             message: 'User registered!' });
+        logger.info(`truckowner with no ${req.body.mobileNum} is registered`);
     }
     res.json({ statusCode: 409,
         message: 'Truckowner with the details already exists' });
