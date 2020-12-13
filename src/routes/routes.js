@@ -11,17 +11,19 @@ const getAvailableSpaceAndWeight = require('../controllers/getAvailableSpaceAndW
 const assignPackage = require('../controllers/assignPackage');
 const sendSMS = require('../controllers/sendSMS');
 const truckOwnerLogin = require('../controllers/truckOwnerLogin');
+const verifyToken = require('../controllers/verifyToken');
 
 // router.get('/get_trucks', getTrucks);
 router.post('/customerregister', customerRegister);
-router.post('/tripRegister', tripRegister);
+router.post('/addTrip', verifyToken, tripRegister);
 router.post('/truckOwnerRegister', truckOwnerRegister);
 router.post('/customerlogin', customerLogin);
 router.post('/truckownerLogin', truckOwnerLogin);
-router.post('/packageRegister', packageRegister);
-router.post('/truckRegister', truckRegister);
-router.post('/getAvailableSpace', getAvailableSpaceAndWeight);
-router.post('/assignPackage', assignPackage);
+router.post('/packageRegister', verifyToken, packageRegister);
+router.post('/truckRegister', verifyToken, truckRegister);
+router.post('/getAvailableSpace', verifyToken, getAvailableSpaceAndWeight);
+router.post('/assignPackage', verifyToken, assignPackage);
 router.post('/sendSMS', sendSMS);
+// router.post('/verifyJWT', verifyToken);
 
 module.exports = router;

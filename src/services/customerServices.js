@@ -44,8 +44,6 @@ async function insertCustomer (customerDetails) {
         ],
     };
 
-    console.log('insert querry called');
-
     try {
         return await pool.query(query);
     } catch (error) {

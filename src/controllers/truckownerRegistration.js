@@ -4,7 +4,7 @@ const winston = require('winston');
 const bcrypt = require('bcrypt');
 
 const logger = winston.createLogger({
-    customer: [
+    transports: [
         new winston.transports.File({
             level: 'info',
             filename: 'logs/truckowner.log',

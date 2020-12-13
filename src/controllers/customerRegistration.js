@@ -4,7 +4,7 @@ const winston = require('winston');
 const bcrypt = require('bcrypt');
 
 const logger = winston.createLogger({
-    customer: [
+    transports: [
         new winston.transports.File({
             level: 'info',
             filename: 'logs/customer.log',
@@ -48,6 +48,7 @@ const customerRegister = async (req, res) => {
 
     // if the insert function failed the it would return a false
     if (addCustomer) {
+        logger.info(`Customer with mobile number  ${req.body.mobileNum} registered`);
         res.status(201)
             .json({ statusCode: 200,
                 message: 'User registered!' });

@@ -2,7 +2,7 @@
 
 CREATE TABLE "SUT".customer
 (
-    customer_id integer NOT NULL,
+    customer_id SERIAL,
     first_name character varying(50) NOT NULL,
     last_name character varying(50) NOT NULL,
     mobile_num numeric(12,0) NOT NULL,
@@ -22,22 +22,9 @@ CREATE TABLE "SUT".customer
     CONSTRAINT customer_pan_no_key UNIQUE (pan_no)
 )
 
-CREATE TABLE "SUT".truck_details (
-    truck_id serial PRIMARY KEY,
-    truck_name VARCHAR (50) NOT NULL,
-    truck_no VARCHAR (10) UNIQUE NOT NULL,
-    truck_model VARCHAR (30) NOT NULL,
-    chasis_no VARCHAR (20) UNIQUE NOT NULL,
-    capacity_inkgs INTEGER,
-    capacity_inspace INTEGER,
-    booked_weight INTEGER,
-    booked_space INTEGER,
-    registerd_name VARCHAR NOT NULL
-)
-
 CREATE TABLE "SUT".package_details
 (
-    package_id integer NOT NULL DEFAULT nextval('"SUT".package_details_package_id_seq'::regclass),
+    package_id SERIAL,
     package_name character varying(50) NOT NULL,
     package_type character varying NOT NULL,
     package_weight integer NOT NULL,
@@ -53,7 +40,7 @@ CREATE TABLE "SUT".package_details
 
 CREATE TABLE "SUT".trip_details
 (
-    trip_id integer NOT NULL,
+    trip_id SERIAL,
     truck_no character varying NOT NULL,
     source character varying,
     destination character varying NOT NULL,
@@ -65,7 +52,7 @@ CREATE TABLE "SUT".trip_details
 
 CREATE TABLE "SUT".truck_owner
 (
-    customer_id integer NOT NULL,
+    customer_id SERIAL,
     first_name character varying(50) NOT NULL,
     last_name character varying(50) NOT NULL,
     mobile_num numeric(12,0) NOT NULL,
@@ -87,7 +74,7 @@ CREATE TABLE "SUT".truck_owner
 
 CREATE TABLE "SUT".truck_package_maping
 (
-    mapping_id integer NOT NULL,
+    mapping_id SERIAL,
     truck_no character varying NOT NULL,
     package_id integer NOT NULL,
     date date NOT NULL,
@@ -104,7 +91,7 @@ CREATE TABLE "SUT".truck_package_maping
 
 CREATE TABLE "SUT".truckdetails
 (
-    truck_id integer NOT NULL ,
+    truck_id SERIAL,
     truck_name character varying(50) NOT NULL,
     truck_no character varying(10) NOT NULL,
     truck_model character varying(30) NOT NULL,

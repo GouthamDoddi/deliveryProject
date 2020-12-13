@@ -21,3 +21,6 @@
 {"message":"customer is found in the database!","level":"info","timestamp":"2020-12-03T10:18:55.210Z"}
 {"message":"passwords matched!, User authenticated !","level":"info","timestamp":"2020-12-03T10:18:55.272Z"}
 {"message":"user authorized!, 200","level":"info","timestamp":"2020-12-03T10:18:55.274Z"}
+{"message":"customer is found in the database!","level":"info","timestamp":"2020-12-12T10:46:48.108Z"}
+{"message":"passwords matched!, User authenticated !","level":"info","timestamp":"2020-12-12T10:46:48.190Z"}
+{"message":"user authorized!, 200","level":"info","timestamp":"2020-12-12T10:46:48.195Z"}

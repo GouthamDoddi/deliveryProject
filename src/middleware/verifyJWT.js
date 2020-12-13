@@ -1,33 +1,23 @@
 const jwt = require('jsonwebtoken');
-const secret = process.env.SECRET;
-// const express = require('express');
-// const router = express.Router();
+const secret = '!@#DWe$%^gge&&**';
 
-// router.post('/', (req, res) => {
-//     jwt.verify(res.token.token, secret, err => {
-//         if (err) {
-//             return res.json(
-//                 {
-//                     name: 'TokenExpiredError',
-//                     message: 'jwt expired',
-//                     expiredAt: 1408621000,
-//                 },
-//             );
-//         }
+function verifyJWT (token) {
+    try {
+        return jwt.verify(token, secret, (err, data) => {
+            if (err) {
+                console.log(err);
 
-//         return res.json({ status: 200,
-//             token: 'verified' });
-//     });
-// });
+                return [ false, err ];
+            }
+            console.log(data);
 
-module.exports.verifyJWT = token => {
-    jwt.verify(token, secret, err => {
-        if (err) {
-            console.log(err);
+            return [ true, data ];
+        });
+    } catch (error) {
+        console.error(error);
 
-            return false;
-        }
+        return false;
+    }
+}
 
-        return true;
-    });
-};
+module.exports = verifyJWT;

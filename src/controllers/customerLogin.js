@@ -29,7 +29,7 @@ const customerLogin = async (req, res) => {
 
     if (!result.rowCount) {
         console.log('No user found');
-        logger.info('Username not found in database');
+        logger.info(`Customer with number ${req.body.mobileNum}  not found in database`);
 
         return res.json({ statusCode: 404,
             message: 'Error! User is not found.' });
@@ -38,7 +38,7 @@ const customerLogin = async (req, res) => {
     // if rowCount > 0 .i.e if any user was matched
 
     console.log('customer found');
-    logger.info('customer is found in the database!');
+    logger.info(`customer with mobile number ${req.body.mobileNum} is found in the database!`);
 
     // since a user was found lets check if the passwords match
     return await Bcrypt.compare(req.body.password, result.rows[0].password).then(

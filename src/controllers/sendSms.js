@@ -25,7 +25,12 @@ const sendSMS = async (req, res) => {
         return OTP;
     }
 
-    console.log(createOTP());
+    const otp = createOTP();
+
+    return res.json({
+        statusCode: 200,
+        otp,
+    });
 };
 
 module.exports = sendSMS;

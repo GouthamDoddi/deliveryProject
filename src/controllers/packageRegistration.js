@@ -3,10 +3,10 @@ const { insertPackage } = require('../services/packageServices');
 const winston = require('winston');
 
 const logger = winston.createLogger({
-    customer: [
+    transports: [
         new winston.transports.File({
             level: 'info',
-            filename: 'logs/truckowner',
+            filename: 'logs/truckowner.log',
             json: true,
             format: winston.format.combine(winston.format.timestamp(),
                 winston.format.json()),
