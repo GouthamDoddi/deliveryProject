@@ -56,7 +56,7 @@ CREATE TABLE "SUT".truck_owner
     first_name character varying(50) NOT NULL,
     last_name character varying(50) NOT NULL,
     mobile_num numeric(12,0) NOT NULL,
-    email character varying NOT NULL,
+    email character varying,
     is_kyc_enabled boolean,
     aadhar_no numeric(12,0),
     pan_no character varying(10),

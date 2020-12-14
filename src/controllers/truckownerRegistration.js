@@ -1,7 +1,8 @@
 const { insertTruckowner } = require('../services/truckownerServices');
 // const { logger } = require('../middleware/logger');
 const winston = require('winston');
-const bcrypt = require('bcrypt');
+const encryptPassword = require('../middleware/encryptPass');
+
 
 const logger = winston.createLogger({
     transports: [
@@ -26,7 +27,7 @@ const truckOwnerRegister = async (req, res) => {
     // store it in a var
     if (req.body.password) {
         var encryptedPassword = await encryptPassword(req.body.password);
-        if (!encryptPassword) {
+        if (!encryptedPassword) {
             return res.json({
                 statusCode: 500,
                 message: 'There is an error in encrypting password',
@@ -53,11 +54,13 @@ const truckOwnerRegister = async (req, res) => {
 
     // if the insert function failed the it would return a false
     if (addTruckowner) {
-        res.json({ statusCode: 201,
-            message: 'User registered!' });
         logger.info(`truckowner with no ${req.body.mobileNum} is registered`);
+
+        return res.json({ statusCode: 201,
+            message: 'User registered!' });
     }
-    res.json({ statusCode: 409,
+
+    return res.json({ statusCode: 409,
         message: 'Truckowner with the details already exists' });
 
 

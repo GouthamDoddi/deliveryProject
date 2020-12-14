@@ -14,12 +14,12 @@ const truckOwnerLogin = require('../controllers/truckOwnerLogin');
 const verifyToken = require('../controllers/verifyToken');
 
 // router.get('/get_trucks', getTrucks);
-router.post('/customerregister', customerRegister);
+router.post('/customerRegister', customerRegister);
 router.post('/addTrip', verifyToken, tripRegister);
-router.post('/truckOwnerRegister', truckOwnerRegister);
+router.post('/truckownerRegister', truckOwnerRegister);
 router.post('/customerlogin', customerLogin);
 router.post('/truckownerLogin', truckOwnerLogin);
-router.post('/packageRegister', verifyToken, packageRegister);
+router.post('/addPackage', verifyToken, packageRegister);
 router.post('/truckRegister', verifyToken, truckRegister);
 router.post('/getAvailableSpace', verifyToken, getAvailableSpaceAndWeight);
 router.post('/assignPackage', verifyToken, assignPackage);

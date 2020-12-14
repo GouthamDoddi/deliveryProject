@@ -1,15 +1,19 @@
 const bcrypt = require('bcrypt');
 
 function encryptPassword (password) {
-    const encryptedPassword = bcrypt.hash(password, 10)
-        .then(hash => hash,
-            error => {
-                console.log(error);
+    try {
+        return bcrypt.hash(password, 10)
+            .then(hash => hash,
+                error => {
+                    console.log(error);
 
-                return false;
-            });
+                    return false;
+                });
+    } catch (error) {
+        console.log(error);
 
-    return encryptedPassword;
+        return false;
+    }
 }
 
 module.exports = encryptPassword;

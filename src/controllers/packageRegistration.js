@@ -34,10 +34,11 @@ const packageRegister = async (req, res) => {
 
     // if the insert function failed the it would return a false
     if (addPackage) {
-        res.json({ statusCode: 201,
+        return res.json({ statusCode: 201,
             message: 'package registered!' });
     }
-    res.json({ statusCode: 409,
+
+    return res.json({ statusCode: 409,
         message: 'failed to add package. please check provided details' });
 
 

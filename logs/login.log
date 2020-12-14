@@ -28,3 +28,7 @@
 {"message":"customer with mobile number 79810743325 is found in the database!","level":"info","timestamp":"2020-12-13T09:44:09.464Z"}
 {"message":"passwords matched!, User authenticated !","level":"info","timestamp":"2020-12-13T09:44:09.601Z"}
 {"message":"user authorized!, 200","level":"info","timestamp":"2020-12-13T09:44:09.609Z"}
+{"message":"truckOwner is found in the database!","level":"info","timestamp":"2020-12-14T02:24:23.122Z"}
+{"message":"truckOwner is found in the database!","level":"info","timestamp":"2020-12-14T02:35:36.515Z"}
+{"message":"passwords matched!, truckOwner authenticated !","level":"info","timestamp":"2020-12-14T02:35:36.654Z"}
+{"message":"truckOwner authorized!, 200","level":"info","timestamp":"2020-12-14T02:35:36.655Z"}

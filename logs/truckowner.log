@@ -1,0 +1,15 @@
+{"message":"recived register request from truck owner with mobile number 79810743325","level":"info","timestamp":"2020-12-14T02:14:39.414Z"}
+{"message":"recived register request from truck owner with mobile number 79810743325","level":"info","timestamp":"2020-12-14T02:17:55.374Z"}
+{"message":"truckowner with no 79810743325 is registered","level":"info","timestamp":"2020-12-14T02:17:55.451Z"}
+{"message":"recived register request from truck owner with mobile number 79810743320","level":"info","timestamp":"2020-12-14T02:22:29.264Z"}
+{"message":"truckowner with no 79810743320 is registered","level":"info","timestamp":"2020-12-14T02:22:29.375Z"}
+{"message":"recived register request from truck owner with mobile number 79810743320","level":"info","timestamp":"2020-12-14T02:22:35.673Z"}
+{"message":"recived register request from truck owner with mobile number 7981074332","level":"info","timestamp":"2020-12-14T02:23:42.750Z"}
+{"message":"truckowner with no 7981074332 is registered","level":"info","timestamp":"2020-12-14T02:23:42.806Z"}
+{"message":"recived register request from truck owner with mobile number 7981074332","level":"info","timestamp":"2020-12-14T02:29:19.104Z"}
+{"message":"recived register request from truck owner with mobile number 7981074335","level":"info","timestamp":"2020-12-14T02:29:39.332Z"}
+{"message":"truckowner with no 7981074335 is registered","level":"info","timestamp":"2020-12-14T02:29:39.514Z"}
+{"message":"received package register request for customer 7981074335","level":"info","timestamp":"2020-12-14T02:43:28.109Z"}
+{"message":"received package register request for customer 7981074335","level":"info","timestamp":"2020-12-14T02:44:55.999Z"}
+{"message":"received package register request for customer 7975490075","level":"info","timestamp":"2020-12-14T03:02:20.306Z"}
+{"message":"received package register request for customer 7975490075","level":"info","timestamp":"2020-12-14T03:02:22.841Z"}
