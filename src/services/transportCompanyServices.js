@@ -22,7 +22,7 @@ async function getTransportCompany (mobileNumber) {
     }
 }
 
-const insertTransportCompany = transportCompany => {
+const insertTransportCompany = async transportCompany => {
     const query = {
         name: 'insert user in db',
         text: `INSERT INTO "SUT".transport_company (company_name, mobile_num, no_of_vehicles)
@@ -35,7 +35,7 @@ const insertTransportCompany = transportCompany => {
     };
 
     try {
-        return pool.query(query);
+        return await pool.query(query).then(error => error);
     } catch (error) {
         console.log(error);
 

@@ -33,7 +33,7 @@ router.post('/assignPackage', verifyToken, assignPackage);
 router.post('/SMSLogin', sendSMS);
 router.post('/transportCompanyRegister', transportCompanyRegister);
 router.post('/getTruck', verifyToken, getTrucks);
-router.post('/getTruck', verifyToken, getTrip);
+router.post('/getTrip', verifyToken, getTrip);
 
 // router.post('/verifyJWT', verifyToken);
 

@@ -1,13 +1,16 @@
-async function getTrip (tripDetails) {
+const pool = require('../config/db');
+
+async function getTrips (tripDetails) {
     // wrong code, search trip with tripId
+    console.log(tripDetails);
     const query = {
         name: 'Check truckowner exists',
-        text: `SELECT * FROM trip_details WHERE source = $1
-            AND destination = $2 AND start_date = $3`,
+        text: `SELECT * FROM "SUT".trip_details WHERE (source = $1
+            AND destination = $2 AND start_date = $3)`,
         values: [
             tripDetails.source,
             tripDetails.destination,
-            tripDetails.date,
+            tripDetails.startDate,
         ],
     };
 
@@ -43,4 +46,4 @@ const insertTrip = async tripDetails => {
     }
 };
 
-module.exports = { getTrip, insertTrip };
+module.exports = { getTrips, insertTrip };

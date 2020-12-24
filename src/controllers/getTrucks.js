@@ -1,4 +1,5 @@
 const { getTrucksForOwner, getTruck } = require('../services/truckServices');
+const getMobileNumber = require('../utils/getMobileNo');
 
 
 const getTrucks = async (req, res) => {
@@ -7,7 +8,9 @@ const getTrucks = async (req, res) => {
     // destination and during the given data.
 
 
-    const { truckNo, mobileNum } = req.body;
+    const mobileNum = await getMobileNumber(req.headers.authorization);
+
+    const { truckNo } = req.body;
 
     /* _______Trucks for trip_________*/
 
@@ -17,7 +20,7 @@ const getTrucks = async (req, res) => {
         if (trucks.rowCount) {
             return res.json({
                 statusCode: 200,
-                message: trucks,
+                message: trucks.rows,
             });
         }
 

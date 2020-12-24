@@ -7,7 +7,7 @@ const getMobileNumber = async authHeader => {
 
     const result = await verifyJWT(token);
 
-    console.log(result[1].sub);
+    // console.log(result[1].sub);
 
     return result[1].sub;
 };

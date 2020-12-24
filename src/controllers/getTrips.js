@@ -7,28 +7,31 @@ const getTrip = async (req, res) => {
     // destination and during the given data.
 
 
-    const { source, destination, tripDate } = req.body;
+    const { source, destination, startDate } = req.body;
 
     const tripDetails = {
         source,
         destination,
-        tripDate,
+        startDate,
     };
 
     /* ______Trips that match_______*/
 
     const trips = await getTrips(tripDetails);
 
-    if (trips.rowCount) {
+    // console.log(tripDetails);
+
+    if (!trips.rowCount) {
         return res.json({
-            statusCode: 200,
-            trips,
+            statusCode: 400,
+            message: 'Could not find any matching trips!',
         });
     }
 
     return res.json({
-        statusCode: 400,
-        message: 'Could not find any matching trips!',
+        statusCode: 200,
+        message: { numberOfTrip: trips.rowCount,
+            tripDetails: trips.rows },
     });
 };
 
