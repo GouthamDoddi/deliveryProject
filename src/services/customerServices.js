@@ -49,7 +49,7 @@ async function insertCustomer (customerDetails) {
     } catch (error) {
         console.log(error);
 
-        return false;
+        return error;
     }
 }
 

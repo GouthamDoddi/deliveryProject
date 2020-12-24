@@ -1,8 +1,10 @@
-const { getCustomer } = require('../services/customerServices');
-const { getTruckowner } = require('../services/truckownerServices');
 const winston = require('winston');
 const jwt = require('jsonwebtoken');
 
+const createOTP = require('../utils/createOTP');
+const { getCustomer } = require('../services/customerServices');
+const { getTruckowner } = require('../services/truckownerServices');
+const { getTransportCompany } = require('../services/transportCompanyServices');
 
 const logger = winston.createLogger({
     transports: [
@@ -20,33 +22,33 @@ const sendSMS = async (req, res) => {
     const secret = '!@#DWe$%^gge&&**';
 
     logger.info(`${req.body.mobileNum} requested an otp.`);
+
+    /* _______try to find if the user already exists________ */
+
     const result1 = await getCustomer(req.body.mobileNum);
 
-    const result2 = await getTruckowner(req.body.mobileNum);
+    if (!result1.rowCount) {
+        const result2 = await getTruckowner(req.body.mobileNum);
 
+        if (!result2.rowCount) {
+            const result3 = await getTransportCompany(req.body.mobileNum);
 
-    if (!result1.rowCount && !result2.rowCount) {
-        console.log('No user found');
-        logger.info(`${req.body.mobileNum} does not exist in either
-        customer or truckowner database`);
+            if (!result3.rowCount) {
+                console.log('No user found');
+                logger.info(`${req.body.mobileNum} does not exist in either
+                customer or truckowner database`);
 
-        return res.json({ statusCode: 404,
-            message: 'Error! User is not found.' });
+                return res.json({ statusCode: 404,
+                    message: 'Error! User is not found.' });
+            }
+        }
     }
 
-    function createOTP () {
-        const digits = '0123456789';
-        let OTP = '';
-
-        for (let i = 0; i < 4; i++)
-            OTP += digits[Math.floor(Math.random() * 10)];
-
-        return OTP;
-    }
+    /* _______If the user is found________ */
 
     const otp = createOTP();
 
-    logger.info(`${req.body.mobileNo} recived and OTP ${otp}`);
+    logger.info(`${req.body.mobileNo} received and OTP ${otp}`);
 
     // also sending JWT token
 

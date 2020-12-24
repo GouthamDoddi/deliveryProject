@@ -1,6 +1,8 @@
-const { insertPackage } = require('../services/packageServices');
-// const { logger } = require('../middleware/logger');
 const winston = require('winston');
+
+const { insertPackage } = require('../services/packageServices');
+const getMobileNumber = require('../utils/getMobileNo');
+
 
 const logger = winston.createLogger({
     transports: [
@@ -20,26 +22,38 @@ const packageRegister = async (req, res) => {
     // using logger to record activity
     logger.info(`received package register request for customer ${req.body.mobileNum}`);
 
+    // using jwt let's get  the user's mobile no
+
+    const mobileNum = await getMobileNumber(req.headers.authorization);
+
+
+    // after extracting the mobile number lets call the insert qurrey
 
     const packageDetails = {
         packageName: req.body.packageName,
-        mobileNum: req.body.mobileNum,
+        mobileNum,
         packageType: req.body.packageType,
+        pickUpPoint: req.body.pickUpPoint,
+        dropPoint: req.body.dropPoint,
+        date: req.body.date,
+        entireTruck: req.body.entireTruck,
+        receivingPersonName: req.body.receivingPersonName,
+        receivingPersonNo: req.body.receivingPersonNo,
         packageWeight: req.body.packageWeight,
         packageSpace: req.body.packageSpace,
         packageValue: req.body.packageValue,
     };
 
-    const addPackage = await insertPackage(packageDetails);
+    const addTruck = await insertPackage(packageDetails);
 
     // if the insert function failed the it would return a false
-    if (addPackage) {
+    if (addTruck.command === 'INSERT') {
         return res.json({ statusCode: 201,
             message: 'package registered!' });
     }
 
-    return res.json({ statusCode: 409,
-        message: 'failed to add package. please check provided details' });
+    return res.json({ statusCode: 400,
+        message: addTruck.detail });
 
 
     // const token = jwtPackage(newUser.rows[0].truckowner_id);

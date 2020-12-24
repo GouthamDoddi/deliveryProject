@@ -3,7 +3,7 @@ const { getCustomer } = require('../services/customerServices');
 const Bcrypt = require('bcrypt');
 const winston = require('winston');
 
-
+// create th logger object
 const logger = winston.createLogger({
     transports: [
         new winston.transports.File({
@@ -16,7 +16,6 @@ const logger = winston.createLogger({
     ],
 });
 
-// create th logger object
 
 const customerLogin = async (req, res) => {
     const result = await getCustomer(req.body.mobileNum);
@@ -29,7 +28,7 @@ const customerLogin = async (req, res) => {
         console.log('No user found');
         logger.info(`Customer with number ${req.body.mobileNum}  not found in database`);
 
-        return res.json({ statusCode: 404,
+        return res.json({ statusCode: 400,
             message: 'Error! User is not found.' });
     }
 
@@ -63,7 +62,7 @@ const customerLogin = async (req, res) => {
             logger.info('user unauthorized!, 401');
 
             return res.json({ statusCode: 401,
-                error: 'User unothorized',
+                error: 'User unauthorized',
                 msg: 'invalid password' });
         },
     );

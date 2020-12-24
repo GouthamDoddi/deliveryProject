@@ -1,5 +1,6 @@
-const { insertCustomer } = require('../services/customerServices');
 const winston = require('winston');
+
+const { insertCustomer } = require('../services/customerServices');
 const encryptPassword = require('../middleware/encryptPass');
 
 const logger = winston.createLogger({
@@ -18,7 +19,7 @@ const customerRegister = async (req, res) => {
     // get the customer details from req.body
 
     // using logger to record activity
-    logger.info(`recived register request from customer with mobile number ${req.body.mobileNum}`);
+    logger.info(`received register request from customer with mobile number ${req.body.mobileNum}`);
 
 
     // using one line promises lets encrypt the password and
@@ -52,7 +53,7 @@ const customerRegister = async (req, res) => {
     const addCustomer = await insertCustomer(customerDetails);
 
     // if the insert function failed the it would return a false
-    if (addCustomer) {
+    if (addCustomer.command === 'INSERT') {
         logger.info(`Customer with mobile number  ${req.body.mobileNum} registered`);
 
         return res.status(201)
@@ -60,9 +61,9 @@ const customerRegister = async (req, res) => {
                 message: 'User registered!' });
     }
 
-    return res.status(409)
-        .json({ statusCode: 409,
-            message: 'Customer with the details already exists' });
+    return res.status(400)
+        .json({ statusCode: 400,
+            message: addCustomer.detail });
 
 
     // const token = jwtCustomer(newUser.rows[0].customer_id);

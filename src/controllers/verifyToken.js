@@ -24,11 +24,9 @@ const verifyToken = async (req, res, next) => {
 
         return res.sendStatus(401); // if there isn't any token
     }
-    console.log(token);
 
     const result = await verifyJWT(token);
 
-    console.log(result);
     if (!result[0]) {
         logger.info(`Token: ${token} is invalid. Unauthorized!`);
 

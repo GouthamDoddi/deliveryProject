@@ -25,11 +25,17 @@ CREATE TABLE "SUT".customer
 CREATE TABLE "SUT".package_details
 (
     package_id SERIAL,
-    package_name character varying(50) NOT NULL,
-    package_type character varying NOT NULL,
+    pickup_point VARCHAR NOT NULL,
+    drop_point VARCHAR NOT NULL,
+    pickup_date TIMESTAMP NOT NULL,
+    package_name character varying(50),
+    package_type character varying,
     package_weight integer NOT NULL,
     package_space integer NOT NULL,
-    package_value integer NOT NULL,
+    booked_entire_truck BOOLEAN NOT NULL,
+    package_receiving_person VARCHAR,
+    receiving_person_mobile_no numeric(12,0),
+    package_value integer,
     customer_mobile_num numeric,
     CONSTRAINT package_details_pkey PRIMARY KEY (package_id),
     CONSTRAINT customer_mobile_num FOREIGN KEY (customer_mobile_num)
@@ -44,8 +50,10 @@ CREATE TABLE "SUT".trip_details
     truck_no character varying NOT NULL,
     source character varying,
     destination character varying NOT NULL,
-    start_date date NOT NULL,
-    reach_date date,
+    start_date TIMESTAMP NOT NULL,
+    reach_date TIMESTAMP,
+    total_packages INTEGER,
+    delivered_packages INTEGER,
     trip_duration_in_hours character varying,
     CONSTRAINT trip_details_pkey PRIMARY KEY (trip_id)
 )
@@ -53,8 +61,7 @@ CREATE TABLE "SUT".trip_details
 CREATE TABLE "SUT".truck_owner
 (
     customer_id SERIAL,
-    first_name character varying(50) NOT NULL,
-    last_name character varying(50) NOT NULL,
+    full_name VARCHAR NOT NULL,
     mobile_num numeric(12,0) NOT NULL,
     email character varying,
     is_kyc_enabled boolean,
@@ -77,13 +84,14 @@ CREATE TABLE "SUT".truck_package_maping
     mapping_id SERIAL,
     truck_no character varying NOT NULL,
     package_id integer NOT NULL,
+    delivered BOOLEAN,
     date date NOT NULL,
     CONSTRAINT truck_package_maping_pkey PRIMARY KEY (mapping_id),
     CONSTRAINT truck_package_maping_package_id_fkey FOREIGN KEY (package_id)
         REFERENCES "SUT".package_details (package_id) MATCH SIMPLE
         ON UPDATE NO ACTION
         ON DELETE NO ACTION,
-    CONSTRAINT truck_package_maping_truck_no_fkey FOREIGN KEY (truck_no)
+    CONSTRAINT truck_package_maping_truck_no_fkey FOREIGN KEY (truck_package_maping_truck_no)
         REFERENCES "SUT".truckdetails (truck_no) MATCH SIMPLE
         ON UPDATE NO ACTION
         ON DELETE NO ACTION
@@ -92,20 +100,46 @@ CREATE TABLE "SUT".truck_package_maping
 CREATE TABLE "SUT".truckdetails
 (
     truck_id SERIAL,
-    truck_name character varying(50) NOT NULL,
+    truck_name character varying(50),
     truck_no character varying(10) NOT NULL,
-    truck_model character varying(30) NOT NULL,
-    chasis_no character varying(20) NOT NULL,
+    truck_model character varying(30),
+    chasis_no character varying(20),
+    rc BYTEA,
+    license BYTEA,
     capacity_inkgs integer,
     capacity_inspace integer,
     booked_weight integer,
     booked_space integer,
+    owned_by_transport_company BOOLEAN,
     truckowner_mobile_num numeric,
+    transport_company_mobile_num numeric,
     CONSTRAINT truckdetails_pkey PRIMARY KEY (truck_id),
     CONSTRAINT truckdetails_chasis_no_key UNIQUE (chasis_no),
     CONSTRAINT truckdetails_truck_no_key UNIQUE (truck_no),
     CONSTRAINT truckdetails_truckdriver_mobile_num_fkey FOREIGN KEY (truckowner_mobile_num)
         REFERENCES "SUT".truck_owner (mobile_num) MATCH SIMPLE
         ON UPDATE NO ACTION
+        ON DELETE NO ACTION,
+    CONSTRAINT transport_company_mobile_num_fkey FOREIGN KEY (transport_company_mobile_num)
+        REFERENCES "SUT".transport_company (mobile_num) MATCH SIMPLE
+        ON UPDATE NO ACTION
         ON DELETE NO ACTION
 )
+
+CREATE TABLE "SUT".transport_company
+(
+    company_id SERIAL,
+    company_name VARCHAR NOT UNIQUE NULL,
+    mobile_num NUMERIC UNIQUE NOT NULL,
+    no_of_vehicles INTEGER,
+)
+
+ALTER TABLE "SUT".truckdetails
+ADD CONSTRAINT transport_company_mobile_num_fkey FOREIGN KEY (transport_company_mobile_num)
+        REFERENCES "SUT".transport_company (mobile_num) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION
+
+ALTER TABLE "SUT".truckdetails
+ADD COLUMN transport_company_name VARCHAR,
+ADD COLUMN driver_name VARCHAR

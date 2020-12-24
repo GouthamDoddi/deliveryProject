@@ -9,7 +9,6 @@ function verifyJWT (token) {
 
                 return [ false, err ];
             }
-            console.log(data);
 
             return [ true, data ];
         });

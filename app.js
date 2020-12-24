@@ -4,6 +4,7 @@ const createError = require('http-errors');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const bodyParser = require('body-parser');
+const fileUpload = require('express-fileupload');
 // const jwt = require('express-jwt');
 
 // const secret = '!@#DWe$%^gge&&**';
@@ -11,7 +12,7 @@ const bodyParser = require('body-parser');
 const app = express();
 
 // create application/json parser
-const jsonParser = bodyParser.json();
+// const jsonParser = bodyParser.json();
 
 // create application/x-www-form-urlencoded parser
 const urlencodedParser = bodyParser.urlencoded({ extended: false });
@@ -19,6 +20,7 @@ const urlencodedParser = bodyParser.urlencoded({ extended: false });
 const routes = require('./src/routes/routes');
 
 app.use('/', urlencodedParser, routes);
+app.use(fileUpload());
 
 // app.use('/api', jwt({ secret }).unless({ path: [ '/register', '/login' ] }));
 app.use(logger('dev'));

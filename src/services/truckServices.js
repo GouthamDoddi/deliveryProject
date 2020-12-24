@@ -6,8 +6,9 @@ const insertTruck = async truckDetails => {
         name: 'Add truck',
         text: `INSERT INTO "SUT".truckdetails (truck_name, truck_no,
          truck_model, chasis_no, capacity_inkgs, capacity_inspace,
-          booked_weight, booked_space, truckowner_mobile_num)
-           VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9)`,
+          booked_weight, booked_space, truckowner_mobile_num, rc,
+          license, transport_company_name, driver_name)
+           VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13)`,
         values: [
             truckDetails.truckName,
             truckDetails.truckNo,
@@ -18,13 +19,17 @@ const insertTruck = async truckDetails => {
             truckDetails.bookedWeight,
             truckDetails.bookedSpace,
             truckDetails.mobileNum,
+            truckDetails.rc,
+            truckDetails.license,
+            truckDetails.companyName,
+            truckDetails.truckDriver,
         ],
     };
 
     try {
         return await pool.query(query);
     } catch (error) {
-        console.error(error);
+        console.error(`error at service ${error}`);
 
         return error;
     }
@@ -41,6 +46,25 @@ const getTruck = truckNo => {
 
     try {
         return pool.query(query);
+    } catch (error) {
+        console.error(error);
+
+        return error;
+    }
+};
+
+const getTrucksForOwner = async mobileNum => {
+    // use truckNo to get the total space
+
+    const query = {
+        name: 'Get truck details',
+        text: `SELECT * FROM "SUT".truckdetails WHERE truckowner_mobile_num = $1
+             OR transport_company_mobile_num = $2`,
+        values: [ mobileNum, mobileNum ],
+    };
+
+    try {
+        return await pool.query(query);
     } catch (error) {
         console.error(error);
 
@@ -66,8 +90,11 @@ const updateTruckWeightandSpace = updatedValues => {
     } catch (error) {
         console.error(error);
 
-        return error;
+        return error.detail;
     }
 };
 
-module.exports = { insertTruck, getTruck, updateTruckWeightandSpace };
+module.exports = { insertTruck,
+    getTrucksForOwner,
+    updateTruckWeightandSpace,
+    getTruck };

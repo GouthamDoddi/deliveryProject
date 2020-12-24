@@ -21,14 +21,12 @@ const tripRegister = async (req, res) => {
 
     // if insert function didn't return an error
     if (addTrip.command) {
-        return res.status(201)
-            .json({ statusCode: 201,
-                message: 'trip registered' });
+        return res.json({ statusCode: 201,
+            message: 'trip registered' });
     }
 
-    return res.status(201)
-        .json({ statusCode: 409,
-            message: 'Please check if all trip details are provided and valid.' });
+    return res.json({ statusCode: 400,
+        message: addTrip.detail });
 };
 
 module.exports = tripRegister;

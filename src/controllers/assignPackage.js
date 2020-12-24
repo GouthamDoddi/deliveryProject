@@ -69,7 +69,7 @@ const assignPackage = async (req, res) => {
 
     return res.json({
         statusCode: 400,
-        message: "couldn't map the package",
+        message: packageMapping.detail,
     });
 };
 

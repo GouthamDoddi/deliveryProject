@@ -43,7 +43,7 @@ async function insertTruckowner (truckownerDetails) {
     } catch (error) {
         console.log(error);
 
-        return false;
+        return error;
     }
 }
 

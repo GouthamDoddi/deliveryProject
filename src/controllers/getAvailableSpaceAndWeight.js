@@ -18,7 +18,7 @@ const getAvailableSpaceAndWeight = async (req, res) => {
     }
 
     return res.json({
-        statusCode: 404,
+        statusCode: 400,
         message: 'truck not found',
     });
 };
