@@ -104,6 +104,8 @@ CREATE TABLE "SUT".truckdetails
     truck_no character varying(10) NOT NULL,
     truck_model character varying(30),
     chasis_no character varying(20),
+    transport_company_name VARCHAR,
+    driver_name VARCHAR,
     rc BYTEA,
     license BYTEA,
     capacity_inkgs integer,
@@ -134,12 +136,12 @@ CREATE TABLE "SUT".transport_company
     no_of_vehicles INTEGER,
 )
 
-ALTER TABLE "SUT".truckdetails
-ADD CONSTRAINT transport_company_mobile_num_fkey FOREIGN KEY (transport_company_mobile_num)
-        REFERENCES "SUT".transport_company (mobile_num) MATCH SIMPLE
-        ON UPDATE NO ACTION
-        ON DELETE NO ACTION
-
-ALTER TABLE "SUT".truckdetails
-ADD COLUMN transport_company_name VARCHAR,
-ADD COLUMN driver_name VARCHAR
+--ALTER TABLE "SUT".truckdetails
+--ADD CONSTRAINT transport_company_mobile_num_fkey FOREIGN KEY (transport_company_mobile_num)
+--        REFERENCES "SUT".transport_company (mobile_num) MATCH SIMPLE
+--        ON UPDATE NO ACTION
+--        ON DELETE NO ACTION
+--
+--ALTER TABLE "SUT".truckdetails
+--ADD COLUMN transport_company_name VARCHAR,
+--ADD COLUMN driver_name VARCHAR
