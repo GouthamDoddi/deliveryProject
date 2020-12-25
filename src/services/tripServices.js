@@ -27,13 +27,15 @@ const insertTrip = async tripDetails => {
     const query = {
         name: 'insert user in db',
         text: `INSERT INTO "SUT".trip_details (truck_no, source, destination, start_date,
-                 reach_date, trip_duration_in_hours) VALUES($1, $2, $3, $4, $5, $6) RETURNING *`,
+                 reach_date,total_packages, delivered_packages, trip_duration_in_hours) VALUES($1, $2, $3, $4, $5, $6, $7, $8) RETURNING *`,
 
         values: [ tripDetails.truckNo,
             tripDetails.source,
             tripDetails.destination,
             tripDetails.startDate,
             tripDetails.reachDate,
+            tripDetails.totalPackages,
+            tripDetails.deliveredPackages,
             tripDetails.tripDurationInHours ],
     };
 

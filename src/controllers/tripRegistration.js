@@ -2,7 +2,8 @@ const { insertTrip } = require('../services/tripServices');
 
 
 const tripRegister = async (req, res) => {
-    const { truckNo, source, destination, startDate, reachDate, tripDurationInHours } = req.body;
+    const { truckNo, source, destination, startDate, reachDate, totalPackages,
+        deliveredPackages, tripDurationInHours } = req.body;
 
     // placing all trip details in one object so we can pass them as
     // parameters
@@ -12,6 +13,8 @@ const tripRegister = async (req, res) => {
         destination,
         startDate,
         reachDate,
+        totalPackages,
+        deliveredPackages,
         tripDurationInHours,
     };
 
