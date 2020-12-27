@@ -45,7 +45,8 @@ const transportCompanyRegister = async (req, res) => {
         logger.info(`Transport company ${req.body.companyName} is registered`);
 
         return res.json({ statusCode: 201,
-            message: 'Company registered!' });
+            message: 'Company registered!',
+            details: addCompany.rows });
     }
 
     return res.json({ statusCode: 400,

@@ -19,6 +19,8 @@ const truckOwnerLogin = require('../controllers/truckOwnerLogin');
 const verifyToken = require('../controllers/verifyToken');
 const transportCompanyRegister = require('../controllers/transportCompanyRegistration');
 const getTrip = require('../controllers/getTrips');
+const updateTrip = require('../controllers/updateTrip');
+const updatePackageMaping = require('../controllers/updatePackageMapping');
 
 
 router.post('/customerRegister', customerRegister);
@@ -34,6 +36,8 @@ router.post('/SMSLogin', sendSMS);
 router.post('/transportCompanyRegister', transportCompanyRegister);
 router.post('/getTruck', verifyToken, getTrucks);
 router.post('/getTrip', verifyToken, getTrip);
+router.post('/updateTrip', verifyToken, updateTrip);
+router.post('/updatePackage/mapping', verifyToken, updatePackageMaping);
 
 // router.post('/verifyJWT', verifyToken);
 

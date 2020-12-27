@@ -25,7 +25,8 @@ const tripRegister = async (req, res) => {
     // if insert function didn't return an error
     if (addTrip.command) {
         return res.json({ statusCode: 201,
-            message: 'trip registered' });
+            message: 'trip registered',
+            details: addTrip.rows });
     }
 
     return res.json({ statusCode: 400,

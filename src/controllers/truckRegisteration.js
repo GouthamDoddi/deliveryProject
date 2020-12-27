@@ -54,6 +54,7 @@ const truckRegister = async (req, res) => {
         return res.json({
             statusCode: 200,
             message: 'Truck added to database',
+            details: result.details,
         });
     }
 

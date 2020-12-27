@@ -21,7 +21,7 @@ const customerLogin = async (req, res) => {
     const result = await getCustomer(req.body.mobileNum);
     const secret = '!@#DWe$%^gge&&**';
 
-    console.log(result);
+    // console.log(result);
 
 
     if (!result.rowCount) {

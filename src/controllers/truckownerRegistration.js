@@ -1,8 +1,6 @@
 const { insertTruckowner } = require('../services/truckownerServices');
 // const { logger } = require('../middleware/logger');
 const winston = require('winston');
-const jwt = require('jsonwebtoken');
-const createOTP = require('../utils/createOTP');
 
 const encryptPassword = require('../middleware/encryptPass');
 
@@ -60,19 +58,9 @@ const truckOwnerRegister = async (req, res) => {
     if (addTruckowner.command === 'INSERT') {
         logger.info(`truckowner with no ${req.body.mobileNum} is registered`);
 
-        // create opt to return it to client in response
-        const otp = createOTP();
-
-        // create jwtToken and return it to client.
-        // client takes care of otp verification.
-        const token = jwt.sign({ sub: req.body.mobileNum }, secret, {
-            expiresIn: 86400, // expires in 24 hours
-        });
-
         return res.json({ statusCode: 201,
             message: 'User registered!',
-            otp,
-            token });
+            details: addTruckowner.rows });
     }
 
     return res.json({ statusCode: 400,

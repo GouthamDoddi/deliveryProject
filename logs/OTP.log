@@ -22,3 +22,9 @@
 {"message":"undefined recived and OTP 0830","level":"info","timestamp":"2020-12-23T00:42:20.610Z"}
 {"message":"79810743325 requested an otp.","level":"info","timestamp":"2020-12-24T00:58:55.212Z"}
 {"message":"undefined received and OTP 8824","level":"info","timestamp":"2020-12-24T00:58:55.268Z"}
+{"message":"79810743327 requested an otp.","level":"info","timestamp":"2020-12-27T09:04:16.113Z"}
+{"message":"79810743327 does not exist in either\n                customer or truckowner database","level":"info","timestamp":"2020-12-27T09:04:16.193Z"}
+{"message":"79810743311 requested an otp.","level":"info","timestamp":"2020-12-27T09:04:46.816Z"}
+{"message":"undefined received and OTP 5251","level":"info","timestamp":"2020-12-27T09:04:46.865Z"}
+{"message":"79810743311 requested an otp.","level":"info","timestamp":"2020-12-27T09:05:08.124Z"}
+{"message":"undefined received and OTP 7994","level":"info","timestamp":"2020-12-27T09:05:08.178Z"}

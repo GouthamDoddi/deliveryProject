@@ -31,3 +31,5 @@
 {"message":"received package register request for customer undefined","level":"info","timestamp":"2020-12-24T00:59:22.393Z"}
 {"message":"received package register request for customer undefined","level":"info","timestamp":"2020-12-24T01:02:28.582Z"}
 {"message":"received package register request for customer undefined","level":"info","timestamp":"2020-12-24T01:02:49.957Z"}
+{"message":"received package register request for customer 79810743311","level":"info","timestamp":"2020-12-27T09:05:23.559Z"}
+{"message":"received package register request for customer 79810743311","level":"info","timestamp":"2020-12-27T09:06:20.685Z"}

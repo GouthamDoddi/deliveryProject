@@ -48,4 +48,30 @@ const insertTrip = async tripDetails => {
     }
 };
 
-module.exports = { getTrips, insertTrip };
+const updateTripDetails = async tripDetails => {
+    const query = {
+        name: 'Update trip details',
+        text: `UPDATE "SUT".trip_details SET reach_date = $1,
+        total_packages = $2, delivered_packages = $3, trip_duration_in_hours = $4
+         WHERE (start_date = $5 AND truck_no = $6)`,
+        values: [
+            tripDetails.reachDate,
+            tripDetails.totalPackages,
+            tripDetails.deliveredPackages,
+            tripDetails.tripDurationInHours,
+            tripDetails.startDate,
+            tripDetails.truckNo,
+        ],
+    };
+
+    try {
+        return await pool.query(query);
+    } catch (error) {
+        console.log(error);
+
+        return error;
+    }
+};
+
+
+module.exports = { getTrips, insertTrip, updateTripDetails };

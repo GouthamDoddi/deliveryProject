@@ -49,7 +49,8 @@ const packageRegister = async (req, res) => {
     // if the insert function failed the it would return a false
     if (addTruck.command === 'INSERT') {
         return res.json({ statusCode: 201,
-            message: 'package registered!' });
+            message: 'package registered!',
+            details: addTruck.rows });
     }
 
     return res.json({ statusCode: 400,
