@@ -29,7 +29,8 @@ const updatePackageTruck = async details => {
         name: 'Update package mapping',
         text: `UPDATE "SUT".truck_package_maping SET truck_no=$1 
         WHERE package_id=$2`,
-        values: [ details.truckNo, details.packageId ],
+        values: [ details.truckNo,
+            details.packageId ],
     };
 
     try {
@@ -46,7 +47,8 @@ const updatePackageDeliveryStatus = async details => {
         name: 'Update package mapping',
         text: `UPDATE "SUT".truck_package_maping SET delivered=$1 
         WHERE package_id=$2`,
-        values: [ details.delivered, details.packageId ],
+        values: [ details.delivered,
+            details.packageId ],
     };
 
     try {

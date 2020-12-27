@@ -1,4 +1,5 @@
-const { updateTripDetails } = require('../services/tripServices');
+const { updateTripDetails, incrementTripPackageDelivered,
+    incrementTripPackageTotal } = require('../services/tripServices');
 
 const updateTrip = async (req, res) => {
     const { reachDate, totalPackages, deliveredPackages, tripDurationInHours,
@@ -28,4 +29,41 @@ const updateTrip = async (req, res) => {
     });
 };
 
-module.exports = updateTrip;
+const incrementDeliveredPackages = async (req, res) => {
+    const { tripId } = req.body;
+
+    const result = await incrementTripPackageDelivered(tripId);
+
+    if (!result.rowCount) {
+        return res.json({
+            statusCode: 400,
+            message: result.detail,
+        });
+    }
+
+    return res.json({
+        statusCode: 200,
+        message: 'info updated',
+    });
+};
+
+const incrementTotalPackages = async (req, res) => {
+    const { tripId } = req.body;
+
+    const result = await incrementTripPackageTotal(tripId);
+
+    if (!result.rowCount) {
+        return res.json({
+            statusCode: 400,
+            message: result.detail,
+        });
+    }
+
+    return res.json({
+        statusCode: 200,
+        message: 'info updated',
+    });
+};
+
+
+module.exports = { updateTrip, incrementDeliveredPackages, incrementTotalPackages };

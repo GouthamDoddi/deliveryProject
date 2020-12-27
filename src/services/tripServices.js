@@ -27,15 +27,15 @@ const insertTrip = async tripDetails => {
     const query = {
         name: 'insert user in db',
         text: `INSERT INTO "SUT".trip_details (truck_no, source, destination, start_date,
-                 reach_date,total_packages, delivered_packages, trip_duration_in_hours) VALUES($1, $2, $3, $4, $5, $6, $7, $8) RETURNING *`,
+                 reach_date, trip_duration_in_hours) VALUES($1, $2, $3, $4, $5, $6) RETURNING *`,
 
         values: [ tripDetails.truckNo,
             tripDetails.source,
             tripDetails.destination,
             tripDetails.startDate,
             tripDetails.reachDate,
-            tripDetails.totalPackages,
-            tripDetails.deliveredPackages,
+            // tripDetails.totalPackages,
+            // tripDetails.deliveredPackages,
             tripDetails.tripDurationInHours ],
     };
 
@@ -52,13 +52,11 @@ const updateTripDetails = async tripDetails => {
     const query = {
         name: 'Update trip details',
         text: `UPDATE "SUT".trip_details SET reach_date = $1,
-        total_packages = $2, delivered_packages = $3, trip_duration_in_hours = $4
+        trip_duration_in_hours = $4
          WHERE (start_date = $5 AND truck_no = $6)`,
         values: [
             tripDetails.reachDate,
             tripDetails.totalPackages,
-            tripDetails.deliveredPackages,
-            tripDetails.tripDurationInHours,
             tripDetails.startDate,
             tripDetails.truckNo,
         ],
@@ -73,5 +71,38 @@ const updateTripDetails = async tripDetails => {
     }
 };
 
+const incrementTripPackageDelivered = async tripId => {
+    const query = {
+        name: 'Update delivered packages',
+        text: `UPDATE "SUT".trip_details SET delivered_packages = delivered_packages + 1
+        WHERE trip_id = $1`,
+        values: [ tripId ],
+    };
 
-module.exports = { getTrips, insertTrip, updateTripDetails };
+    try {
+        return await pool.query(query);
+    } catch (error) {
+        console.log(error);
+
+        return error;
+    }
+};
+
+const incrementTripPackageTotal = async tripId => {
+    const query = {
+        name: 'Update delivered packages',
+        text: `UPDATE "SUT".trip_details SET total_packages = total_packages + 1
+        WHERE trip_id = $1`,
+        values: [ tripId ],
+    };
+
+    try {
+        return await pool.query(query);
+    } catch (error) {
+        console.log(error);
+
+        return error;
+    }
+};
+
+module.exports = { getTrips, insertTrip, updateTripDetails, incrementTripPackageDelivered, incrementTripPackageTotal };

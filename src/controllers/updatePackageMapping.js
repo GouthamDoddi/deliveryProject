@@ -1,14 +1,11 @@
 const { updatePackageTruck, updatePackageDeliveryStatus } = require('../services/truckPackageMappingServices');
 
 const updatePackageMaping = async (req, res) => {
-    const { delivered, truckNo } = req.body;
-
-    const details = {
-        delivered,
-        truckNo,
-    };
+    const { delivered, truckNo, packageId } = req.body;
 
     if (delivered) {
+        const details = { delivered, packageId };
+
         const result = await updatePackageDeliveryStatus(details);
 
         if (!result.rowCount) {
@@ -25,6 +22,8 @@ const updatePackageMaping = async (req, res) => {
     }
 
     if (truckNo) {
+        const details = { truckNo, packageId };
+
         const result = await updatePackageTruck(details);
 
         if (!result.rowCount) {
