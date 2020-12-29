@@ -37,9 +37,9 @@ router.post('/transportCompanyRegister', transportCompanyRegister);
 router.post('/getTruck', verifyToken, getTrucks);
 router.post('/getTrip', verifyToken, getTrip);
 router.post('/updateTrip', verifyToken, updateTrip);
-router.post('/updatePackage/mapping', verifyToken, updatePackageMaping);
-router.post('/incrementDeliveredPackages', verifyToken, incrementTotalPackages);
-router.post('/incrementTotalPackages', verifyToken, incrementDeliveredPackages);
+router.post('/updatePackageMapping', verifyToken, updatePackageMaping);
+router.post('/incrementDeliveredPackages', verifyToken, incrementDeliveredPackages);
+router.post('/incrementTotalPackages', verifyToken, incrementTotalPackages);
 
 
 // router.post('/verifyJWT', verifyToken);

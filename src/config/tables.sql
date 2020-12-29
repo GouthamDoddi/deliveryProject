@@ -84,7 +84,7 @@ CREATE TABLE "SUT".truck_package_maping
     mapping_id SERIAL,
     truck_no character varying NOT NULL,
     package_id integer NOT NULL,
-    delivered BOOLEAN,
+    delivered BOOLEAN DEFAULT FALSE,
     date date NOT NULL,
     CONSTRAINT truck_package_maping_pkey PRIMARY KEY (mapping_id),
     CONSTRAINT truck_package_maping_package_id_fkey FOREIGN KEY (package_id)

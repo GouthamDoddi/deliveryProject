@@ -28,3 +28,5 @@
 {"message":"undefined received and OTP 5251","level":"info","timestamp":"2020-12-27T09:04:46.865Z"}
 {"message":"79810743311 requested an otp.","level":"info","timestamp":"2020-12-27T09:05:08.124Z"}
 {"message":"undefined received and OTP 7994","level":"info","timestamp":"2020-12-27T09:05:08.178Z"}
+{"message":"79810743311 requested an otp.","level":"info","timestamp":"2020-12-29T04:05:46.908Z"}
+{"message":"undefined received and OTP 1920","level":"info","timestamp":"2020-12-29T04:05:47.054Z"}

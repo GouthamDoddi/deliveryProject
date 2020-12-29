@@ -2,13 +2,11 @@ const { updateTripDetails, incrementTripPackageDelivered,
     incrementTripPackageTotal } = require('../services/tripServices');
 
 const updateTrip = async (req, res) => {
-    const { reachDate, totalPackages, deliveredPackages, tripDurationInHours,
+    const { reachDate, tripDurationInHours,
         truckNo, startDate } = req.body;
 
     const tripDetails = {
         reachDate,
-        totalPackages,
-        deliveredPackages,
         tripDurationInHours,
         truckNo,
         startDate,

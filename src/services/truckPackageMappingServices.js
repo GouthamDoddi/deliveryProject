@@ -13,14 +13,12 @@ async function insertMapping (mappingDetails) {
         ],
     };
 
-    console.log('insert querry called');
-
     try {
         return await pool.query(query);
     } catch (error) {
         console.log(error);
 
-        return false;
+        return error;
     }
 }
 
@@ -38,7 +36,7 @@ const updatePackageTruck = async details => {
     } catch (error) {
         console.log(error);
 
-        return false;
+        return error;
     }
 };
 
@@ -56,7 +54,7 @@ const updatePackageDeliveryStatus = async details => {
     } catch (error) {
         console.log(error);
 
-        return false;
+        return error;
     }
 };
 
