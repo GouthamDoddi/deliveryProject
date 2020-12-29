@@ -58,7 +58,8 @@ const customerRegister = async (req, res) => {
 
         return res.status(201)
             .json({ statusCode: 200,
-                message: 'User registered!' });
+                message: 'User registered!',
+                details: addCustomer.rows });
     }
 
     return res.status(400)

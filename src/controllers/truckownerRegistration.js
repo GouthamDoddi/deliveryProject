@@ -38,8 +38,7 @@ const truckOwnerRegister = async (req, res) => {
     }
 
     const truckownerDetails = {
-        firstName: req.body.firstName,
-        lastName: req.body.lastName,
+        firstName: req.body.fullName,
         mobileNum: req.body.mobileNum,
         email: req.body.email,
         isKycEnabled: req.body.isKycEnabled,

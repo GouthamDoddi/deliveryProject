@@ -19,12 +19,11 @@ async function getTruckowner (mobileNumber) {
 async function insertTruckowner (truckownerDetails) {
     const query = {
         name: 'insert user in db',
-        text: `INSERT INTO "SUT".truck_owner (first_name, last_name, mobile_num, password, email,
+        text: `INSERT INTO "SUT".truck_owner (full_name, mobile_num, password, email,
                 is_kyc_enabled, aadhar_no, pan_no, addressline1, addressline2, city, state) 
-                VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING *`,
+                VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11 ) RETURNING *`,
         values: [
-            truckownerDetails.firstName,
-            truckownerDetails.lastName,
+            truckownerDetails.fullName,
             truckownerDetails.mobileNum,
             truckownerDetails.encryptedPassword,
             truckownerDetails.email,

@@ -79,7 +79,7 @@ CREATE TABLE "SUT".truck_owner
     CONSTRAINT truck_owner_pan_no_key UNIQUE (pan_no)
 )
 
-CREATE TABLE "SUT".truck_package_maping
+CREATE TABLE "SUT".truck_package_mapping
 (
     mapping_id SERIAL,
     truck_no character varying NOT NULL,
@@ -131,7 +131,7 @@ CREATE TABLE "SUT".truckdetails
 CREATE TABLE "SUT".transport_company
 (
     company_id SERIAL,
-    company_name VARCHAR NOT UNIQUE NULL,
+    company_name VARCHAR UNIQUE NOT NULL,
     mobile_num NUMERIC UNIQUE NOT NULL,
     no_of_vehicles INTEGER,
 )
