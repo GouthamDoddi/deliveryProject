@@ -18,7 +18,6 @@ const logger = winston.createLogger({
 });
 
 const truckOwnerRegister = async (req, res) => {
-    const secret = '!@#DWe$%^gge&&**';
     // get the customer details from req.body
 
     // using logger to record activity
@@ -38,7 +37,7 @@ const truckOwnerRegister = async (req, res) => {
     }
 
     const truckownerDetails = {
-        firstName: req.body.fullName,
+        fullName: req.body.fullName,
         mobileNum: req.body.mobileNum,
         email: req.body.email,
         isKycEnabled: req.body.isKycEnabled,
