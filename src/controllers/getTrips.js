@@ -1,5 +1,5 @@
 const { getTrips } = require('../services/tripServices');
-
+const parseIp = require('../middleware/praseIp');
 
 const getTrip = async (req, res) => {
     // using the data givin we need to find trucks
@@ -32,6 +32,7 @@ const getTrip = async (req, res) => {
         statusCode: 200,
         message: { numberOfTrip: trips.rowCount,
             tripDetails: trips.rows },
+        ipAddress: parseIp(req),
     });
 };
 

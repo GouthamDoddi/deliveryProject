@@ -40,7 +40,7 @@ CREATE TABLE "SUT".package_details
     CONSTRAINT package_details_pkey PRIMARY KEY (package_id),
     CONSTRAINT customer_mobile_num FOREIGN KEY (customer_mobile_num)
         REFERENCES "SUT".customer (mobile_num) MATCH SIMPLE
-        ON UPDATE NO ACTION
+        ON UPDATE CASCADE
         ON DELETE NO ACTION
 )
 
@@ -60,7 +60,7 @@ CREATE TABLE "SUT".trip_details
 
 CREATE TABLE "SUT".truck_owner
 (
-    customer_id SERIAL,
+    owner_id SERIAL,
     full_name VARCHAR NOT NULL,
     mobile_num numeric(12,0) NOT NULL,
     email character varying,
@@ -72,7 +72,7 @@ CREATE TABLE "SUT".truck_owner
     city character varying(50),
     state character varying(50),
     password character varying,
-    CONSTRAINT truck_owner_pkey PRIMARY KEY (customer_id),
+    CONSTRAINT truck_owner_pkey PRIMARY KEY (owner_id),
     CONSTRAINT truck_owner_aadhar_no_key UNIQUE (aadhar_no),
     CONSTRAINT truck_owner_email_key UNIQUE (email),
     CONSTRAINT truck_owner_mobile_num_key UNIQUE (mobile_num),
@@ -89,11 +89,11 @@ CREATE TABLE "SUT".truck_package_mapping
     CONSTRAINT truck_package_maping_pkey PRIMARY KEY (mapping_id),
     CONSTRAINT truck_package_maping_package_id_fkey FOREIGN KEY (package_id)
         REFERENCES "SUT".package_details (package_id) MATCH SIMPLE
-        ON UPDATE NO ACTION
+        ON UPDATE CASCADE
         ON DELETE NO ACTION,
     CONSTRAINT truck_package_maping_truck_no_fkey FOREIGN KEY (truck_package_maping_truck_no)
         REFERENCES "SUT".truckdetails (truck_no) MATCH SIMPLE
-        ON UPDATE NO ACTION
+        ON UPDATE CASCADE
         ON DELETE NO ACTION
 )
 
@@ -120,12 +120,12 @@ CREATE TABLE "SUT".truckdetails
     CONSTRAINT truckdetails_truck_no_key UNIQUE (truck_no),
     CONSTRAINT truckdetails_truckdriver_mobile_num_fkey FOREIGN KEY (truckowner_mobile_num)
         REFERENCES "SUT".truck_owner (mobile_num) MATCH SIMPLE
-        ON UPDATE NO ACTION
-        ON DELETE NO ACTION,
+        ON UPDATE CASCADE
+        ON DELETE CASCADE,
     CONSTRAINT transport_company_mobile_num_fkey FOREIGN KEY (transport_company_mobile_num)
         REFERENCES "SUT".transport_company (mobile_num) MATCH SIMPLE
-        ON UPDATE NO ACTION
-        ON DELETE NO ACTION
+        ON UPDATE CASCADE
+        ON DELETE CASCADE
 )
 
 CREATE TABLE "SUT".transport_company
@@ -134,7 +134,41 @@ CREATE TABLE "SUT".transport_company
     company_name VARCHAR UNIQUE NOT NULL,
     mobile_num NUMERIC UNIQUE NOT NULL,
     no_of_vehicles INTEGER,
+    CONSTRAINT transport_company_pkey PRIMARY KEY (company_id)
 )
+
+CREATE TABLE "SUT".delivery_partner_rating
+(
+    rating_id SERIAL,
+    truck_no varchar NOT NULL,
+    truck_owner_mobile_num numeric,
+    company_mobile_num numeric,
+    trip_id integer NOT NULL,
+    customer_mobile_num numeric NOT NULL,
+    rating integer NOT NULL,
+    CONSTRAINT delivery_partner_rating_pkey PRIMARY KEY (rating_id),
+    CONSTRAINT delivery_partner_rating_truck_no_fkey FOREIGN KEY (truck_no)
+        REFERENCES "SUT".truckdetails (truck_no) MATCH SIMPLE
+        ON UPDATE CASCADE
+        ON DELETE NO ACTION,
+    CONSTRAINT delivery_partner_rating_truck_owner_mobile_num_fkey FOREIGN KEY (truck_owner_mobile_num)
+        REFERENCES "SUT".truck_owner (mobile_num) MATCH SIMPLE
+        ON UPDATE CASCADE
+        ON DELETE NO ACTION,
+    CONSTRAINT delivery_partner_rating_company_mobile_num_fkey FOREIGN KEY (company_mobile_num)
+        REFERENCES "SUT".transport_company (mobile_num) MATCH SIMPLE
+        ON UPDATE CASCADE
+        ON DELETE NO ACTION,
+    CONSTRAINT delivery_partner_rating_trip_id_fkey FOREIGN KEY (trip_id)
+        REFERENCES "SUT".trip_details (trip_id) MATCH SIMPLE
+        ON UPDATE CASCADE
+        ON DELETE CASCADE,
+    CONSTRAINT delivery_partner_rating_customer_mobile_num_fkey FOREIGN KEY (customer_mobile_num)
+        REFERENCES "SUT".customer (mobile_num) MATCH SIMPLE
+        ON UPDATE CASCADE
+        ON DELETE NO ACTION
+)
+
 
 --ALTER TABLE "SUT".truckdetails
 --ADD CONSTRAINT transport_company_mobile_num_fkey FOREIGN KEY (transport_company_mobile_num)

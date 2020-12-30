@@ -2,6 +2,8 @@ const jwt = require('jsonwebtoken');
 const { getTruckowner } = require('../services/truckownerServices');
 const Bcrypt = require('bcrypt');
 const winston = require('winston');
+const parseIp = require('../middleware/praseIp');
+
 
 // log4js helps us to create a logfile which contains all the info related
 // loging activity. So we can can have data about all the activity that
@@ -60,13 +62,15 @@ const truckOwnerLogin = async (req, res) => {
                     statusCode: 200,
                     message: 'truckOwner authorized',
                     token,
+                    ipAddress: parseIp(req),
                 });
             }
             logger.info('truckOwner unauthorized!, 401');
 
             return res.json({ statusCode: 401,
                 error: 'truckOwner unothorized',
-                msg: 'invalid password' });
+                msg: 'invalid password',
+                ipAddress: parseIp(req) });
         },
     );
 };

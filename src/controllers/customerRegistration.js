@@ -2,6 +2,7 @@ const winston = require('winston');
 
 const { insertCustomer } = require('../services/customerServices');
 const encryptPassword = require('../middleware/encryptPass');
+const parseIp = require('../middleware/praseIp');
 
 const logger = winston.createLogger({
     transports: [
@@ -59,12 +60,14 @@ const customerRegister = async (req, res) => {
         return res.status(201)
             .json({ statusCode: 200,
                 message: 'User registered!',
-                details: addCustomer.rows });
+                details: addCustomer.rows,
+                ipAddress: parseIp(req) });
     }
 
     return res.status(400)
         .json({ statusCode: 400,
-            message: addCustomer.detail });
+            message: addCustomer.detail,
+            ipAddress: parseIp(req) });
 
 
     // const token = jwtCustomer(newUser.rows[0].customer_id);

@@ -3,6 +3,7 @@ const { insertTruckowner } = require('../services/truckownerServices');
 const winston = require('winston');
 
 const encryptPassword = require('../middleware/encryptPass');
+const parseIp = require('../middleware/praseIp');
 
 
 const logger = winston.createLogger({
@@ -58,11 +59,13 @@ const truckOwnerRegister = async (req, res) => {
 
         return res.json({ statusCode: 201,
             message: 'User registered!',
-            details: addTruckowner.rows });
+            details: addTruckowner.rows,
+            ipAddress: parseIp(req) });
     }
 
     return res.json({ statusCode: 400,
-        message: addTruckowner.detail });
+        message: addTruckowner.detail,
+        ipAddress: parseIp(req) });
 
 
     // const token = jwtTruckowner(newUser.rows[0].truckowner_id);

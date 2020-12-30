@@ -2,6 +2,8 @@ const winston = require('winston');
 
 const { insertTruck } = require('../services/truckServices');
 const getMobileNumber = require('../utils/getMobileNo');
+const parseIp = require('../middleware/praseIp');
+
 
 // define the logger function
 const logger = winston.createLogger({
@@ -55,6 +57,7 @@ const truckRegister = async (req, res) => {
             statusCode: 200,
             message: 'Truck added to database',
             details: result.details,
+            ipAddress: parseIp(req),
         });
     }
 
@@ -64,6 +67,7 @@ const truckRegister = async (req, res) => {
     return res.json({
         statusCode: 400,
         message: result.detail,
+        ipAddress: parseIp(req),
     });
 };
 

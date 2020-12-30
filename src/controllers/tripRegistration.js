@@ -1,4 +1,5 @@
 const { insertTrip } = require('../services/tripServices');
+const parseIp = require('../middleware/praseIp');
 
 
 const tripRegister = async (req, res) => {
@@ -26,11 +27,13 @@ const tripRegister = async (req, res) => {
     if (addTrip.command) {
         return res.json({ statusCode: 201,
             message: 'trip registered',
-            details: addTrip.rows });
+            details: addTrip.rows,
+            ipAddress: parseIp(req) });
     }
 
     return res.json({ statusCode: 400,
-        message: addTrip.detail });
+        message: addTrip.detail,
+        ipAddress: parseIp(req) });
 };
 
 module.exports = tripRegister;

@@ -1,5 +1,7 @@
 const { updateTripDetails, incrementTripPackageDelivered,
     incrementTripPackageTotal } = require('../services/tripServices');
+const parseIp = require('../middleware/praseIp');
+
 
 const updateTrip = async (req, res) => {
     const { reachDate, tripDurationInHours,
@@ -24,6 +26,7 @@ const updateTrip = async (req, res) => {
     return res.json({
         statusCode: 200,
         message: 'info updated',
+        ipAddress: parseIp(req),
     });
 };
 
@@ -42,6 +45,7 @@ const incrementDeliveredPackages = async (req, res) => {
     return res.json({
         statusCode: 200,
         message: 'info updated',
+        ipAddress: parseIp(req),
     });
 };
 
@@ -60,6 +64,7 @@ const incrementTotalPackages = async (req, res) => {
     return res.json({
         statusCode: 200,
         message: 'info updated',
+        ipAddress: parseIp(req),
     });
 };
 

@@ -1,6 +1,7 @@
 const winston = require('winston');
 
 const { insertTransportCompany } = require('../services/transportCompanyServices');
+const parseIp = require('../middleware/praseIp');
 
 
 const logger = winston.createLogger({
@@ -46,11 +47,13 @@ const transportCompanyRegister = async (req, res) => {
 
         return res.json({ statusCode: 201,
             message: 'Company registered!',
-            details: addCompany.rows });
+            details: addCompany.rows,
+            ipAddress: parseIp(req) });
     }
 
     return res.json({ statusCode: 400,
-        message: addCompany.detail });
+        message: addCompany.detail,
+        ipAddress: parseIp(req) });
 
 
     // const token = jwtTruckowner(newUser.rows[0].truckowner_id);

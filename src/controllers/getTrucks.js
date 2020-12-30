@@ -1,5 +1,6 @@
 const { getTrucksForOwner, getTruck } = require('../services/truckServices');
 const getMobileNumber = require('../utils/getMobileNo');
+const parseIp = require('../middleware/praseIp');
 
 
 const getTrucks = async (req, res) => {
@@ -21,6 +22,7 @@ const getTrucks = async (req, res) => {
             return res.json({
                 statusCode: 200,
                 message: trucks.rows,
+                ipAddress: parseIp(req),
             });
         }
 
@@ -39,6 +41,7 @@ const getTrucks = async (req, res) => {
         return res.json({
             statusCode: 200,
             trucks,
+            ipAddress: parseIp(req),
         });
     }
 

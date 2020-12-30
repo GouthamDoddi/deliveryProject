@@ -2,6 +2,7 @@ const { updateTruckWeightandSpace } = require('../services/truckServices');
 const { getPackage } = require('../services/packageServices');
 const { getTruck } = require('../services/truckServices');
 const { insertMapping } = require('../services/truckPackageMappingServices');
+const parseIp = require('../middleware/praseIp');
 
 
 const assignPackage = async (req, res) => {
@@ -70,6 +71,7 @@ const assignPackage = async (req, res) => {
     return res.json({
         statusCode: 400,
         message: packageMapping.detail,
+        ipAddress: parseIp(req),
     });
 };
 

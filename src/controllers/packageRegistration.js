@@ -2,7 +2,7 @@ const winston = require('winston');
 
 const { insertPackage } = require('../services/packageServices');
 const getMobileNumber = require('../utils/getMobileNo');
-
+const parseIp = require('../middleware/praseIp');
 
 const logger = winston.createLogger({
     transports: [
@@ -50,7 +50,8 @@ const packageRegister = async (req, res) => {
     if (addTruck.command === 'INSERT') {
         return res.json({ statusCode: 201,
             message: 'package registered!',
-            details: addTruck.rows });
+            details: addTruck.rows,
+            ipAddress: parseIp(req) });
     }
 
     return res.json({ statusCode: 400,

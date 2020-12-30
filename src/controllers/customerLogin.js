@@ -2,6 +2,7 @@ const jwt = require('jsonwebtoken');
 const { getCustomer } = require('../services/customerServices');
 const Bcrypt = require('bcrypt');
 const winston = require('winston');
+const parseIp = require('../middleware/praseIp');
 
 // create th logger object
 const logger = winston.createLogger({
@@ -63,7 +64,8 @@ const customerLogin = async (req, res) => {
 
             return res.json({ statusCode: 401,
                 error: 'User unauthorized',
-                msg: 'invalid password' });
+                msg: 'invalid password',
+                ipAddress: parseIp(req) });
         },
     );
 };

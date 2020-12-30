@@ -1,4 +1,5 @@
 const { updatePackageTruck, updatePackageDeliveryStatus } = require('../services/truckPackageMappingServices');
+const parseIp = require('../middleware/praseIp');
 
 const updatePackageMaping = async (req, res) => {
     const { delivered, truckNo, packageId } = req.body;
@@ -30,12 +31,14 @@ const updatePackageMaping = async (req, res) => {
             return res.json({
                 status: 400,
                 details: result.detail,
+                ipAddress: parseIp(req),
             });
         }
 
         return res.json({
             statusCode: 200,
             message: 'Info updated',
+            ipAddress: parseIp(req),
         });
     }
 

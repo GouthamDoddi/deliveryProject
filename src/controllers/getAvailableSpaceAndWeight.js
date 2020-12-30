@@ -1,4 +1,5 @@
 const { getTruck } = require('../services/truckServices');
+const parseIp = require('../middleware/praseIp');
 
 const getAvailableSpaceAndWeight = async (req, res) => {
     // lest use truck no to get the space available in truck
@@ -14,6 +15,7 @@ const getAvailableSpaceAndWeight = async (req, res) => {
             statsCode: 200,
             availableWeight: totalWeight - bookedWeight,
             availableSpace: totalSpace - bookedSapce,
+            ipAddress: parseIp(req),
         });
     }
 

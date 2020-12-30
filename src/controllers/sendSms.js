@@ -5,6 +5,8 @@ const createOTP = require('../utils/createOTP');
 const { getCustomer } = require('../services/customerServices');
 const { getTruckowner } = require('../services/truckownerServices');
 const { getTransportCompany } = require('../services/transportCompanyServices');
+const parseIp = require('../middleware/praseIp');
+
 
 const logger = winston.createLogger({
     transports: [
@@ -60,6 +62,7 @@ const sendSMS = async (req, res) => {
         statusCode: 200,
         otp,
         token,
+        ipAddress: parseIp(req),
     });
 };
 

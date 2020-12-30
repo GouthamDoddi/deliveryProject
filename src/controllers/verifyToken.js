@@ -1,5 +1,6 @@
 const verifyJWT = require('../middleware/verifyJWT');
 const winston = require('winston');
+const parseIp = require('../middleware/praseIp');
 
 
 const logger = winston.createLogger({
@@ -33,6 +34,7 @@ const verifyToken = async (req, res, next) => {
         return res.json({
             statusCode: 403,
             message: result[1],
+            ipAddress: parseIp(req),
         });
     }
 
