@@ -53,12 +53,12 @@ const updateTripDetails = async tripDetails => {
         name: 'Update trip details',
         text: `UPDATE "SUT".trip_details SET reach_date = $1,
         trip_duration_in_hours = $2, start_date = $3
-         WHERE (truck_no = $4)`,
+         WHERE (trip_id = $4)`,
         values: [
             tripDetails.reachDate,
             tripDetails.tripDurationInHours,
             tripDetails.startDate,
-            tripDetails.truckNo,
+            tripDetails.tripId,
         ],
     };
 

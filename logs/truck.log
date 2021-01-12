@@ -8,3 +8,4 @@
 {"message":"added truck with no = AP31EJ704 by user with mobileNo=79810743325","level":"info","timestamp":"2020-12-24T01:18:21.925Z"}
 {"message":"Failed! Couldn't add added truck with no = AP31EJ704 by user with mobileNo=79810743325","level":"info","timestamp":"2020-12-24T08:43:14.583Z"}
 {"message":"added truck with no = AP31EJ705 by user with mobileNo=79810743325","level":"info","timestamp":"2020-12-24T08:43:34.223Z"}
+{"message":"Failed! Couldn't add added truck with no = undefined by user with mobileNo=79810743311","level":"info","timestamp":"2021-01-11T13:21:28.263Z"}

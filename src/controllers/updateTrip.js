@@ -5,12 +5,12 @@ const parseIp = require('../middleware/praseIp');
 
 const updateTrip = async (req, res) => {
     const { reachDate, tripDurationInHours,
-        truckNo, startDate } = req.body;
+        tripId, startDate } = req.body;
 
     const tripDetails = {
         reachDate,
         tripDurationInHours,
-        truckNo,
+        tripId,
         startDate,
     };
 

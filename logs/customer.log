@@ -33,3 +33,8 @@
 {"message":"Customer with mobile number  79810743325 registered","level":"info","timestamp":"2020-12-13T09:21:17.228Z"}
 {"message":"recived register request from customer with mobile number 79810743325","level":"info","timestamp":"2020-12-13T09:21:49.634Z"}
 {"message":"recived register request from customer with mobile number 79810743325","level":"info","timestamp":"2020-12-13T09:22:03.432Z"}
+{"message":"received register request from customer with mobile number 79810743318","level":"info","timestamp":"2021-01-06T07:23:32.915Z"}
+{"message":"received register request from customer with mobile number 79810743310","level":"info","timestamp":"2021-01-06T07:23:40.348Z"}
+{"message":"Customer with mobile number  79810743310 registered","level":"info","timestamp":"2021-01-06T07:23:40.414Z"}
+{"message":"received register request from customer with mobile number 79810743310","level":"info","timestamp":"2021-01-06T09:35:28.296Z"}
+{"message":"received register request from customer with mobile number 79810743311","level":"info","timestamp":"2021-01-06T09:35:40.631Z"}

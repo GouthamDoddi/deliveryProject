@@ -23,6 +23,8 @@ const truckRegister = async (req, res) => {
     // getting mobile number from decoding the token
     const mobileNum = await getMobileNumber(req.headers.authorization);
 
+    console.log(req);
+
     const bookedWeight = req.body.bookedWeight
         ? req.body.bookedWeight
         : 0;
