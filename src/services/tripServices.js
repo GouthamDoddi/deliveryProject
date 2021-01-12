@@ -63,7 +63,11 @@ const updateTripDetails = async tripDetails => {
     };
 
     try {
-        return await pool.query(query);
+        const result = await pool.query(query);
+
+        console.log(result);
+
+        return result;
     } catch (error) {
         console.log(error);
 

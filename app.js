@@ -5,11 +5,13 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const bodyParser = require('body-parser');
 const fileUpload = require('express-fileupload');
-// const jwt = require('express-jwt');
+const cors = require('cors');
 
 // const secret = '!@#DWe$%^gge&&**';
 
 const app = express();
+
+app.use(cors());
 
 // create application/json parser
 // const jsonParser = bodyParser.json();

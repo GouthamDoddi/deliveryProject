@@ -54,6 +54,8 @@ const incrementTotalPackages = async (req, res) => {
 
     const result = await incrementTripPackageTotal(tripId);
 
+    console.log(result);
+
     if (!result.rowCount) {
         return res.json({
             statusCode: 400,
