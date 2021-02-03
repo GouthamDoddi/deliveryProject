@@ -66,7 +66,7 @@ const sendSMS = async (req, res) => {
     return res.json({
         statusCode: 200,
         customerDetails: result1.rows,
-        truckOwner: result1.rows,
+        truckOwner: result2.rows,
         transportOwner: result3.rows,
         otp,
         token,
