@@ -18,7 +18,8 @@ const logger = winston.createLogger({
 
 const transportCompanyRegister = async (req, res) => {
     // using logger to record activity
-    logger.info(`received register request from transportCompany ${req.body.companyName}`);
+    logger.info(`received register request from transportCompany ${req.body.companyName}
+    and id address = ${parseIp(req)} `);
 
 
     // using one line promises lets encrypt the password and

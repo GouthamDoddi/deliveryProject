@@ -3,6 +3,7 @@ const winston = require('winston');
 const { insertCustomer } = require('../services/customerServices');
 const encryptPassword = require('../middleware/encryptPass');
 const parseIp = require('../middleware/praseIp');
+const createOTP = require('../utils/createOTP');
 
 const logger = winston.createLogger({
     transports: [
@@ -17,10 +18,12 @@ const logger = winston.createLogger({
 });
 
 const customerRegister = async (req, res) => {
+    const otp = createOTP();
     // get the customer details from req.body
 
     // using logger to record activity
-    logger.info(`received register request from customer with mobile number ${req.body.mobileNum}`);
+    logger.info(`received register request from customer with mobile number ${req.body.mobileNum} 
+    and id address = ${parseIp(req)} `);
 
 
     // using one line promises lets encrypt the password and
@@ -60,7 +63,7 @@ const customerRegister = async (req, res) => {
         return res.status(201)
             .json({ statusCode: 200,
                 message: 'User registered!',
-                details: addCustomer.rows,
+                details: [ ...addCustomer.rows, otp ],
                 ipAddress: parseIp(req) });
     }
 

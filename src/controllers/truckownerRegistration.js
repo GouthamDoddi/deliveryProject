@@ -22,7 +22,8 @@ const truckOwnerRegister = async (req, res) => {
     // get the customer details from req.body
 
     // using logger to record activity
-    logger.info(`recived register request from truck owner with mobile number ${req.body.mobileNum}`);
+    logger.info(`recived register request from truck owner with mobile number ${req.body.mobileNum}
+    and id address = ${parseIp(req)} `);
 
 
     // using one line promises lets encrypt the password and

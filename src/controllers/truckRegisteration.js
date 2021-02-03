@@ -53,7 +53,8 @@ const truckRegister = async (req, res) => {
 
 
     if (result.command === 'INSERT') {
-        logger.info(`added truck with no = ${truckDetails.truckNo} by user with mobileNo=${mobileNum}`);
+        logger.info(`added truck with no = ${truckDetails.truckNo} by user with mobileNo=${mobileNum}
+        and id address = ${parseIp(req)} `);
 
         return res.json({
             statusCode: 200,

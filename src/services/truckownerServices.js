@@ -16,6 +16,22 @@ async function getTruckowner (mobileNumber) {
     }
 }
 
+async function getTruckownerWithId (ownerId) {
+    const query = {
+        name: 'Check truckowner exists',
+        text: 'SELECT * FROM "SUT".truck_owner WHERE owner_id = $1',
+        values: [ ownerId ],
+    };
+
+    try {
+        return await pool.query(query);
+    } catch (error) {
+        console.log(error);
+
+        return error;
+    }
+}
+
 async function insertTruckowner (truckownerDetails) {
     const query = {
         name: 'insert user in db',
@@ -46,4 +62,4 @@ async function insertTruckowner (truckownerDetails) {
     }
 }
 
-module.exports = { insertTruckowner, getTruckowner };
+module.exports = { insertTruckowner, getTruckownerWithId, getTruckowner };

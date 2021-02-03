@@ -52,7 +52,7 @@ CREATE TABLE "SUT".trip_details
     destination character varying NOT NULL,
     start_date TIMESTAMP NOT NULL,
     reach_date TIMESTAMP,
-    total_packages NUMERIC SET DEFAULT 0,
+    total_packages NUMERIC DEFAULT 0,
     delivered_packages INTEGER DEFAULT 0,
     trip_duration_in_hours character varying,
     CONSTRAINT trip_details_pkey PRIMARY KEY (trip_id)

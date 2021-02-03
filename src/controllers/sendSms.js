@@ -29,20 +29,25 @@ const sendSMS = async (req, res) => {
 
     const result1 = await getCustomer(req.body.mobileNum);
 
-    if (!result1.rowCount) {
-        const result2 = await getTruckowner(req.body.mobileNum);
+    console.log(result1);
 
-        if (!result2.rowCount) {
-            const result3 = await getTransportCompany(req.body.mobileNum);
 
-            if (!result3.rowCount) {
-                console.log('No user found');
-                logger.info(`${req.body.mobileNum} does not exist in either
+    const result2 = await getTruckowner(req.body.mobileNum);
+
+    console.log(result2);
+
+    if (!result2.rowCount) {
+        var result3 = await getTransportCompany(req.body.mobileNum);
+
+        console.log(result3);
+
+        if (!result3.rowCount && !result1.rowCount) {
+            console.log('No user found');
+            logger.info(`${req.body.mobileNum} does not exist in either
                 customer or truckowner database`);
 
-                return res.json({ statusCode: 404,
-                    message: 'Error! User is not found.' });
-            }
+            return res.json({ statusCode: 404,
+                message: 'Error! User is not found.' });
         }
     }
 
@@ -60,6 +65,9 @@ const sendSMS = async (req, res) => {
 
     return res.json({
         statusCode: 200,
+        customerDetails: result1.rows,
+        truckOwner: result1.rows,
+        transportOwner: result3.rows,
         otp,
         token,
         ipAddress: parseIp(req),

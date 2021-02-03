@@ -23,6 +23,7 @@ const { updateTrip, incrementDeliveredPackages, incrementTotalPackages } = requi
 const updatePackageMaping = require('../controllers/updatePackageMapping');
 const getTruckRating = require('../controllers/getTruckRating');
 const addRating = require('../controllers/addRating');
+const { getCustomerDetails, getTruckOwnerDetails, getTransportCompanyDetails } = require('../controllers/getDetails');
 
 
 router.post('/customerRegister', customerRegister);
@@ -44,6 +45,9 @@ router.post('/incrementDeliveredPackages', verifyToken, incrementDeliveredPackag
 router.post('/incrementTotalPackages', verifyToken, incrementTotalPackages);
 router.post('/addRating', verifyToken, addRating);
 router.post('/getTruckRating', verifyToken, getTruckRating);
+router.post('/getCustomer', verifyToken, getCustomerDetails);
+router.post('/getTruckOwner', verifyToken, getTruckOwnerDetails);
+router.post('/getTransportCompany', verifyToken, getTransportCompanyDetails);
 
 
 // router.post('/verifyJWT', verifyToken);

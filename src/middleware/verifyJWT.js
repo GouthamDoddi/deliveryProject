@@ -4,11 +4,9 @@ const secret = '!@#DWe$%^gge&&**';
 function verifyJWT (token) {
     try {
         return jwt.verify(token, secret, (err, data) => {
-            if (err) {
-                console.log(err);
-
+            if (err)
                 return [ false, err ];
-            }
+
 
             return [ true, data ];
         });

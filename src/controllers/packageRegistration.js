@@ -20,7 +20,8 @@ const packageRegister = async (req, res) => {
     // get the truck owner details from req.body
 
     // using logger to record activity
-    logger.info(`received package register request for customer ${req.body.mobileNum}`);
+    logger.info(`received package register request for customer ${req.body.mobileNum} 
+    and id address = ${parseIp(req)} `);
 
     // using jwt let's get  the user's mobile no
 

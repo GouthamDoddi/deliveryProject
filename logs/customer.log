@@ -38,3 +38,100 @@
 {"message":"Customer with mobile number  79810743310 registered","level":"info","timestamp":"2021-01-06T07:23:40.414Z"}
 {"message":"received register request from customer with mobile number 79810743310","level":"info","timestamp":"2021-01-06T09:35:28.296Z"}
 {"message":"received register request from customer with mobile number 79810743311","level":"info","timestamp":"2021-01-06T09:35:40.631Z"}
+{"message":"received register request from customer with mobile number undefined","level":"info","timestamp":"2021-01-12T10:31:40.962Z"}
+{"message":"received register request from customer with mobile number undefined","level":"info","timestamp":"2021-01-12T10:33:26.246Z"}
+{"message":"received register request from customer with mobile number undefined","level":"info","timestamp":"2021-01-12T10:34:10.737Z"}
+{"message":"received register request from customer with mobile number undefined","level":"info","timestamp":"2021-01-12T10:36:16.438Z"}
+{"message":"received register request from customer with mobile number undefined","level":"info","timestamp":"2021-01-12T10:37:09.823Z"}
+{"message":"received register request from customer with mobile number undefined","level":"info","timestamp":"2021-01-12T10:43:34.691Z"}
+{"message":"received register request from customer with mobile number undefined","level":"info","timestamp":"2021-01-13T05:55:42.368Z"}
+{"message":"received register request from customer with mobile number 7981075481","level":"info","timestamp":"2021-01-13T05:57:33.495Z"}
+{"message":"Customer with mobile number  7981075481 registered","level":"info","timestamp":"2021-01-13T05:57:33.579Z"}
+{"message":"received register request from customer with mobile number 7981075481","level":"info","timestamp":"2021-01-13T06:03:21.430Z"}
+{"message":"received register request from customer with mobile number 7981075481","level":"info","timestamp":"2021-01-13T06:03:23.990Z"}
+{"message":"received register request from customer with mobile number 7981075481","level":"info","timestamp":"2021-01-13T06:03:54.462Z"}
+{"message":"received register request from customer with mobile number 7981075481","level":"info","timestamp":"2021-01-13T06:04:17.748Z"}
+{"message":"received register request from customer with mobile number 7981075481","level":"info","timestamp":"2021-01-13T06:04:35.021Z"}
+{"message":"received register request from customer with mobile number 7981075481","level":"info","timestamp":"2021-01-13T06:05:05.786Z"}
+{"message":"received register request from customer with mobile number 7981075480","level":"info","timestamp":"2021-01-13T06:05:24.017Z"}
+{"message":"Customer with mobile number  7981075480 registered","level":"info","timestamp":"2021-01-13T06:05:24.141Z"}
+{"message":"received register request from customer with mobile number 7981079810","level":"info","timestamp":"2021-01-13T09:00:17.748Z"}
+{"message":"Customer with mobile number  7981079810 registered","level":"info","timestamp":"2021-01-13T09:00:17.852Z"}
+{"message":"received register request from customer with mobile number 1234567890","level":"info","timestamp":"2021-01-13T11:44:42.772Z"}
+{"message":"Customer with mobile number  1234567890 registered","level":"info","timestamp":"2021-01-13T11:44:43.059Z"}
+{"message":"received register request from customer with mobile number 1234567890","level":"info","timestamp":"2021-01-13T11:53:29.685Z"}
+{"message":"received register request from customer with mobile number 1234567890","level":"info","timestamp":"2021-01-13T11:55:02.509Z"}
+{"message":"received register request from customer with mobile number 1234567891","level":"info","timestamp":"2021-01-13T11:55:12.214Z"}
+{"message":"Customer with mobile number  1234567891 registered","level":"info","timestamp":"2021-01-13T11:55:12.278Z"}
+{"message":"received register request from customer with mobile number 1234567891","level":"info","timestamp":"2021-01-13T11:55:15.869Z"}
+{"message":"received register request from customer with mobile number 1234567812","level":"info","timestamp":"2021-01-13T11:55:23.297Z"}
+{"message":"Customer with mobile number  1234567812 registered","level":"info","timestamp":"2021-01-13T11:55:23.414Z"}
+{"message":"received register request from customer with mobile number 1234567812","level":"info","timestamp":"2021-01-13T11:55:24.195Z"}
+{"message":"received register request from customer with mobile number 1234560000","level":"info","timestamp":"2021-01-13T11:55:37.578Z"}
+{"message":"Customer with mobile number  1234560000 registered","level":"info","timestamp":"2021-01-13T11:55:37.649Z"}
+{"message":"received register request from customer with mobile number 1234560000","level":"info","timestamp":"2021-01-13T11:55:40.561Z"}
+{"message":"received register request from customer with mobile number 1234560000","level":"info","timestamp":"2021-01-13T11:56:54.581Z"}
+{"message":"received register request from customer with mobile number 1234569999","level":"info","timestamp":"2021-01-13T11:57:02.964Z"}
+{"message":"Customer with mobile number  1234569999 registered","level":"info","timestamp":"2021-01-13T11:57:03.066Z"}
+{"message":"received register request from customer with mobile number 1234569999","level":"info","timestamp":"2021-01-13T11:57:07.188Z"}
+{"message":"received register request from customer with mobile number 1234569990","level":"info","timestamp":"2021-01-13T11:57:37.357Z"}
+{"message":"Customer with mobile number  1234569990 registered","level":"info","timestamp":"2021-01-13T11:57:37.473Z"}
+{"message":"received register request from customer with mobile number 1234569990","level":"info","timestamp":"2021-01-13T11:58:17.494Z"}
+{"message":"received register request from customer with mobile number 1234569990","level":"info","timestamp":"2021-01-13T12:11:43.379Z"}
+{"message":"received register request from customer with mobile number 1234569990","level":"info","timestamp":"2021-01-13T12:12:39.333Z"}
+{"message":"received register request from customer with mobile number 1234569990","level":"info","timestamp":"2021-01-13T12:15:25.370Z"}
+{"message":"received register request from customer with mobile number 1234569991","level":"info","timestamp":"2021-01-13T12:15:32.148Z"}
+{"message":"Customer with mobile number  1234569991 registered","level":"info","timestamp":"2021-01-13T12:15:32.260Z"}
+{"message":"received register request from customer with mobile number 1234569991","level":"info","timestamp":"2021-01-13T12:16:45.115Z"}
+{"message":"received register request from customer with mobile number ","level":"info","timestamp":"2021-01-13T12:17:06.370Z"}
+{"message":"received register request from customer with mobile number 142538949291","level":"info","timestamp":"2021-01-13T12:17:22.981Z"}
+{"message":"Customer with mobile number  142538949291 registered","level":"info","timestamp":"2021-01-13T12:17:23.057Z"}
+{"message":"received register request from customer with mobile number ","level":"info","timestamp":"2021-01-13T12:33:30.807Z"}
+{"message":"received register request from customer with mobile number ","level":"info","timestamp":"2021-01-13T12:33:37.913Z"}
+{"message":"received register request from customer with mobile number 7981075481","level":"info","timestamp":"2021-01-13T12:33:59.683Z"}
+{"message":"received register request from customer with mobile number 1234512345","level":"info","timestamp":"2021-01-13T12:34:23.471Z"}
+{"message":"Customer with mobile number  1234512345 registered","level":"info","timestamp":"2021-01-13T12:34:23.583Z"}
+{"message":"received register request from customer with mobile number 1234512345","level":"info","timestamp":"2021-01-13T12:35:42.631Z"}
+{"message":"received register request from customer with mobile number 1234512321","level":"info","timestamp":"2021-01-13T12:39:48.360Z"}
+{"message":"Customer with mobile number  1234512321 registered","level":"info","timestamp":"2021-01-13T12:39:48.528Z"}
+{"message":"received register request from customer with mobile number 1234554321","level":"info","timestamp":"2021-01-13T12:41:16.816Z"}
+{"message":"Customer with mobile number  1234554321 registered","level":"info","timestamp":"2021-01-13T12:41:16.923Z"}
+{"message":"received register request from customer with mobile number 1234567543","level":"info","timestamp":"2021-01-13T12:43:14.689Z"}
+{"message":"Customer with mobile number  1234567543 registered","level":"info","timestamp":"2021-01-13T12:43:14.841Z"}
+{"message":"received register request from customer with mobile number 9876543261","level":"info","timestamp":"2021-01-13T12:44:00.782Z"}
+{"message":"Customer with mobile number  9876543261 registered","level":"info","timestamp":"2021-01-13T12:44:00.871Z"}
+{"message":"received register request from customer with mobile number 9876543261","level":"info","timestamp":"2021-01-13T12:45:54.875Z"}
+{"message":"received register request from customer with mobile number 9876543261","level":"info","timestamp":"2021-01-13T12:46:15.621Z"}
+{"message":"received register request from customer with mobile number 9876543261","level":"info","timestamp":"2021-01-13T12:46:37.930Z"}
+{"message":"received register request from customer with mobile number 9876543261","level":"info","timestamp":"2021-01-13T12:47:46.461Z"}
+{"message":"received register request from customer with mobile number 9876543261","level":"info","timestamp":"2021-01-13T12:47:48.883Z"}
+{"message":"received register request from customer with mobile number 9876543261","level":"info","timestamp":"2021-01-13T12:47:52.312Z"}
+{"message":"received register request from customer with mobile number 9876543261","level":"info","timestamp":"2021-01-13T12:47:59.883Z"}
+{"message":"received register request from customer with mobile number 9876543266","level":"info","timestamp":"2021-01-13T12:48:06.231Z"}
+{"message":"Customer with mobile number  9876543266 registered","level":"info","timestamp":"2021-01-13T12:48:06.325Z"}
+{"message":"received register request from customer with mobile number 9876543266","level":"info","timestamp":"2021-01-13T12:48:25.051Z"}
+{"message":"received register request from customer with mobile number 9876543268","level":"info","timestamp":"2021-01-13T12:48:36.213Z"}
+{"message":"Customer with mobile number  9876543268 registered","level":"info","timestamp":"2021-01-13T12:48:36.366Z"}
+{"message":"received register request from customer with mobile number 9876543268","level":"info","timestamp":"2021-01-13T12:49:34.764Z"}
+{"message":"received register request from customer with mobile number 9876543260","level":"info","timestamp":"2021-01-13T12:49:38.886Z"}
+{"message":"Customer with mobile number  9876543260 registered","level":"info","timestamp":"2021-01-13T12:49:38.996Z"}
+{"message":"received register request from customer with mobile number 0987654321","level":"info","timestamp":"2021-01-15T02:59:49.220Z"}
+{"message":"Customer with mobile number  0987654321 registered","level":"info","timestamp":"2021-01-15T02:59:49.330Z"}
+{"message":"received register request from customer with mobile number 0987654321","level":"info","timestamp":"2021-01-15T03:02:14.365Z"}
+{"message":"received register request from customer with mobile number 0987654320","level":"info","timestamp":"2021-01-15T03:02:19.317Z"}
+{"message":"Customer with mobile number  0987654320 registered","level":"info","timestamp":"2021-01-15T03:02:19.351Z"}
+{"message":"received register request from customer with mobile number 0987654329","level":"info","timestamp":"2021-01-15T03:03:02.042Z"}
+{"message":"Customer with mobile number  0987654329 registered","level":"info","timestamp":"2021-01-15T03:03:02.076Z"}
+{"message":"received register request from customer with mobile number 0987654329","level":"info","timestamp":"2021-01-15T03:03:14.345Z"}
+{"message":"received register request from customer with mobile number 0987654329","level":"info","timestamp":"2021-01-15T03:20:24.532Z"}
+{"message":"received register request from customer with mobile number 0987654325","level":"info","timestamp":"2021-01-15T03:20:33.572Z"}
+{"message":"Customer with mobile number  0987654325 registered","level":"info","timestamp":"2021-01-15T03:20:33.615Z"}
+{"message":"received register request from customer with mobile number 0987654324","level":"info","timestamp":"2021-01-15T03:26:18.535Z"}
+{"message":"Customer with mobile number  0987654324 registered","level":"info","timestamp":"2021-01-15T03:26:18.620Z"}
+{"message":"received register request from customer with mobile number 8976855555","level":"info","timestamp":"2021-01-17T09:15:35.354Z"}
+{"message":"Customer with mobile number  8976855555 registered","level":"info","timestamp":"2021-01-17T09:15:35.460Z"}
+{"message":"received register request from customer with mobile number 7981075555","level":"info","timestamp":"2021-01-17T09:21:16.994Z"}
+{"message":"Customer with mobile number  7981075555 registered","level":"info","timestamp":"2021-01-17T09:21:17.080Z"}
+{"message":"received register request from customer with mobile number 7981075444","level":"info","timestamp":"2021-01-17T09:25:59.957Z"}
+{"message":"Customer with mobile number  7981075444 registered","level":"info","timestamp":"2021-01-17T09:26:00.142Z"}
+{"message":"received register request from customer with mobile number 7981075481","level":"info","timestamp":"2021-02-03T04:08:23.131Z"}

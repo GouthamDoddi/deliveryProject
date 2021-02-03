@@ -2,12 +2,33 @@ const pool = require('../config/db');
 
 async function getTransportCompany (mobileNumber) {
     const query = {
-        name: 'Check customer exists',
+        name: 'Check transport owner exists',
         text: 'SELECT * FROM "SUT".transport_company WHERE mobile_num = $1',
         values: [ mobileNumber ],
     };
 
-    console.log(`select query called! ${mobileNumber}`);
+
+    try {
+        return await pool.query(query);
+
+        // console.log(`query result is ${result}`);
+
+        // return result.rows.length;
+    } catch (error) {
+        console.log(error);
+
+        return error;
+    }
+}
+
+async function getTransportCompanyWithId (companyId) {
+    const query = {
+        name: 'Check transport owner exists',
+        text: 'SELECT * FROM "SUT".transport_company WHERE company_id = $1',
+        values: [ companyId ],
+    };
+
+    // console.log(`select query called! ${mobileNumber}`);
 
     try {
         return await pool.query(query);
@@ -43,4 +64,4 @@ const insertTransportCompany = async transportCompany => {
     }
 };
 
-module.exports = { insertTransportCompany, getTransportCompany };
+module.exports = { insertTransportCompany, getTransportCompanyWithId, getTransportCompany };

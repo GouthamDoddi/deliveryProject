@@ -7,7 +7,28 @@ async function getCustomer (mobileNumber) {
         values: [ mobileNumber ],
     };
 
-    console.log(`select query called! ${mobileNumber}`);
+
+    try {
+        return await pool.query(query);
+
+        // console.log(`query result is ${result}`);
+
+        // return result.rows.length;
+    } catch (error) {
+        console.log(error);
+
+        return error;
+    }
+}
+
+async function getCustomerWithId (id) {
+    const query = {
+        name: 'Check customer exists',
+        text: 'SELECT * FROM "SUT".customer WHERE customer_id = $1',
+        values: [ id ],
+    };
+
+    // console.log(`customer select query called!  with id = ${id}`);
 
     try {
         return await pool.query(query);
@@ -53,4 +74,4 @@ async function insertCustomer (customerDetails) {
     }
 }
 
-module.exports = { getCustomer, insertCustomer };
+module.exports = { getCustomer, getCustomerWithId, insertCustomer };
