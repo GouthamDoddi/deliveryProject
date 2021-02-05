@@ -2,6 +2,7 @@ const { updateTruckWeightandSpace } = require('../services/truckServices');
 const { getPackage } = require('../services/packageServices');
 const { getTruck } = require('../services/truckServices');
 const { insertMapping } = require('../services/truckPackageMappingServices');
+const { incrementTripPackageTota } = require('../services/tripServices');
 const parseIp = require('../middleware/praseIp');
 
 
@@ -59,7 +60,17 @@ const assignPackage = async (req, res) => {
         tripId,
     };
 
-    const packageMapping = await insertMapping(mappingDetails);
+    const packageMapping1 = await insertMapping(mappingDetails);
+
+    if (!packageMapping1.rowCount) {
+        return res.json({
+            statusCode: 400,
+            message: packageMapping1.detail,
+            ipAddress: parseIp(req),
+        });
+    }
+
+    const packageMapping = await incrementTripPackageTota(tripId);
 
     if (packageMapping.rowCount === 1) {
         return res.json({

@@ -189,7 +189,7 @@ CREATE TABLE "SUT".package_details
         ON
         UPDATE CASCADE
         ON DELETE NO ACTION,
-    CONSTRAINT delivery_partner_rating_truck_owner_mobile_num_fkey
+        CONSTRAINT delivery_partner_rating_truck_owner_mobile_num_fkey
         FOREIGN KEY
         (truck_owner_mobile_num)
         REFERENCES "SUT".truck_owner
@@ -197,7 +197,7 @@ CREATE TABLE "SUT".package_details
         ON
         UPDATE CASCADE
         ON DELETE NO ACTION,
-    CONSTRAINT delivery_partner_rating_company_mobile_num_fkey
+        CONSTRAINT delivery_partner_rating_company_mobile_num_fkey
         FOREIGN KEY
         (company_mobile_num)
         REFERENCES "SUT".transport_company
@@ -205,7 +205,7 @@ CREATE TABLE "SUT".package_details
         ON
         UPDATE CASCADE
         ON DELETE NO ACTION,
-    CONSTRAINT delivery_partner_rating_trip_id_fkey
+        CONSTRAINT delivery_partner_rating_trip_id_fkey
         FOREIGN KEY
         (trip_id)
         REFERENCES "SUT".trip_details
@@ -214,7 +214,7 @@ CREATE TABLE "SUT".package_details
         UPDATE CASCADE
         ON
         DELETE CASCADE,
-    CONSTRAINT delivery_partner_rating_receiving_person_mobile_no_fkey FOREIGN KEY
+        CONSTRAINT delivery_partner_rating_receiving_person_mobile_no_fkey FOREIGN KEY
         (customer_mobile_num)
         REFERENCES "SUT".customer
         (mobile_num) MATCH SIMPLE

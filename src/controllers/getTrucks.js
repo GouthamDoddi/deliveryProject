@@ -55,23 +55,21 @@ const getTrucks = async (req, res) => {
 const getTruckWithDocs = async (req, res) => {
     const { truckNo } = req.body;
 
-    if (truckNo) {
-        const trucks = await getTruck2(truckNo);
+    const trucks = await getTruck2(truckNo);
 
-        if (trucks.rowCount) {
-            return res.json({
-                statusCode: 200,
-                message: trucks.rows,
-                ipAddress: parseIp(req),
-            });
-        }
-
-
+    if (trucks.rowCount) {
         return res.json({
-            status: 400,
-            message: "Couldn't find any trucks",
+            statusCode: 200,
+            message: trucks.rows,
+            ipAddress: parseIp(req),
         });
     }
+
+
+    return res.json({
+        status: 400,
+        message: "Couldn't find any trucks",
+    });
 };
 
 
