@@ -17,3 +17,8 @@
 {"message":"received register request from transportCompany Nice transports5","level":"info","timestamp":"2020-12-24T09:50:35.266Z"}
 {"message":"received register request from transportCompany Nice transports5","level":"info","timestamp":"2020-12-24T09:50:49.597Z"}
 {"message":"Transport company Nice transports5 is registered","level":"info","timestamp":"2020-12-24T09:50:49.643Z"}
+{"message":"received register request from transportCompany Nice transports6\n    and id address = ::1 ","level":"info","timestamp":"2021-02-04T15:14:53.089Z"}
+{"message":"Transport company Nice transports6 is registered","level":"info","timestamp":"2021-02-04T15:14:53.152Z"}
+{"message":"received register request from transportCompany Nice transports6\n    and id address = ::1 ","level":"info","timestamp":"2021-02-04T15:58:19.531Z"}
+{"message":"received register request from transportCompany Nice transports6\n    and id address = ::1 ","level":"info","timestamp":"2021-02-04T15:59:33.173Z"}
+{"message":"Transport company Nice transports6 is registered","level":"info","timestamp":"2021-02-04T15:59:33.218Z"}

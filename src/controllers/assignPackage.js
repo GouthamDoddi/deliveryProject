@@ -7,7 +7,7 @@ const parseIp = require('../middleware/praseIp');
 
 const assignPackage = async (req, res) => {
     // get package details and assign it to suitble truck
-    const { packageId, truckNo } = req.body;
+    const { packageId, truckNo, tripId } = req.body;
 
     const packageDetails = await getPackage(packageId);
 
@@ -56,6 +56,7 @@ const assignPackage = async (req, res) => {
         truckNo,
         packageId,
         date,
+        tripId,
     };
 
     const packageMapping = await insertMapping(mappingDetails);

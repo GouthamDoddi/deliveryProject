@@ -4,12 +4,13 @@ const pool = require('../config/db');
 async function insertMapping (mappingDetails) {
     const query = {
         name: 'insert user in db',
-        text: `INSERT INTO "SUT".truck_package_mapping (truck_no, package_id, date) 
-                VALUES($1, $2, $3) RETURNING *`,
+        text: `INSERT INTO "SUT".truck_package_mapping (truck_no, package_id, date, trip_id) 
+                VALUES($1, $2, $3, $4) RETURNING *`,
         values: [
             mappingDetails.truckNo,
             mappingDetails.packageId,
             mappingDetails.date,
+            mappingDetails.tripId,
         ],
     };
 

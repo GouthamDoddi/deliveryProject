@@ -4,8 +4,8 @@ const multer = require('multer');
 const router = express.Router();
 const formDataHandler = multer();
 
-
-const getTrucks = require('../controllers/getTrucks');
+const updatePackage = require('../controllers/updatePackage');
+const { getTrucks, getCompanyTrucks, getTruckWithDocs } = require('../controllers/getTrucks');
 const customerRegister = require('../controllers/customerRegistration');
 const tripRegister = require('../controllers/tripRegistration');
 const truckOwnerRegister = require('../controllers/truckownerRegistration');
@@ -19,11 +19,15 @@ const truckOwnerLogin = require('../controllers/truckOwnerLogin');
 const verifyToken = require('../controllers/verifyToken');
 const transportCompanyRegister = require('../controllers/transportCompanyRegistration');
 const getTrip = require('../controllers/getTrips');
-const { updateTrip, incrementDeliveredPackages, incrementTotalPackages } = require('../controllers/updateTrip');
+const { updateTrip, incrementDeliveredPackages,
+    incrementTotalPackages } = require('../controllers/updateTrip');
 const updatePackageMaping = require('../controllers/updatePackageMapping');
 const getTruckRating = require('../controllers/getTruckRating');
 const addRating = require('../controllers/addRating');
-const { getCustomerDetails, getTruckOwnerDetails, getTransportCompanyDetails } = require('../controllers/getDetails');
+const { getCustomerDetails, getTruckOwnerDetails,
+    getTransportCompanyDetails } = require('../controllers/getDetails');
+const { getReceivingPackages, getCustomerPackages,
+    getAllPackagesForTrip } = require('../controllers/getPackages');
 
 
 router.post('/customerRegister', customerRegister);
@@ -48,6 +52,12 @@ router.post('/getTruckRating', verifyToken, getTruckRating);
 router.post('/getCustomer', verifyToken, getCustomerDetails);
 router.post('/getTruckOwner', verifyToken, getTruckOwnerDetails);
 router.post('/getTransportCompany', verifyToken, getTransportCompanyDetails);
+router.post('/updatePackage', verifyToken, updatePackage);
+router.post('/getReceivingPackages', verifyToken, getReceivingPackages);
+router.post('/getCustomerPackages', verifyToken, getCustomerPackages);
+router.post('/getTripPackages', verifyToken, getAllPackagesForTrip);
+router.post('/getCompanyTrucks', verifyToken, getCompanyTrucks);
+router.post('/getTruck2', verifyToken, getTruckWithDocs);
 
 
 // router.post('/verifyJWT', verifyToken);

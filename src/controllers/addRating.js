@@ -1,13 +1,12 @@
 const { insertRating } = require('../services/ratingServices');
-const getMobileNumber = require('../utils/getMobileNo');
 const parseIp = require('../middleware/praseIp');
 
 
 const addRating = async (req, res) => {
     const { truckNo, truckOwnerMobileNo, companyMobileNo, tripId,
-        rating } = req.body;
+        rating, receivingPersonNo, comment, mobileNum, packageId } = req.body;
 
-    const customerMobileNum = await getMobileNumber(req.headers.authorization);
+    // const customerMobileNum = await getMobileNumber(req.headers.authorization);
 
     const details = {
         truckNo,
@@ -15,7 +14,10 @@ const addRating = async (req, res) => {
         companyMobileNo,
         tripId,
         rating,
-        customerMobileNum,
+        mobileNum,
+        receivingPersonNo,
+        comment,
+        packageId,
     };
 
 

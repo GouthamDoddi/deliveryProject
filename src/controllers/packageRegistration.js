@@ -43,6 +43,7 @@ const packageRegister = async (req, res) => {
         packageWeight: req.body.packageWeight,
         packageSpace: req.body.packageSpace,
         packageValue: req.body.packageValue,
+        status: 'Yet to Pickup',
     };
 
     const addTruck = await insertPackage(packageDetails);

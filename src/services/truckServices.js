@@ -7,8 +7,8 @@ const insertTruck = async truckDetails => {
         text: `INSERT INTO "SUT".truckdetails (truck_name, truck_no,
          truck_model, chasis_no, capacity_inkgs, capacity_inspace,
           booked_weight, booked_space, truckowner_mobile_num, rc,
-          license, transport_company_name, driver_name)
-           VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13)`,
+          license, transport_company_name, driver_name, transport_company_mobile_num)
+           VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14)`,
         values: [
             truckDetails.truckName,
             truckDetails.truckNo,
@@ -23,11 +23,16 @@ const insertTruck = async truckDetails => {
             truckDetails.license,
             truckDetails.companyName,
             truckDetails.truckDriver,
+            truckDetails.companyMobileNum,
         ],
     };
 
     try {
-        return await pool.query(query);
+        const result = await pool.query(query);
+
+        console.log(result);
+
+        return result;
     } catch (error) {
         console.error(`error at service ${error}`);
 
@@ -36,6 +41,31 @@ const insertTruck = async truckDetails => {
 };
 
 const getTruck = truckNo => {
+    // use truckNo to get the total space
+
+    const query = {
+        name: 'Get truck details',
+        text: `SELECT truck_id, truck_name,
+        truck_no, truck_model, chasis_no,
+        capacity_inkgs, capacity_inspace,
+        booked_weight, booked_space,
+        truckowner_mobile_num,
+        transport_company_name,
+        driver_name, transport_company_mobile_num
+        FROM "SUT".truckdetails WHERE truck_no = $1`,
+        values: [ truckNo ],
+    };
+
+    try {
+        return pool.query(query);
+    } catch (error) {
+        console.error(error);
+
+        return error;
+    }
+};
+
+const getTruck2 = truckNo => {
     // use truckNo to get the total space
 
     const query = {
@@ -94,7 +124,31 @@ const updateTruckWeightandSpace = updatedValues => {
     }
 };
 
+function getTransportCompanyTrucks (mobileNum) {
+    const query = {
+        name: 'Check transport owner exists',
+        text: 'SELECT * FROM "SUT".truckdetails WHERE transport_company_mobile_num = $1',
+        values: [ mobileNum ],
+    };
+
+    // console.log(`select query called! ${mobileNumber}`);
+
+    try {
+        return pool.query(query);
+
+        // console.log(`query result is ${result}`);
+
+        // return result.rows.length;
+    } catch (error) {
+        console.log(error);
+
+        return error;
+    }
+}
+
 module.exports = { insertTruck,
     getTrucksForOwner,
     updateTruckWeightandSpace,
-    getTruck };
+    getTruck,
+    getTransportCompanyTrucks,
+    getTruck2 };

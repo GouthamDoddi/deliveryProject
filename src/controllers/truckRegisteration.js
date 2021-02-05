@@ -21,9 +21,7 @@ const logger = winston.createLogger({
 
 const truckRegister = async (req, res) => {
     // getting mobile number from decoding the token
-    const mobileNum = await getMobileNumber(req.headers.authorization);
-
-    console.log(req);
+    const { companyMobileNum, mobileNum } = req.body;
 
     const bookedWeight = req.body.bookedWeight
         ? req.body.bookedWeight
@@ -47,6 +45,7 @@ const truckRegister = async (req, res) => {
         license: req.files[1].buffer,
         companyName: req.body.companyName,
         truckDriver: req.body.truckDriver,
+        companyMobileNum,
     };
 
     const result = await insertTruck(truckDetails);
@@ -64,7 +63,7 @@ const truckRegister = async (req, res) => {
         });
     }
 
-    logger.info(`Failed! Couldn't add added truck with no = ${truckDetails.truckNo} by user with mobileNo=${mobileNum}`);
+    logger.info(`Failed! Couldn't add added truck with no = ${truckDetails.truckNo} by user with mobileNo=${mobileNum || companyMobileNum}`);
 
 
     return res.json({
