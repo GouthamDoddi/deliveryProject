@@ -28,6 +28,7 @@ const { getCustomerDetails, getTruckOwnerDetails,
     getTransportCompanyDetails } = require('../controllers/getDetails');
 const { getReceivingPackages, getCustomerPackages,
     getAllPackagesForTrip } = require('../controllers/getPackages');
+const getListOfTrucks = require('../controllers/getListOfTrucks');
 
 
 router.post('/customerRegister', customerRegister);
@@ -58,6 +59,7 @@ router.post('/getCustomerPackages', verifyToken, getCustomerPackages);
 router.post('/getTripPackages', verifyToken, getAllPackagesForTrip);
 router.post('/getCompanyTrucks', verifyToken, getCompanyTrucks);
 router.post('/getTruck2', verifyToken, getTruckWithDocs);
+router.post('/getTruckList', verifyToken, getListOfTrucks);
 
 
 // router.post('/verifyJWT', verifyToken);

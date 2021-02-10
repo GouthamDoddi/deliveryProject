@@ -1,7 +1,6 @@
 const winston = require('winston');
 
 const { insertTruck } = require('../services/truckServices');
-const getMobileNumber = require('../utils/getMobileNo');
 const parseIp = require('../middleware/praseIp');
 
 
@@ -21,6 +20,8 @@ const logger = winston.createLogger({
 
 const truckRegister = async (req, res) => {
     // getting mobile number from decoding the token
+    console.log(req);
+
     const { companyMobileNum, mobileNum } = req.body;
 
     const bookedWeight = req.body.bookedWeight
