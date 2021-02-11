@@ -18,7 +18,7 @@ const sendSMS = require('../controllers/sendSMS');
 const truckOwnerLogin = require('../controllers/truckOwnerLogin');
 const verifyToken = require('../controllers/verifyToken');
 const transportCompanyRegister = require('../controllers/transportCompanyRegistration');
-const getTrip = require('../controllers/getTrips');
+const { getTrip, getTripWTruckNo } = require('../controllers/getTrips');
 const { updateTrip, incrementDeliveredPackages,
     incrementTotalPackages } = require('../controllers/updateTrip');
 const updatePackageMaping = require('../controllers/updatePackageMapping');
@@ -60,6 +60,7 @@ router.post('/getTripPackages', verifyToken, getAllPackagesForTrip);
 router.post('/getCompanyTrucks', verifyToken, getCompanyTrucks);
 router.post('/getTruck2', verifyToken, getTruckWithDocs);
 router.post('/getTruckList', verifyToken, getListOfTrucks);
+router.post('/getTripByTruckNo', verifyToken, getTripWTruckNo);
 
 
 // router.post('/verifyJWT', verifyToken);

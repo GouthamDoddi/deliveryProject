@@ -23,6 +23,25 @@ async function getTrips (tripDetails) {
     }
 }
 
+async function getTripByTruckNo (truckNo) {
+    // wrong code, search trip with tripId
+    const query = {
+        name: 'Check truckowner exists',
+        text: 'SELECT * FROM "SUT".trip_details WHERE (truck_no = $1)',
+        values: [
+            truckNo,
+        ],
+    };
+
+    try {
+        return await pool.query(query);
+    } catch (error) {
+        console.log(error);
+
+        return error;
+    }
+}
+
 const insertTrip = async tripDetails => {
     const query = {
         name: 'insert user in db',
@@ -109,4 +128,9 @@ const incrementTripPackageTotal = async tripId => {
     }
 };
 
-module.exports = { getTrips, insertTrip, updateTripDetails, incrementTripPackageDelivered, incrementTripPackageTotal };
+module.exports = { getTrips,
+    insertTrip,
+    updateTripDetails,
+    incrementTripPackageDelivered,
+    incrementTripPackageTotal,
+    getTripByTruckNo };

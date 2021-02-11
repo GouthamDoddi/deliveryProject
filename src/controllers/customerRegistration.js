@@ -1,4 +1,6 @@
 const winston = require('winston');
+const jwt = require('jsonwebtoken');
+
 
 const { insertCustomer } = require('../services/customerServices');
 const encryptPassword = require('../middleware/encryptPass');
@@ -18,6 +20,8 @@ const logger = winston.createLogger({
 });
 
 const customerRegister = async (req, res) => {
+    const secret = '!@#DWe$%^gge&&**';
+
     const otp = createOTP();
     // get the customer details from req.body
 
@@ -54,6 +58,10 @@ const customerRegister = async (req, res) => {
         state: req.body.state,
     };
 
+    const token = jwt.sign({ sub: req.body.mobileNum }, secret, {
+        expiresIn: 86400, // expires in 24 hours
+    });
+
     const addCustomer = await insertCustomer(customerDetails);
 
     // if the insert function failed the it would return a false
@@ -63,7 +71,10 @@ const customerRegister = async (req, res) => {
         return res.status(201)
             .json({ statusCode: 200,
                 message: 'User registered!',
-                details: [ ...addCustomer.rows, otp ],
+                details: [
+                    otp,
+                    token,
+                ],
                 ipAddress: parseIp(req) });
     }
 

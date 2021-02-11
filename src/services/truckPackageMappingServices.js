@@ -44,10 +44,11 @@ const updatePackageTruck = async details => {
 const updatePackageDeliveryStatus = async details => {
     const query = {
         name: 'Update package mapping',
-        text: `UPDATE "SUT".truck_package_mapping SET delivered=$1 
-        WHERE package_id=$2`,
+        text: `UPDATE "SUT".truck_package_mapping SET delivered=$1, status=$3
+        WHERE mapping_id=$2`,
         values: [ details.delivered,
-            details.packageId ],
+            details.mappingId,
+            details.status ],
     };
 
     try {

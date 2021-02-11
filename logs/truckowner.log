@@ -37,3 +37,7 @@
 {"message":"received package register request for customer undefined","level":"info","timestamp":"2021-01-18T05:11:32.605Z"}
 {"message":"received package register request for customer undefined","level":"info","timestamp":"2021-01-18T05:33:09.534Z"}
 {"message":"received package register request for customer undefined","level":"info","timestamp":"2021-01-18T05:35:00.192Z"}
+{"message":"recived register request from truck owner with mobile number 9098989876\n    and id address = ::1 ","level":"info","timestamp":"2021-02-10T06:15:27.131Z"}
+{"message":"recived register request from truck owner with mobile number 9098989876\n    and id address = ::1 ","level":"info","timestamp":"2021-02-10T06:16:53.019Z"}
+{"message":"recived register request from truck owner with mobile number 9098989876\n    and id address = ::1 ","level":"info","timestamp":"2021-02-10T06:19:09.766Z"}
+{"message":"truckowner with no 9098989876 is registered","level":"info","timestamp":"2021-02-10T06:19:09.918Z"}

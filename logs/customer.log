@@ -135,3 +135,10 @@
 {"message":"received register request from customer with mobile number 7981075444","level":"info","timestamp":"2021-01-17T09:25:59.957Z"}
 {"message":"Customer with mobile number  7981075444 registered","level":"info","timestamp":"2021-01-17T09:26:00.142Z"}
 {"message":"received register request from customer with mobile number 7981075481","level":"info","timestamp":"2021-02-03T04:08:23.131Z"}
+{"message":"received register request from customer with mobile number 9999999999 \n    and id address = ::1 ","level":"info","timestamp":"2021-02-10T06:28:17.845Z"}
+{"message":"Customer with mobile number  9999999999 registered","level":"info","timestamp":"2021-02-10T06:28:17.935Z"}
+{"message":"received register request from customer with mobile number 9999999999 \n    and id address = ::1 ","level":"info","timestamp":"2021-02-10T06:48:22.184Z"}
+{"message":"received register request from customer with mobile number 9999999990 \n    and id address = ::1 ","level":"info","timestamp":"2021-02-10T06:48:37.814Z"}
+{"message":"Customer with mobile number  9999999990 registered","level":"info","timestamp":"2021-02-10T06:48:37.878Z"}
+{"message":"received register request from customer with mobile number 9999999991 \n    and id address = ::1 ","level":"info","timestamp":"2021-02-10T06:53:10.132Z"}
+{"message":"Customer with mobile number  9999999991 registered","level":"info","timestamp":"2021-02-10T06:53:10.248Z"}

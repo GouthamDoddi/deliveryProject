@@ -2,47 +2,26 @@ const { updatePackageTruck, updatePackageDeliveryStatus } = require('../services
 const parseIp = require('../middleware/praseIp');
 
 const updatePackageMaping = async (req, res) => {
-    const { delivered, truckNo, packageId } = req.body;
+    const { delivered, status, mappingId } = req.body;
 
-    if (delivered) {
-        const details = { delivered, packageId };
+    console.log(mappingId);
+    const details = { delivered, mappingId, status };
 
-        const result = await updatePackageDeliveryStatus(details);
+    const result = await updatePackageDeliveryStatus(details);
 
-        if (!result.rowCount) {
-            return res.json({
-                status: 400,
-                details: result.detail,
-            });
-        }
-
+    if (!result.rowCount) {
         return res.json({
-            statusCode: 200,
-            message: 'Info updated',
+            status: 400,
+            message: 'failed',
+            details: result.details,
         });
     }
 
-    if (truckNo) {
-        const details = { truckNo, packageId };
-
-        const result = await updatePackageTruck(details);
-
-        if (!result.rowCount) {
-            return res.json({
-                status: 400,
-                details: result.detail,
-                ipAddress: parseIp(req),
-            });
-        }
-
-        return res.json({
-            statusCode: 200,
-            message: 'Info updated',
-            ipAddress: parseIp(req),
-        });
-    }
-
-    return true;
+    return res.json({
+        statusCode: 200,
+        message: 'Updated!',
+        ipAddress: parseIp(req),
+    });
 };
 
 module.exports = updatePackageMaping;
