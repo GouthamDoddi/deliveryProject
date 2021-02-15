@@ -1,3 +1,4 @@
+/* eslint-disable object-shorthand */
 const { insertTruckowner } = require('../services/truckownerServices');
 // const { logger } = require('../middleware/logger');
 const winston = require('winston');
@@ -5,6 +6,7 @@ const jwt = require('jsonwebtoken');
 
 const encryptPassword = require('../middleware/encryptPass');
 const parseIp = require('../middleware/praseIp');
+const createOTP = require('../utils/createOTP');
 
 
 const logger = winston.createLogger({
@@ -57,6 +59,7 @@ const truckOwnerRegister = async (req, res) => {
 
     const addTruckowner = await insertTruckowner(truckownerDetails);
 
+    const otp = createOTP();
 
     const token = jwt.sign({ sub: req.body.mobileNum }, secret, {
         expiresIn: 86400, // expires in 24 hours
@@ -70,8 +73,8 @@ const truckOwnerRegister = async (req, res) => {
             message: 'User registered!',
             details: addTruckowner.rows,
             ipAddress: parseIp(req),
-            // eslint-disable-next-line object-shorthand
-            token: token });
+            token: token,
+            otp: otp });
     }
 
     return res.json({ statusCode: 400,

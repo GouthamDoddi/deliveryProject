@@ -236,28 +236,28 @@ CREATE TABLE "SUT".package_details
 --ADD COLUMN transport_company_name VARCHAR,
 --ADD COLUMN driver_name VARCHAR
 
-// truck packahe mapping
-  CONSTRAINT truck_package_maping_pkey PRIMARY KEY
-        (mapping_id),
-  CONSTRAINT truck_package_maping_package_id_fkey FOREIGN KEY
-        (package_id) 
-	REFERENCES "SUT".package_details
-        (package_id) MATCH SIMPLE ON
-        UPDATE CASCADE
-    ON DELETE NO ACTION,
-  CONSTRAINT truck_package_maping_truck_no_fkey
-        FOREIGN KEY
-        (truck_package_maping_truck_no)
-    REFERENCES "SUT".truckdetails
-        (truck_no) MATCH SIMPLE
-    ON
-        UPDATE CASCADE
-    ON DELETE NO ACTION,
-  CONSTRAINT truck_package_maping_trip_id_fkey
-        FOREIGN KEY
-        (truck_package_maping_trip_id)
-	REFERENCES "SUT".trip_details
-        (trip_id) MATCH SIMPLE
-    ON
-        UPDATE CASCADE
-    ON DELETE NO ACTION
+-- // truck packahe mapping
+--   CONSTRAINT truck_package_maping_pkey PRIMARY KEY
+--         (mapping_id),
+--   CONSTRAINT truck_package_maping_package_id_fkey FOREIGN KEY
+--         (package_id) 
+-- 	REFERENCES "SUT".package_details
+--         (package_id) MATCH SIMPLE ON
+--         UPDATE CASCADE
+--     ON DELETE NO ACTION,
+--   CONSTRAINT truck_package_maping_truck_no_fkey
+--         FOREIGN KEY
+--         (truck_package_maping_truck_no)
+--     REFERENCES "SUT".truckdetails
+--         (truck_no) MATCH SIMPLE
+--     ON
+--         UPDATE CASCADE
+--     ON DELETE NO ACTION,
+--   CONSTRAINT truck_package_maping_trip_id_fkey
+--         FOREIGN KEY
+--         (truck_package_maping_trip_id)
+-- 	REFERENCES "SUT".trip_details
+--         (trip_id) MATCH SIMPLE
+--     ON
+--         UPDATE CASCADE
+--     ON DELETE NO ACTION

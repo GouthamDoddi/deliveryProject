@@ -1,13 +1,13 @@
-const jwt = require('jsonwebtoken');
+// const jwt = require('jsonwebtoken');
 
-require('dotenv').config();
+// require('dotenv').config();
 
-function jwtTruckowner (truckowner_id) {
-    const payload = {
-        user: truckowner_id,
-    };
+// function jwtTruckowner (truckowner_id) {
+//     const payload = {
+//         user: truckowner_id,
+//     };
 
-    return jwt.sign(payload, `${process.env.jwtSecret}`, { expiresIn: '1h' });
-}
+//     return jwt.sign(payload, `${process.env.jwtSecret}`, { expiresIn: '1h' });
+// }
 
-module.exports = jwtTruckowner;
+// module.exports = jwtTruckowner;

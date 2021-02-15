@@ -44,3 +44,14 @@
 {"message":"recived register request from truck owner with mobile number undefined\n    and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-02-12T10:16:01.478Z"}
 {"message":"recived register request from truck owner with mobile number 6666666666\n    and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-02-15T04:54:12.787Z"}
 {"message":"truckowner with no 6666666666 is registered","level":"info","timestamp":"2021-02-15T04:54:12.876Z"}
+{"message":"recived register request from truck owner with mobile number 6666666666\n    and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-02-15T05:13:41.695Z"}
+{"message":"recived register request from truck owner with mobile number 6666666666\n    and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-02-15T05:15:16.232Z"}
+{"message":"recived register request from truck owner with mobile number 6666666667\n    and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-02-15T05:15:35.437Z"}
+{"message":"truckowner with no 6666666667 is registered","level":"info","timestamp":"2021-02-15T05:15:35.545Z"}
+{"message":"recived register request from truck owner with mobile number 6666666667\n    and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-02-15T05:19:06.870Z"}
+{"message":"recived register request from truck owner with mobile number 6666666661\n    and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-02-15T05:19:19.655Z"}
+{"message":"truckowner with no 6666666661 is registered","level":"info","timestamp":"2021-02-15T05:19:19.759Z"}
+{"message":"recived register request from truck owner with mobile number 6666666662\n    and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-02-15T05:20:22.259Z"}
+{"message":"truckowner with no 6666666662 is registered","level":"info","timestamp":"2021-02-15T05:20:22.322Z"}
+{"message":"recived register request from truck owner with mobile number 7981075481\n    and id address = ::1 ","level":"info","timestamp":"2021-02-15T06:53:17.129Z"}
+{"message":"truckowner with no 7981075481 is registered","level":"info","timestamp":"2021-02-15T06:53:17.251Z"}
