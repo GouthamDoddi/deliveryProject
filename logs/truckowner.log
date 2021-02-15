@@ -41,3 +41,6 @@
 {"message":"recived register request from truck owner with mobile number 9098989876\n    and id address = ::1 ","level":"info","timestamp":"2021-02-10T06:16:53.019Z"}
 {"message":"recived register request from truck owner with mobile number 9098989876\n    and id address = ::1 ","level":"info","timestamp":"2021-02-10T06:19:09.766Z"}
 {"message":"truckowner with no 9098989876 is registered","level":"info","timestamp":"2021-02-10T06:19:09.918Z"}
+{"message":"recived register request from truck owner with mobile number undefined\n    and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-02-12T10:16:01.478Z"}
+{"message":"recived register request from truck owner with mobile number 6666666666\n    and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-02-15T04:54:12.787Z"}
+{"message":"truckowner with no 6666666666 is registered","level":"info","timestamp":"2021-02-15T04:54:12.876Z"}

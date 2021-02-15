@@ -1,7 +1,9 @@
 const winston = require('winston');
+const jwt = require('jsonwebtoken');
 
 const { insertTransportCompany } = require('../services/transportCompanyServices');
 const parseIp = require('../middleware/praseIp');
+const createOTP = require('../utils/createOTP');
 
 
 const logger = winston.createLogger({
@@ -20,6 +22,8 @@ const transportCompanyRegister = async (req, res) => {
     // using logger to record activity
     logger.info(`received register request from transportCompany ${req.body.companyName}
     and id address = ${parseIp(req)} `);
+
+    const secret = '!@#DWe$%^gge&&**';
 
 
     // using one line promises lets encrypt the password and
@@ -41,6 +45,10 @@ const transportCompanyRegister = async (req, res) => {
     };
 
     const addCompany = await insertTransportCompany(transportCompany);
+    const otp = createOTP();
+    const token = jwt.sign({ sub: req.body.mobileNum }, secret, {
+        expiresIn: 86400, // expires in 24 hours
+    });
 
     // if the insert function failed the it would return a false
     if (addCompany.command === 'INSERT') {
@@ -49,7 +57,11 @@ const transportCompanyRegister = async (req, res) => {
         return res.json({ statusCode: 201,
             message: 'Company registered!',
             details: addCompany.rows,
-            ipAddress: parseIp(req) });
+            ipAddress: parseIp(req),
+            // eslint-disable-next-line object-shorthand
+            otp: otp,
+            // eslint-disable-next-line object-shorthand
+            token: token });
     }
 
     return res.json({ statusCode: 400,

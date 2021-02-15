@@ -2,6 +2,7 @@ const winston = require('winston');
 
 const { insertTruck } = require('../services/truckServices');
 const parseIp = require('../middleware/praseIp');
+const createOTP = require('../utils/createOTP');
 
 
 // define the logger function
@@ -50,7 +51,7 @@ const truckRegister = async (req, res) => {
     };
 
     const result = await insertTruck(truckDetails);
-
+    const otp = createOTP();
 
     if (result.command === 'INSERT') {
         logger.info(`added truck with no = ${truckDetails.truckNo} by user with mobileNo=${mobileNum}
@@ -61,6 +62,8 @@ const truckRegister = async (req, res) => {
             message: 'Truck added to database',
             details: result.details,
             ipAddress: parseIp(req),
+            // eslint-disable-next-line object-shorthand
+            otp: otp,
         });
     }
 

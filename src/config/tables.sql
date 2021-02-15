@@ -41,18 +41,19 @@ CREATE TABLE "SUT".package_details
   customer_mobile_num numeric,
   CONSTRAINT package_details_pkey PRIMARY KEY (package_id),
   CONSTRAINT customer_mobile_num FOREIGN KEY (customer_mobile_num)
-        REFERENCES "SUT".customer (mobile_num)
+  REFERENCES "SUT".customer (mobile_num)
   MATCH SIMPLE
-        ON
+  ON
   UPDATE CASCADE
-        ON DELETE NO ACTION
-  CONSTRAINT receiving_person_mobile_no FOREIGN KEY
+  ON DELETE NO ACTION,
+  CONSTRAINT receiving_person_mobile_no
+  FOREIGN KEY
   (customer_mobile_num)
-        REFERENCES "SUT".customer
+  REFERENCES "SUT".customer
   (mobile_num) MATCH SIMPLE
-        ON
+  ON
   UPDATE CASCADE
-        ON DELETE NO ACTION
+  ON DELETE NO ACTION
   )
 
   CREATE TABLE "SUT".trip_details
@@ -113,8 +114,9 @@ CREATE TABLE "SUT".package_details
     (truck_no) MATCH SIMPLE
         ON
     UPDATE CASCADE
-        ON DELETE NO ACTION
-    CONSTRAINT truck_package_maping_trip_id_fkey FOREIGN KEY
+        ON DELETE NO ACTION,
+    CONSTRAINT truck_package_maping_trip_id_fkey
+    FOREIGN KEY
     (truck_package_maping_trip_id)
         REFERENCES "SUT".trip_details
     (trip_id) MATCH SIMPLE
@@ -146,12 +148,12 @@ CREATE TABLE "SUT".package_details
       CONSTRAINT truckdetails_truck_no_key UNIQUE (truck_no),
       CONSTRAINT truckdetails_truckdriver_mobile_num_fkey FOREIGN KEY (truckowner_mobile_num)
         REFERENCES "SUT".truck_owner (mobile_num)
-      MATCH SIMPLE
+      MATCH SIMPLE 
         ON
       UPDATE CASCADE
         ON
       DELETE CASCADE,
-    CONSTRAINT truckdetails_transport_company_mobile_num_fkey FOREIGN KEY
+      CONSTRAINT truckdetails_transport_company_mobile_num_fkey FOREIGN KEY
       (transport_company_mobile_num)
         REFERENCES "SUT".transport_company
       (mobile_num) MATCH SIMPLE
@@ -159,7 +161,7 @@ CREATE TABLE "SUT".package_details
       UPDATE CASCADE
         ON
       DELETE CASCADE
-)
+  )
 
       CREATE TABLE "SUT".transport_company
       (
@@ -233,3 +235,29 @@ CREATE TABLE "SUT".package_details
 --ALTER TABLE "SUT".truckdetails
 --ADD COLUMN transport_company_name VARCHAR,
 --ADD COLUMN driver_name VARCHAR
+
+// truck packahe mapping
+  CONSTRAINT truck_package_maping_pkey PRIMARY KEY
+        (mapping_id),
+  CONSTRAINT truck_package_maping_package_id_fkey FOREIGN KEY
+        (package_id) 
+	REFERENCES "SUT".package_details
+        (package_id) MATCH SIMPLE ON
+        UPDATE CASCADE
+    ON DELETE NO ACTION,
+  CONSTRAINT truck_package_maping_truck_no_fkey
+        FOREIGN KEY
+        (truck_package_maping_truck_no)
+    REFERENCES "SUT".truckdetails
+        (truck_no) MATCH SIMPLE
+    ON
+        UPDATE CASCADE
+    ON DELETE NO ACTION,
+  CONSTRAINT truck_package_maping_trip_id_fkey
+        FOREIGN KEY
+        (truck_package_maping_trip_id)
+	REFERENCES "SUT".trip_details
+        (trip_id) MATCH SIMPLE
+    ON
+        UPDATE CASCADE
+    ON DELETE NO ACTION

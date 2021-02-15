@@ -1,3 +1,4 @@
+/* eslint-disable object-shorthand */
 const winston = require('winston');
 const jwt = require('jsonwebtoken');
 
@@ -71,10 +72,8 @@ const customerRegister = async (req, res) => {
         return res.status(201)
             .json({ statusCode: 200,
                 message: 'User registered!',
-                details: [
-                    otp,
-                    token,
-                ],
+                otp: otp,
+                token: token,
                 ipAddress: parseIp(req) });
     }
 
