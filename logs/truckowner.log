@@ -55,3 +55,44 @@
 {"message":"truckowner with no 6666666662 is registered","level":"info","timestamp":"2021-02-15T05:20:22.322Z"}
 {"message":"recived register request from truck owner with mobile number 7981075481\n    and id address = ::1 ","level":"info","timestamp":"2021-02-15T06:53:17.129Z"}
 {"message":"truckowner with no 7981075481 is registered","level":"info","timestamp":"2021-02-15T06:53:17.251Z"}
+{"message":"recived register request from truck owner with mobile number 7787898888\n    and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-02-15T10:49:17.635Z"}
+{"message":"truckowner with no 7787898888 is registered","level":"info","timestamp":"2021-02-15T10:49:17.738Z"}
+{"message":"recived register request from truck owner with mobile number 5555544445\n    and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-02-15T10:50:34.307Z"}
+{"message":"truckowner with no 5555544445 is registered","level":"info","timestamp":"2021-02-15T10:50:34.354Z"}
+{"message":"recived register request from truck owner with mobile number 5555544446\n    and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-02-15T11:02:48.266Z"}
+{"message":"truckowner with no 5555544446 is registered","level":"info","timestamp":"2021-02-15T11:02:48.349Z"}
+{"message":"recived register request from truck owner with mobile number 5555544446\n    and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-02-15T11:03:09.164Z"}
+{"message":"recived register request from truck owner with mobile number 5555544448\n    and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-02-15T11:04:43.326Z"}
+{"message":"truckowner with no 5555544448 is registered","level":"info","timestamp":"2021-02-15T11:04:43.376Z"}
+{"message":"recived register request from truck owner with mobile number 5555544448\n    and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-02-15T11:09:18.664Z"}
+{"message":"recived register request from truck owner with mobile number 5555544448\n    and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-02-15T11:09:39.211Z"}
+{"message":"recived register request from truck owner with mobile number 5555544445\n    and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-02-15T11:10:04.180Z"}
+{"message":"recived register request from truck owner with mobile number 5555544400\n    and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-02-15T11:10:15.493Z"}
+{"message":"truckowner with no 5555544400 is registered","level":"info","timestamp":"2021-02-15T11:10:15.575Z"}
+{"message":"recived register request from truck owner with mobile number 5555544408\n    and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-02-15T11:11:00.213Z"}
+{"message":"truckowner with no 5555544408 is registered","level":"info","timestamp":"2021-02-15T11:11:00.281Z"}
+{"message":"recived register request from truck owner with mobile number 5555544408\n    and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-02-15T11:14:08.919Z"}
+{"message":"recived register request from truck owner with mobile number 5555544401\n    and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-02-15T11:14:22.017Z"}
+{"message":"truckowner with no 5555544401 is registered","level":"info","timestamp":"2021-02-15T11:14:22.094Z"}
+{"message":"recived register request from truck owner with mobile number 5555544401\n    and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-02-15T11:15:02.591Z"}
+{"message":"recived register request from truck owner with mobile number 5555544402\n    and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-02-15T11:15:11.471Z"}
+{"message":"truckowner with no 5555544402 is registered","level":"info","timestamp":"2021-02-15T11:15:11.526Z"}
+{"message":"recived register request from truck owner with mobile number 5555544402\n    and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-02-15T11:16:50.886Z"}
+{"message":"recived register request from truck owner with mobile number 5555544402\n    and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-02-15T11:17:26.916Z"}
+{"message":"recived register request from truck owner with mobile number 5555544405\n    and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-02-15T11:18:16.088Z"}
+{"message":"truckowner with no 5555544405 is registered","level":"info","timestamp":"2021-02-15T11:18:16.137Z"}
+{"message":"recived register request from truck owner with mobile number 5555544406\n    and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-02-15T11:19:09.915Z"}
+{"message":"truckowner with no 5555544406 is registered","level":"info","timestamp":"2021-02-15T11:19:09.956Z"}
+{"message":"recived register request from truck owner with mobile number 5555544406\n    and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-02-15T11:24:17.351Z"}
+{"message":"recived register request from truck owner with mobile number 5555544407\n    and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-02-15T11:24:48.650Z"}
+{"message":"truckowner with no 5555544407 is registered","level":"info","timestamp":"2021-02-15T11:24:48.692Z"}
+{"message":"recived register request from truck owner with mobile number 5555544407\n    and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-02-15T11:27:48.282Z"}
+{"message":"recived register request from truck owner with mobile number 5555544409\n    and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-02-15T11:34:46.998Z"}
+{"message":"truckowner with no 5555544409 is registered","level":"info","timestamp":"2021-02-15T11:34:47.042Z"}
+{"message":"recived register request from truck owner with mobile number 5555544409\n    and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-02-15T11:35:56.209Z"}
+{"message":"recived register request from truck owner with mobile number 5555544409\n    and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-02-15T11:37:31.360Z"}
+{"message":"recived register request from truck owner with mobile number 7777676766\n    and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-02-16T04:10:48.635Z"}
+{"message":"truckowner with no 7777676766 is registered","level":"info","timestamp":"2021-02-16T04:10:48.705Z"}
+{"message":"recived register request from truck owner with mobile number \n    and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-02-16T08:12:48.127Z"}
+{"message":"recived register request from truck owner with mobile number 7981075482\n    and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-02-16T08:27:07.753Z"}
+{"message":"truckowner with no 7981075482 is registered","level":"info","timestamp":"2021-02-16T08:27:07.802Z"}

@@ -41,7 +41,7 @@ const getTrucks = async (req, res) => {
     if (trucks.rowCount) {
         return res.json({
             statusCode: 200,
-            trucks,
+            message: trucks.rows,
             ipAddress: parseIp(req),
         });
     }

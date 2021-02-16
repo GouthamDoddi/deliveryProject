@@ -3,6 +3,7 @@ const winston = require('winston');
 const { insertTruck } = require('../services/truckServices');
 const parseIp = require('../middleware/praseIp');
 const createOTP = require('../utils/createOTP');
+const fs = require('fs');
 
 
 // define the logger function
@@ -21,9 +22,10 @@ const logger = winston.createLogger({
 
 const truckRegister = async (req, res) => {
     // getting mobile number from decoding the token
-    console.log(req);
 
     const { companyMobileNum, mobileNum } = req.body;
+
+    console.log(req.body);
 
     const bookedWeight = req.body.bookedWeight
         ? req.body.bookedWeight
@@ -32,6 +34,12 @@ const truckRegister = async (req, res) => {
     const bookedSpace = req.body.bookedSpace
         ? req.body.bookedSpace
         : 0;
+
+    console.log(req.body, req.files);
+
+    // const rc = fs.createReadStream('C:/Users/gouth/Pictures/wallpappers/paint_stains_fluid_art_172777_1920x1080.jpg');
+
+    // console.log(rc);
 
     const truckDetails = {
         truckName: req.body.truckName,
