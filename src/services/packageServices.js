@@ -73,8 +73,8 @@ async function insertPackage (packageDetails) {
         text: `INSERT INTO "SUT".package_details (package_name, customer_mobile_num, package_type,
             package_weight, package_space, package_value, pickup_point, 
             drop_point, pickup_date, booked_entire_truck, package_receiving_person,
-             receiving_person_mobile_no, status) VALUES($1, $2, $3, $4, $5, $6, $7, $8,
-             $9, $10, $11, $12, $13) RETURNING *`,
+             receiving_person_mobile_no, status, customer_name) VALUES($1, $2, $3, $4, $5, $6, $7, $8,
+             $9, $10, $11, $12, $13, $14) RETURNING *`,
         values: [
             packageDetails.packageName,
             packageDetails.mobileNum,
@@ -89,6 +89,7 @@ async function insertPackage (packageDetails) {
             packageDetails.receivingPersonName,
             packageDetails.receivingPersonNo,
             packageDetails.status,
+            packageDetails.customerName,
         ],
     };
 

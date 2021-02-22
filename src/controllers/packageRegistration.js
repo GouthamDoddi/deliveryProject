@@ -44,6 +44,7 @@ const packageRegister = async (req, res) => {
         packageSpace: req.body.packageSpace,
         packageValue: req.body.packageValue,
         status: 'Yet to Pickup',
+        customerName: req.body.customerName,
     };
 
     const addTruck = await insertPackage(packageDetails);

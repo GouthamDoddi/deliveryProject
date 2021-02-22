@@ -39,6 +39,7 @@ CREATE TABLE "SUT".package_details
   receiving_person_mobile_no numeric(12,0),
   package_value integer,
   customer_mobile_num numeric,
+  customer_name character varying(50),
   CONSTRAINT package_details_pkey PRIMARY KEY (package_id),
   CONSTRAINT customer_mobile_num FOREIGN KEY (customer_mobile_num)
   REFERENCES "SUT".customer (mobile_num)
@@ -48,7 +49,7 @@ CREATE TABLE "SUT".package_details
   ON DELETE NO ACTION,
   CONSTRAINT receiving_person_mobile_no
   FOREIGN KEY
-  (customer_mobile_num)
+  (customer_mobile_num) 
   REFERENCES "SUT".customer
   (mobile_num) MATCH SIMPLE
   ON
