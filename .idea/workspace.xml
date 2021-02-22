@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ab2135b9-672e-44c1-a177-f2aa9ef9a004" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/logs/JWT.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/JWT.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/OTP.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/OTP.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/truck.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/truck.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/truckowner.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/truckowner.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/getTrips.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/getTrips.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/sendSms.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/sendSms.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/transportCompanyServices.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/transportCompanyServices.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/tripServices.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/tripServices.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/truckServices.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/truckServices.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/truckownerServices.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/truckownerServices.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1oavg4WM3of8DtHr16H82MqTUmA" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ab2135b9-672e-44c1-a177-f2aa9ef9a004" name="Default Changelist" comment="" />
+      <created>1613537623992</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1613537623992</updated>
+      <workItem from="1613537625067" duration="14901000" />
+      <workItem from="1613702661522" duration="2036000" />
+      <workItem from="1613897714611" duration="414000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

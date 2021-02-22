@@ -51,3 +51,6 @@
 {"message":"added truck with no = UK009 by user with mobileNo=undefined\n        and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-02-16T03:50:53.422Z"}
 {"message":"added truck with no = XR0000 by user with mobileNo=undefined\n        and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-02-16T04:10:48.913Z"}
 {"message":"added truck with no = AP31EJ0007 by user with mobileNo=7981075482\n        and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-02-16T08:27:07.967Z"}
+{"message":"added truck with no = AP31EJ008 by user with mobileNo=6767678788\n        and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-02-16T14:37:04.329Z"}
+{"message":"added truck with no = AP31EJ001 by user with mobileNo=7981075488\n        and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-02-19T03:30:16.331Z"}
+{"message":"added truck with no = AP31EJ002 by user with mobileNo=7981075489\n        and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-02-19T03:36:17.586Z"}

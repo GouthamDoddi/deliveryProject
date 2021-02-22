@@ -96,3 +96,14 @@
 {"message":"recived register request from truck owner with mobile number \n    and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-02-16T08:12:48.127Z"}
 {"message":"recived register request from truck owner with mobile number 7981075482\n    and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-02-16T08:27:07.753Z"}
 {"message":"truckowner with no 7981075482 is registered","level":"info","timestamp":"2021-02-16T08:27:07.802Z"}
+{"message":"recived register request from truck owner with mobile number 6767678788\n    and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-02-16T14:37:03.933Z"}
+{"message":"truckowner with no 6767678788 is registered","level":"info","timestamp":"2021-02-16T14:37:03.978Z"}
+{"message":"recived register request from truck owner with mobile number 7981075482\n    and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-02-19T03:29:54.123Z"}
+{"message":"recived register request from truck owner with mobile number 7981075488\n    and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-02-19T03:30:16.085Z"}
+{"message":"truckowner with no 7981075488 is registered","level":"info","timestamp":"2021-02-19T03:30:16.207Z"}
+{"message":"recived register request from truck owner with mobile number 7981075489\n    and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-02-19T03:36:17.345Z"}
+{"message":"truckowner with no 7981075489 is registered","level":"info","timestamp":"2021-02-19T03:36:17.457Z"}
+{"message":"received package register request for customer 7981075481 \n    and id address = ::1 ","level":"info","timestamp":"2021-02-22T02:38:36.890Z"}
+{"message":"received package register request for customer 7981075481 \n    and id address = ::1 ","level":"info","timestamp":"2021-02-22T02:40:48.547Z"}
+{"message":"received package register request for customer 7981075487 \n    and id address = ::1 ","level":"info","timestamp":"2021-02-22T02:41:14.121Z"}
+{"message":"received package register request for customer 9999999999 \n    and id address = ::1 ","level":"info","timestamp":"2021-02-22T02:42:00.700Z"}

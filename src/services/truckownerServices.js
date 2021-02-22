@@ -1,4 +1,5 @@
 const pool = require('../config/db');
+const { getTrucksForOwner } = require('../services/truckServices');
 
 async function getTruckowner (mobileNumber) {
     const query = {
@@ -7,8 +8,15 @@ async function getTruckowner (mobileNumber) {
         values: [ mobileNumber ],
     };
 
+    const truckDetails = await getTrucksForOwner(mobileNumber);
+
     try {
-        return await pool.query(query);
+        const result = await pool.query(query);
+        const finalResult = truckDetails.rowCount
+            ? [ result, truckDetails.rows ]
+            : result;
+
+        return finalResult;
     } catch (error) {
         console.log(error);
 

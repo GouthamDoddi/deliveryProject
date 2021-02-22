@@ -37,8 +37,8 @@ const getTrip = async (req, res) => {
 };
 
 const getTripWTruckNo = async (req, res) => {
-    // using the data givin we need to find trucks
-    // thats can travel between user's location,
+    // using the data given we need to find trucks
+    // that can travel between user's location,
     // destination and during the given data.
 
 

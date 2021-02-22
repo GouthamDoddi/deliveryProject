@@ -146,3 +146,260 @@
 {"message":"undefined received and OTP 2431","level":"info","timestamp":"2021-02-16T09:13:54.041Z"}
 {"message":"7981075482 requested an otp.","level":"info","timestamp":"2021-02-16T09:18:17.530Z"}
 {"message":"undefined received and OTP 2787","level":"info","timestamp":"2021-02-16T09:18:17.605Z"}
+{"message":"undefined requested an otp.","level":"info","timestamp":"2021-02-16T09:20:28.660Z"}
+{"message":"undefined does not exist in either\n                customer or truckowner database","level":"info","timestamp":"2021-02-16T09:20:28.773Z"}
+{"message":"7981075482 requested an otp.","level":"info","timestamp":"2021-02-16T09:20:56.547Z"}
+{"message":"undefined received and OTP 9231","level":"info","timestamp":"2021-02-16T09:20:56.587Z"}
+{"message":"7981075482 requested an otp.","level":"info","timestamp":"2021-02-16T09:21:00.295Z"}
+{"message":"undefined received and OTP 9084","level":"info","timestamp":"2021-02-16T09:21:00.297Z"}
+{"message":"7981075482 requested an otp.","level":"info","timestamp":"2021-02-16T09:21:33.520Z"}
+{"message":"undefined received and OTP 0954","level":"info","timestamp":"2021-02-16T09:21:33.562Z"}
+{"message":"7981075482 requested an otp.","level":"info","timestamp":"2021-02-16T09:22:53.848Z"}
+{"message":"undefined received and OTP 5615","level":"info","timestamp":"2021-02-16T09:22:53.891Z"}
+{"message":"7981075481 requested an otp.","level":"info","timestamp":"2021-02-16T09:25:01.624Z"}
+{"message":"undefined received and OTP 0673","level":"info","timestamp":"2021-02-16T09:25:01.672Z"}
+{"message":"7981075482 requested an otp.","level":"info","timestamp":"2021-02-16T09:27:38.329Z"}
+{"message":"undefined received and OTP 5984","level":"info","timestamp":"2021-02-16T09:27:38.378Z"}
+{"message":"7981075482 requested an otp.","level":"info","timestamp":"2021-02-16T09:28:39.038Z"}
+{"message":"undefined received and OTP 8804","level":"info","timestamp":"2021-02-16T09:28:39.084Z"}
+{"message":"7981075482 requested an otp.","level":"info","timestamp":"2021-02-16T09:32:18.791Z"}
+{"message":"undefined received and OTP 2962","level":"info","timestamp":"2021-02-16T09:32:18.835Z"}
+{"message":"7981075482 requested an otp.","level":"info","timestamp":"2021-02-16T09:34:20.571Z"}
+{"message":"undefined received and OTP 3810","level":"info","timestamp":"2021-02-16T09:34:20.608Z"}
+{"message":"undefined requested an otp.","level":"info","timestamp":"2021-02-16T09:43:36.586Z"}
+{"message":"undefined does not exist in either\n                customer or truckowner database","level":"info","timestamp":"2021-02-16T09:43:36.670Z"}
+{"message":"7981075482 requested an otp.","level":"info","timestamp":"2021-02-16T09:43:54.783Z"}
+{"message":"undefined received and OTP 9369","level":"info","timestamp":"2021-02-16T09:43:54.839Z"}
+{"message":"7981075482 requested an otp.","level":"info","timestamp":"2021-02-16T10:19:16.581Z"}
+{"message":"undefined received and OTP 9896","level":"info","timestamp":"2021-02-16T10:19:16.618Z"}
+{"message":"7981075482 requested an otp.","level":"info","timestamp":"2021-02-16T10:20:32.066Z"}
+{"message":"undefined received and OTP 4067","level":"info","timestamp":"2021-02-16T10:20:32.119Z"}
+{"message":"7981075481 requested an otp.","level":"info","timestamp":"2021-02-16T10:22:34.230Z"}
+{"message":"undefined received and OTP 4977","level":"info","timestamp":"2021-02-16T10:22:34.262Z"}
+{"message":"7981075482 requested an otp.","level":"info","timestamp":"2021-02-16T10:23:51.662Z"}
+{"message":"undefined received and OTP 7111","level":"info","timestamp":"2021-02-16T10:23:51.719Z"}
+{"message":"7981075481 requested an otp.","level":"info","timestamp":"2021-02-16T10:28:35.931Z"}
+{"message":"undefined received and OTP 5285","level":"info","timestamp":"2021-02-16T10:28:35.974Z"}
+{"message":"7981075482 requested an otp.","level":"info","timestamp":"2021-02-16T11:02:01.177Z"}
+{"message":"undefined received and OTP 1234","level":"info","timestamp":"2021-02-16T11:02:01.233Z"}
+{"message":"7981075481 requested an otp.","level":"info","timestamp":"2021-02-16T11:04:27.518Z"}
+{"message":"undefined received and OTP 7759","level":"info","timestamp":"2021-02-16T11:04:27.564Z"}
+{"message":"7981075481 requested an otp.","level":"info","timestamp":"2021-02-16T11:09:25.782Z"}
+{"message":"undefined received and OTP 5227","level":"info","timestamp":"2021-02-16T11:09:25.919Z"}
+{"message":"7981075482 requested an otp.","level":"info","timestamp":"2021-02-16T11:10:16.703Z"}
+{"message":"undefined received and OTP 4563","level":"info","timestamp":"2021-02-16T11:10:16.741Z"}
+{"message":"7981075482 requested an otp.","level":"info","timestamp":"2021-02-16T11:11:05.181Z"}
+{"message":"undefined received and OTP 0524","level":"info","timestamp":"2021-02-16T11:11:05.218Z"}
+{"message":"7981075481 requested an otp.","level":"info","timestamp":"2021-02-16T11:11:42.873Z"}
+{"message":"undefined received and OTP 7094","level":"info","timestamp":"2021-02-16T11:11:42.917Z"}
+{"message":"7980174582 requested an otp.","level":"info","timestamp":"2021-02-16T11:12:35.587Z"}
+{"message":"7980174582 does not exist in either\n                customer or truckowner database","level":"info","timestamp":"2021-02-16T11:12:35.665Z"}
+{"message":"7980175482 requested an otp.","level":"info","timestamp":"2021-02-16T11:12:46.141Z"}
+{"message":"7980175482 does not exist in either\n                customer or truckowner database","level":"info","timestamp":"2021-02-16T11:12:46.222Z"}
+{"message":"7980175481 requested an otp.","level":"info","timestamp":"2021-02-16T11:12:53.605Z"}
+{"message":"7980175481 does not exist in either\n                customer or truckowner database","level":"info","timestamp":"2021-02-16T11:12:53.635Z"}
+{"message":"7981075482 requested an otp.","level":"info","timestamp":"2021-02-16T11:13:08.050Z"}
+{"message":"undefined received and OTP 4772","level":"info","timestamp":"2021-02-16T11:13:08.113Z"}
+{"message":" requested an otp.","level":"info","timestamp":"2021-02-16T11:16:04.285Z"}
+{"message":" does not exist in either\n                customer or truckowner database","level":"info","timestamp":"2021-02-16T11:16:04.513Z"}
+{"message":"7981075481 requested an otp.","level":"info","timestamp":"2021-02-16T11:16:10.620Z"}
+{"message":"undefined received and OTP 4789","level":"info","timestamp":"2021-02-16T11:16:10.665Z"}
+{"message":"7981075481 requested an otp.","level":"info","timestamp":"2021-02-16T11:20:48.953Z"}
+{"message":"undefined received and OTP 8627","level":"info","timestamp":"2021-02-16T11:20:48.994Z"}
+{"message":"7981075482 requested an otp.","level":"info","timestamp":"2021-02-16T11:22:51.139Z"}
+{"message":"undefined received and OTP 4305","level":"info","timestamp":"2021-02-16T11:22:51.183Z"}
+{"message":"7981075482 requested an otp.","level":"info","timestamp":"2021-02-16T11:23:56.463Z"}
+{"message":"undefined received and OTP 9710","level":"info","timestamp":"2021-02-16T11:23:56.524Z"}
+{"message":"7981075481 requested an otp.","level":"info","timestamp":"2021-02-16T14:50:25.587Z"}
+{"message":"undefined received and OTP 1241","level":"info","timestamp":"2021-02-16T14:50:25.659Z"}
+{"message":"7981075481 requested an otp.","level":"info","timestamp":"2021-02-16T14:52:56.324Z"}
+{"message":"undefined received and OTP 8132","level":"info","timestamp":"2021-02-16T14:52:56.364Z"}
+{"message":"7981075481 requested an otp.","level":"info","timestamp":"2021-02-16T15:11:14.457Z"}
+{"message":"undefined received and OTP 4415","level":"info","timestamp":"2021-02-16T15:11:14.541Z"}
+{"message":"7981075481 requested an otp.","level":"info","timestamp":"2021-02-16T15:12:00.045Z"}
+{"message":"undefined received and OTP 7595","level":"info","timestamp":"2021-02-16T15:12:00.083Z"}
+{"message":"7981075482 requested an otp.","level":"info","timestamp":"2021-02-16T15:42:11.202Z"}
+{"message":"undefined received and OTP 1944","level":"info","timestamp":"2021-02-16T15:42:11.274Z"}
+{"message":"7981075481 requested an otp.","level":"info","timestamp":"2021-02-16T15:45:21.298Z"}
+{"message":"undefined received and OTP 6266","level":"info","timestamp":"2021-02-16T15:45:21.335Z"}
+{"message":"7981075482 requested an otp.","level":"info","timestamp":"2021-02-16T15:56:52.748Z"}
+{"message":"undefined received and OTP 1524","level":"info","timestamp":"2021-02-16T15:56:52.791Z"}
+{"message":"7981075481 requested an otp.","level":"info","timestamp":"2021-02-17T04:55:08.800Z"}
+{"message":"undefined received and OTP 5946","level":"info","timestamp":"2021-02-17T04:55:08.912Z"}
+{"message":"7981075481 requested an otp.","level":"info","timestamp":"2021-02-17T05:22:47.485Z"}
+{"message":"undefined received and OTP 3213","level":"info","timestamp":"2021-02-17T05:22:47.537Z"}
+{"message":"7981075482 requested an otp.","level":"info","timestamp":"2021-02-17T05:36:00.250Z"}
+{"message":"undefined received and OTP 9974","level":"info","timestamp":"2021-02-17T05:36:00.301Z"}
+{"message":"7981075481 requested an otp.","level":"info","timestamp":"2021-02-17T06:07:59.690Z"}
+{"message":"undefined received and OTP 8310","level":"info","timestamp":"2021-02-17T06:07:59.735Z"}
+{"message":"7981075482 requested an otp.","level":"info","timestamp":"2021-02-17T06:24:33.436Z"}
+{"message":"undefined received and OTP 3923","level":"info","timestamp":"2021-02-17T06:24:33.480Z"}
+{"message":"7981075481 requested an otp.","level":"info","timestamp":"2021-02-17T06:25:55.797Z"}
+{"message":"undefined received and OTP 5747","level":"info","timestamp":"2021-02-17T06:25:55.837Z"}
+{"message":"7981075482 requested an otp.","level":"info","timestamp":"2021-02-17T06:29:34.677Z"}
+{"message":"undefined received and OTP 7078","level":"info","timestamp":"2021-02-17T06:29:34.756Z"}
+{"message":"7981075482 requested an otp.","level":"info","timestamp":"2021-02-17T06:32:01.015Z"}
+{"message":"undefined received and OTP 1658","level":"info","timestamp":"2021-02-17T06:32:01.068Z"}
+{"message":"7981075482 requested an otp.","level":"info","timestamp":"2021-02-17T06:34:18.082Z"}
+{"message":"undefined received and OTP 9915","level":"info","timestamp":"2021-02-17T06:34:18.124Z"}
+{"message":"7981075482 requested an otp.","level":"info","timestamp":"2021-02-17T06:40:17.759Z"}
+{"message":"undefined received and OTP 8621","level":"info","timestamp":"2021-02-17T06:40:17.806Z"}
+{"message":"7981075482 requested an otp.","level":"info","timestamp":"2021-02-17T06:47:08.180Z"}
+{"message":"undefined received and OTP 4742","level":"info","timestamp":"2021-02-17T06:47:08.235Z"}
+{"message":"7981075482 requested an otp.","level":"info","timestamp":"2021-02-17T06:49:21.338Z"}
+{"message":"undefined received and OTP 2102","level":"info","timestamp":"2021-02-17T06:49:21.386Z"}
+{"message":"7981075482 requested an otp.","level":"info","timestamp":"2021-02-17T06:58:50.282Z"}
+{"message":"undefined received and OTP 7213","level":"info","timestamp":"2021-02-17T06:58:50.326Z"}
+{"message":"7981075482 requested an otp.","level":"info","timestamp":"2021-02-17T08:40:22.447Z"}
+{"message":"undefined received and OTP 0467","level":"info","timestamp":"2021-02-17T08:40:22.526Z"}
+{"message":"7981075482 requested an otp.","level":"info","timestamp":"2021-02-17T08:42:50.501Z"}
+{"message":"undefined received and OTP 5889","level":"info","timestamp":"2021-02-17T08:42:50.545Z"}
+{"message":"7981075482 requested an otp.","level":"info","timestamp":"2021-02-17T08:57:33.412Z"}
+{"message":"undefined received and OTP 5378","level":"info","timestamp":"2021-02-17T08:57:33.455Z"}
+{"message":"7981075482 requested an otp.","level":"info","timestamp":"2021-02-17T08:59:20.633Z"}
+{"message":"undefined received and OTP 9249","level":"info","timestamp":"2021-02-17T08:59:20.679Z"}
+{"message":"7981075482 requested an otp.","level":"info","timestamp":"2021-02-17T09:10:47.061Z"}
+{"message":"undefined received and OTP 7982","level":"info","timestamp":"2021-02-17T09:10:47.109Z"}
+{"message":"7981075483 requested an otp.","level":"info","timestamp":"2021-02-18T01:49:13.131Z"}
+{"message":"7981075483 does not exist in either\n                customer or truckowner database","level":"info","timestamp":"2021-02-18T01:49:13.380Z"}
+{"message":"7981075482 requested an otp.","level":"info","timestamp":"2021-02-18T01:49:21.091Z"}
+{"message":"undefined received and OTP 5179","level":"info","timestamp":"2021-02-18T01:49:21.098Z"}
+{"message":"7981075482 requested an otp.","level":"info","timestamp":"2021-02-18T01:51:35.764Z"}
+{"message":"undefined received and OTP 1762","level":"info","timestamp":"2021-02-18T01:51:35.880Z"}
+{"message":"7981075482 requested an otp.","level":"info","timestamp":"2021-02-18T02:00:56.137Z"}
+{"message":"undefined received and OTP 7601","level":"info","timestamp":"2021-02-18T02:00:56.242Z"}
+{"message":"7981075481 requested an otp.","level":"info","timestamp":"2021-02-18T02:07:38.497Z"}
+{"message":"undefined received and OTP 5741","level":"info","timestamp":"2021-02-18T02:07:38.613Z"}
+{"message":"7981075481 requested an otp.","level":"info","timestamp":"2021-02-18T02:17:45.909Z"}
+{"message":"undefined received and OTP 2517","level":"info","timestamp":"2021-02-18T02:17:45.993Z"}
+{"message":"7981075482 requested an otp.","level":"info","timestamp":"2021-02-18T02:22:18.451Z"}
+{"message":"undefined received and OTP 0132","level":"info","timestamp":"2021-02-18T02:22:18.559Z"}
+{"message":"7981075482 requested an otp.","level":"info","timestamp":"2021-02-18T02:26:49.048Z"}
+{"message":"undefined received and OTP 0700","level":"info","timestamp":"2021-02-18T02:26:49.158Z"}
+{"message":"7981075482 requested an otp.","level":"info","timestamp":"2021-02-18T02:29:54.699Z"}
+{"message":"undefined received and OTP 0324","level":"info","timestamp":"2021-02-18T02:29:54.785Z"}
+{"message":"7981075482 requested an otp.","level":"info","timestamp":"2021-02-18T02:31:20.623Z"}
+{"message":"undefined received and OTP 7530","level":"info","timestamp":"2021-02-18T02:31:20.747Z"}
+{"message":"7981075482 requested an otp.","level":"info","timestamp":"2021-02-18T02:32:30.834Z"}
+{"message":"undefined received and OTP 6011","level":"info","timestamp":"2021-02-18T02:32:30.979Z"}
+{"message":"7981075482 requested an otp.","level":"info","timestamp":"2021-02-18T02:34:29.013Z"}
+{"message":"undefined received and OTP 4821","level":"info","timestamp":"2021-02-18T02:34:29.176Z"}
+{"message":"7981075482 requested an otp.","level":"info","timestamp":"2021-02-18T02:37:24.032Z"}
+{"message":"undefined received and OTP 4439","level":"info","timestamp":"2021-02-18T02:37:24.194Z"}
+{"message":"7981075482 requested an otp.","level":"info","timestamp":"2021-02-18T04:17:13.371Z"}
+{"message":"undefined received and OTP 2604","level":"info","timestamp":"2021-02-18T04:17:13.464Z"}
+{"message":"7981075482 requested an otp.","level":"info","timestamp":"2021-02-18T04:20:31.237Z"}
+{"message":"undefined received and OTP 3421","level":"info","timestamp":"2021-02-18T04:20:31.318Z"}
+{"message":"7981075482 requested an otp.","level":"info","timestamp":"2021-02-18T04:22:46.750Z"}
+{"message":"undefined received and OTP 4516","level":"info","timestamp":"2021-02-18T04:22:46.794Z"}
+{"message":"7981075482 requested an otp.","level":"info","timestamp":"2021-02-18T04:24:22.310Z"}
+{"message":"undefined received and OTP 3028","level":"info","timestamp":"2021-02-18T04:24:22.390Z"}
+{"message":"7981075482 requested an otp.","level":"info","timestamp":"2021-02-18T04:25:59.057Z"}
+{"message":"undefined received and OTP 8565","level":"info","timestamp":"2021-02-18T04:25:59.094Z"}
+{"message":"7981075482 requested an otp.","level":"info","timestamp":"2021-02-18T04:26:20.686Z"}
+{"message":"undefined received and OTP 8200","level":"info","timestamp":"2021-02-18T04:26:20.733Z"}
+{"message":"7981075482 requested an otp.","level":"info","timestamp":"2021-02-18T04:26:21.728Z"}
+{"message":"undefined received and OTP 8127","level":"info","timestamp":"2021-02-18T04:26:21.729Z"}
+{"message":"7981075482 requested an otp.","level":"info","timestamp":"2021-02-18T04:28:58.775Z"}
+{"message":"undefined received and OTP 9392","level":"info","timestamp":"2021-02-18T04:28:58.821Z"}
+{"message":"7981075482 requested an otp.","level":"info","timestamp":"2021-02-18T04:29:04.748Z"}
+{"message":"undefined received and OTP 9374","level":"info","timestamp":"2021-02-18T04:29:04.749Z"}
+{"message":"7981075481 requested an otp.","level":"info","timestamp":"2021-02-18T04:30:15.650Z"}
+{"message":"undefined received and OTP 6933","level":"info","timestamp":"2021-02-18T04:30:15.698Z"}
+{"message":"7981075481 requested an otp.","level":"info","timestamp":"2021-02-18T04:30:19.123Z"}
+{"message":"undefined received and OTP 3266","level":"info","timestamp":"2021-02-18T04:30:19.125Z"}
+{"message":"7981075481 requested an otp.","level":"info","timestamp":"2021-02-18T04:30:48.576Z"}
+{"message":"undefined received and OTP 4089","level":"info","timestamp":"2021-02-18T04:30:48.631Z"}
+{"message":"7981075481 requested an otp.","level":"info","timestamp":"2021-02-18T04:31:10.935Z"}
+{"message":"undefined received and OTP 3290","level":"info","timestamp":"2021-02-18T04:31:10.974Z"}
+{"message":"7981075481 requested an otp.","level":"info","timestamp":"2021-02-18T05:46:27.184Z"}
+{"message":"undefined received and OTP 5171","level":"info","timestamp":"2021-02-18T05:46:27.240Z"}
+{"message":"7981075481 requested an otp.","level":"info","timestamp":"2021-02-18T05:51:32.788Z"}
+{"message":"undefined received and OTP 9489","level":"info","timestamp":"2021-02-18T05:51:32.852Z"}
+{"message":"7981075481 requested an otp.","level":"info","timestamp":"2021-02-18T05:52:14.322Z"}
+{"message":"undefined received and OTP 0094","level":"info","timestamp":"2021-02-18T05:52:14.367Z"}
+{"message":"7981075481 requested an otp.","level":"info","timestamp":"2021-02-18T05:55:04.792Z"}
+{"message":"undefined received and OTP 4132","level":"info","timestamp":"2021-02-18T05:55:04.855Z"}
+{"message":"7981075481 requested an otp.","level":"info","timestamp":"2021-02-18T05:56:23.994Z"}
+{"message":"undefined received and OTP 3519","level":"info","timestamp":"2021-02-18T05:56:24.044Z"}
+{"message":"7981075481 requested an otp.","level":"info","timestamp":"2021-02-18T05:58:23.282Z"}
+{"message":"undefined received and OTP 6244","level":"info","timestamp":"2021-02-18T05:58:23.320Z"}
+{"message":"7981075481 requested an otp.","level":"info","timestamp":"2021-02-18T06:00:23.270Z"}
+{"message":"undefined received and OTP 9236","level":"info","timestamp":"2021-02-18T06:00:23.328Z"}
+{"message":"7981075481 requested an otp.","level":"info","timestamp":"2021-02-18T06:02:02.584Z"}
+{"message":"undefined received and OTP 0876","level":"info","timestamp":"2021-02-18T06:02:02.642Z"}
+{"message":"7981075481 requested an otp.","level":"info","timestamp":"2021-02-18T06:05:54.422Z"}
+{"message":"undefined received and OTP 1282","level":"info","timestamp":"2021-02-18T06:05:54.462Z"}
+{"message":"7981075481 requested an otp.","level":"info","timestamp":"2021-02-18T06:32:52.072Z"}
+{"message":"7981075481 requested an otp.","level":"info","timestamp":"2021-02-18T06:33:51.320Z"}
+{"message":"7981075481 requested an otp.","level":"info","timestamp":"2021-02-18T06:34:38.907Z"}
+{"message":"7981075481 requested an otp.","level":"info","timestamp":"2021-02-18T06:36:56.728Z"}
+{"message":"7981075481 does not exist in either\n                customer or truckowner database","level":"info","timestamp":"2021-02-18T06:36:56.806Z"}
+{"message":"7981075481 requested an otp.","level":"info","timestamp":"2021-02-18T06:41:33.177Z"}
+{"message":"7981075481 does not exist in either\n                customer or truckowner database","level":"info","timestamp":"2021-02-18T06:41:33.237Z"}
+{"message":"7981075481 requested an otp.","level":"info","timestamp":"2021-02-18T06:41:57.276Z"}
+{"message":"7981075481 does not exist in either\n                customer or truckowner database","level":"info","timestamp":"2021-02-18T06:41:57.336Z"}
+{"message":"7981075481 requested an otp.","level":"info","timestamp":"2021-02-18T06:43:08.079Z"}
+{"message":"7981075481 does not exist in either\n                customer or truckowner database","level":"info","timestamp":"2021-02-18T06:43:08.125Z"}
+{"message":"7981075481 requested an otp.","level":"info","timestamp":"2021-02-18T06:43:11.427Z"}
+{"message":"7981075481 does not exist in either\n                customer or truckowner database","level":"info","timestamp":"2021-02-18T06:43:11.433Z"}
+{"message":"7981075481 requested an otp.","level":"info","timestamp":"2021-02-18T06:43:22.407Z"}
+{"message":"7981075481 does not exist in either\n                customer or truckowner database","level":"info","timestamp":"2021-02-18T06:43:22.452Z"}
+{"message":"7981075481 requested an otp.","level":"info","timestamp":"2021-02-18T06:44:39.431Z"}
+{"message":"7981075481 does not exist in either\n                customer or truckowner database","level":"info","timestamp":"2021-02-18T06:44:39.603Z"}
+{"message":"7981075481 requested an otp.","level":"info","timestamp":"2021-02-18T06:45:21.742Z"}
+{"message":"7981075481 does not exist in either\n                customer or truckowner database","level":"info","timestamp":"2021-02-18T06:45:21.786Z"}
+{"message":"7981075481 requested an otp.","level":"info","timestamp":"2021-02-18T06:45:33.067Z"}
+{"message":"7981075481 does not exist in either\n                customer or truckowner database","level":"info","timestamp":"2021-02-18T06:45:33.115Z"}
+{"message":"7981075481 requested an otp.","level":"info","timestamp":"2021-02-18T06:45:48.581Z"}
+{"message":"7981075481 does not exist in either\n                customer or truckowner database","level":"info","timestamp":"2021-02-18T06:45:48.638Z"}
+{"message":"7981075481 requested an otp.","level":"info","timestamp":"2021-02-18T06:46:33.395Z"}
+{"message":"7981075481 does not exist in either\n                customer or truckowner database","level":"info","timestamp":"2021-02-18T06:46:33.436Z"}
+{"message":"7981075481 requested an otp.","level":"info","timestamp":"2021-02-18T06:49:10.120Z"}
+{"message":"undefined received and OTP 6352","level":"info","timestamp":"2021-02-18T06:49:10.172Z"}
+{"message":"7981075481 requested an otp.","level":"info","timestamp":"2021-02-18T06:50:54.735Z"}
+{"message":"undefined received and OTP 5798","level":"info","timestamp":"2021-02-18T06:50:54.799Z"}
+{"message":"7981075481 requested an otp.","level":"info","timestamp":"2021-02-18T06:58:24.953Z"}
+{"message":"7981075481 requested an otp.","level":"info","timestamp":"2021-02-18T07:01:00.295Z"}
+{"message":"7981075481 requested an otp.","level":"info","timestamp":"2021-02-18T07:01:48.976Z"}
+{"message":"7981075481 requested an otp.","level":"info","timestamp":"2021-02-18T07:02:07.132Z"}
+{"message":"7981075481 requested an otp.","level":"info","timestamp":"2021-02-18T07:05:52.969Z"}
+{"message":"undefined received and OTP 2249","level":"info","timestamp":"2021-02-18T07:05:53.029Z"}
+{"message":"7981075481 requested an otp.","level":"info","timestamp":"2021-02-18T07:07:11.211Z"}
+{"message":"undefined received and OTP 4534","level":"info","timestamp":"2021-02-18T07:07:11.272Z"}
+{"message":"7981075481 requested an otp.","level":"info","timestamp":"2021-02-18T07:13:52.758Z"}
+{"message":"7981075481 does not exist in either\n                customer or truckowner database","level":"info","timestamp":"2021-02-18T07:13:52.831Z"}
+{"message":"7981075481 requested an otp.","level":"info","timestamp":"2021-02-18T07:15:11.747Z"}
+{"message":"undefined received and OTP 0955","level":"info","timestamp":"2021-02-18T07:15:11.803Z"}
+{"message":"7981075481 requested an otp.","level":"info","timestamp":"2021-02-18T07:19:53.029Z"}
+{"message":"undefined received and OTP 8127","level":"info","timestamp":"2021-02-18T07:19:53.085Z"}
+{"message":"7981075481 requested an otp.","level":"info","timestamp":"2021-02-18T09:04:45.556Z"}
+{"message":"undefined received and OTP 4198","level":"info","timestamp":"2021-02-18T09:04:45.636Z"}
+{"message":"7981075481 requested an otp.","level":"info","timestamp":"2021-02-18T09:16:36.354Z"}
+{"message":"undefined received and OTP 1860","level":"info","timestamp":"2021-02-18T09:16:36.427Z"}
+{"message":"7981075481 requested an otp.","level":"info","timestamp":"2021-02-18T09:23:38.730Z"}
+{"message":"undefined received and OTP 7504","level":"info","timestamp":"2021-02-18T09:23:38.777Z"}
+{"message":"7981075481 requested an otp.","level":"info","timestamp":"2021-02-18T09:25:06.096Z"}
+{"message":"undefined received and OTP 5345","level":"info","timestamp":"2021-02-18T09:25:06.145Z"}
+{"message":"7981075481 requested an otp.","level":"info","timestamp":"2021-02-18T09:44:25.244Z"}
+{"message":"undefined received and OTP 5088","level":"info","timestamp":"2021-02-18T09:44:25.333Z"}
+{"message":"7981075481 requested an otp.","level":"info","timestamp":"2021-02-18T09:47:21.885Z"}
+{"message":"undefined received and OTP 9520","level":"info","timestamp":"2021-02-18T09:47:21.972Z"}
+{"message":"7981075481 requested an otp.","level":"info","timestamp":"2021-02-21T08:54:23.591Z"}
+{"message":"undefined received and OTP 9430","level":"info","timestamp":"2021-02-21T08:54:23.758Z"}
+{"message":"7981075481 requested an otp.","level":"info","timestamp":"2021-02-21T09:03:56.897Z"}
+{"message":"undefined received and OTP 0379","level":"info","timestamp":"2021-02-21T09:03:57.006Z"}
+{"message":"7981075481 requested an otp.","level":"info","timestamp":"2021-02-21T09:28:32.697Z"}
+{"message":"undefined received and OTP 7287","level":"info","timestamp":"2021-02-21T09:28:32.791Z"}
+{"message":"7981075481 requested an otp.","level":"info","timestamp":"2021-02-21T09:33:26.255Z"}
+{"message":"undefined received and OTP 8384","level":"info","timestamp":"2021-02-21T09:33:26.353Z"}
+{"message":"7981075481 requested an otp.","level":"info","timestamp":"2021-02-21T09:39:12.884Z"}
+{"message":"undefined received and OTP 9246","level":"info","timestamp":"2021-02-21T09:39:12.983Z"}
+{"message":"7981075481 requested an otp.","level":"info","timestamp":"2021-02-22T02:27:07.459Z"}
+{"message":"undefined received and OTP 1815","level":"info","timestamp":"2021-02-22T02:27:07.619Z"}
+{"message":"7981075481 requested an otp.","level":"info","timestamp":"2021-02-22T04:37:54.446Z"}
+{"message":"undefined received and OTP 6257","level":"info","timestamp":"2021-02-22T04:37:54.517Z"}
+{"message":"7981075481 requested an otp.","level":"info","timestamp":"2021-02-22T04:38:57.725Z"}
+{"message":"undefined received and OTP 9870","level":"info","timestamp":"2021-02-22T04:38:57.798Z"}
+{"message":"7981075481 requested an otp.","level":"info","timestamp":"2021-02-22T05:03:59.538Z"}
+{"message":"undefined received and OTP 9549","level":"info","timestamp":"2021-02-22T05:03:59.610Z"}

@@ -34,14 +34,16 @@ const sendSMS = async (req, res) => {
 
     const result2 = await getTruckowner(req.body.mobileNum);
 
+    console.log(result2);
+
     // console.log(`trunk driver ${JSON.stringify(result2)}`);
 
-    if (!result2.rowCount) {
+    if (!result2[0].rowCount) {
         const result3 = await getTransportCompany(req.body.mobileNum);
 
         console.log(result3);
 
-        if (!result3.rowCount) {
+        if (!result3[0].rowCount) {
             console.log('No user found');
             logger.info(`${req.body.mobileNum} does not exist in either
                 customer or truckowner database`);
@@ -56,7 +58,9 @@ const sendSMS = async (req, res) => {
 
         return res.json({
             statusCode: 200,
+            customerDetails: result1.rows,
             transportOwner: result3.rows,
+            truckDetails: result3[1],
             otp,
             token,
             ipAddress: parseIp(req),
@@ -75,10 +79,14 @@ const sendSMS = async (req, res) => {
         expiresIn: 86400, // expires in 24 hours
     });
 
+    console.log('result2');
+    console.log(result2);
+
     return res.json({
         statusCode: 200,
         customerDetails: result1.rows,
-        truckOwner: result2.rows,
+        truckOwner: result2[0].rows,
+        truckDetails: result2[1],
         otp,
         token,
         ipAddress: parseIp(req),

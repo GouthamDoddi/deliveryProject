@@ -25,8 +25,10 @@ async function getTrips (tripDetails) {
 
 async function getTripByTruckNo (truckNo) {
     // wrong code, search trip with tripId
+
+    console.log(truckNo);
     const query = {
-        name: 'Check truckowner exists',
+        name: 'Check tripzzz exists',
         text: 'SELECT * FROM "SUT".trip_details WHERE (truck_no = $1)',
         values: [
             truckNo,
@@ -34,7 +36,11 @@ async function getTripByTruckNo (truckNo) {
     };
 
     try {
-        return await pool.query(query);
+        const r = await pool.query(query);
+
+        console.log(r);
+
+        return r;
     } catch (error) {
         console.log(error);
 

@@ -133,7 +133,7 @@ const updateTruckWeightandSpace = updatedValues => {
 
 function getTransportCompanyTrucks (mobileNum) {
     const query = {
-        name: 'Check transport owner exists',
+        name: 'Check transport owner exist',
         text: 'SELECT * FROM "SUT".truckdetails WHERE transport_company_mobile_num = $1',
         values: [ mobileNum ],
     };

@@ -16,6 +16,25 @@ function getPackage (packageId) {
     }
 }
 
+const getPackageWithDetails = async details => {
+    const query = {
+        name: 'get list of packeages for route',
+        text: `SELECT * FROM "SUT".package_details WHERE
+    (pickup_point = $1 AND drop_point = $2 AND pickup_date::date = $3)`,
+        values: [ details.pickUpPoint,
+            details.dropPoint,
+            details.date ],
+    };
+
+    try {
+        return await pool.query(query);
+    } catch (error) {
+        console.log(error);
+
+        return error;
+    }
+};
+
 async function getPackageReceivingDetails (mobileNum) {
     const query = {
         name: 'get receiving packages',
@@ -122,4 +141,5 @@ module.exports = { getPackage,
     updatePackageReachDate,
     getPackageReceivingDetails,
     getAllCustomerPackages,
-    getAllTripPackages };
+    getAllTripPackages,
+    getPackageWithDetails };
