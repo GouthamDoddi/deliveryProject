@@ -1,9 +1,10 @@
 const pool = require('../config/db');
+const { getPackage } = require('./packageServices');
 
 
 async function insertMapping (mappingDetails) {
     const query = {
-        name: 'insert user in db',
+        name: 'mapping trucck and package',
         text: `INSERT INTO "SUT".truck_package_mapping (truck_no, package_id, date, trip_id) 
                 VALUES($1, $2, $3, $4) RETURNING *`,
         values: [
@@ -60,6 +61,36 @@ const updatePackageDeliveryStatus = async details => {
     }
 };
 
+const getPackageByTruck = async truckNo => {
+    const query = {
+        name: 'Update package mapping',
+        text: 'SELECT * FROM "SUT".truck_package_mapping WHERE truck_no=$1',
+        values: [ truckNo ],
+    };
+
+    const result = await pool.query(query);
+
+    try {
+        // console.log(result.rows);
+
+        const result2 = result.rows
+            ? await Promise.all(result.rows.map(async (data, index) => {
+                const resultData = await getPackage(data.package_id);
+
+                return [ resultData.rows[0], data ];
+            }))
+            : 0;
+
+        return result2;
+    } catch (error) {
+        console.log(error);
+
+        return error;
+    }
+};
+
+
 module.exports = { insertMapping,
     updatePackageTruck,
-    updatePackageDeliveryStatus };
+    updatePackageDeliveryStatus,
+    getPackageByTruck };

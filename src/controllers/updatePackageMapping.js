@@ -1,4 +1,4 @@
-const { updatePackageTruck, updatePackageDeliveryStatus } = require('../services/truckPackageMappingServices');
+const { updatePackageDeliveryStatus } = require('../services/truckPackageMappingServices');
 const parseIp = require('../middleware/praseIp');
 
 const updatePackageMaping = async (req, res) => {

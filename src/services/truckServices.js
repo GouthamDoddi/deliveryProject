@@ -44,7 +44,7 @@ const getTruck = truckNo => {
     // use truckNo to get the total space
 
     const query = {
-        name: 'Get truck details',
+        name: 'Get truck detail',
         text: `SELECT truck_id, truck_name,
         truck_no, truck_model, chasis_no,
         capacity_inkgs, capacity_inspace,
@@ -69,7 +69,7 @@ const getTruck2 = truckNo => {
     // use truckNo to get the total space
 
     const query = {
-        name: 'Get truck details',
+        name: 'Get truck details with truckNo',
         text: 'SELECT * FROM "SUT".truckdetails WHERE truck_no = $1',
         values: [ truckNo ],
     };
@@ -87,7 +87,7 @@ const getTrucksForOwner = async mobileNum => {
     // use truckNo to get the total space
 
     const query = {
-        name: 'Get truck details',
+        name: 'Get truck details fro owner',
         text: `SELECT truck_id, truck_name,
           truck_no, truck_model, chasis_no,
           capacity_inkgs, capacity_inspace,

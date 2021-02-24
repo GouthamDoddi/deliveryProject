@@ -107,3 +107,12 @@
 {"message":"received package register request for customer 7981075481 \n    and id address = ::1 ","level":"info","timestamp":"2021-02-22T02:40:48.547Z"}
 {"message":"received package register request for customer 7981075487 \n    and id address = ::1 ","level":"info","timestamp":"2021-02-22T02:41:14.121Z"}
 {"message":"received package register request for customer 9999999999 \n    and id address = ::1 ","level":"info","timestamp":"2021-02-22T02:42:00.700Z"}
+{"message":"received package register request for customer 7981075481 \n    and id address = ::1 ","level":"info","timestamp":"2021-02-22T09:26:14.628Z"}
+{"message":"received package register request for customer 7981075481 \n    and id address = ::1 ","level":"info","timestamp":"2021-02-22T09:33:38.819Z"}
+{"message":"received package register request for customer 7981075482 \n    and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-02-23T04:34:50.234Z"}
+{"message":"received package register request for customer 999999999 \n    and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-02-23T05:26:40.755Z"}
+{"message":"received package register request for customer 999999999 \n    and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-02-23T05:28:19.141Z"}
+{"message":"received package register request for customer 999999999 \n    and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-02-23T05:31:26.724Z"}
+{"message":"received package register request for customer 999999999 \n    and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-02-23T05:31:50.332Z"}
+{"message":"received package register request for customer 999999999 \n    and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-02-23T05:33:50.781Z"}
+{"message":"received package register request for customer 999999999 \n    and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-02-23T05:35:30.069Z"}

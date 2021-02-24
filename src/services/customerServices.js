@@ -66,7 +66,9 @@ async function insertCustomer (customerDetails) {
     };
 
     try {
-        return await pool.query(query);
+        const res = await pool.query(query);
+
+        console.log(res);
     } catch (error) {
         console.log(error);
 

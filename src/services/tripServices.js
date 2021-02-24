@@ -50,7 +50,7 @@ async function getTripByTruckNo (truckNo) {
 
 const insertTrip = async tripDetails => {
     const query = {
-        name: 'insert user in db',
+        name: 'insert Trip in db',
         text: `INSERT INTO "SUT".trip_details (truck_no, source, destination, start_date,
                  reach_date, trip_duration_in_hours) VALUES($1, $2, $3, $4, $5, $6) RETURNING *`,
 
@@ -102,7 +102,7 @@ const updateTripDetails = async tripDetails => {
 
 const incrementTripPackageDelivered = async tripId => {
     const query = {
-        name: 'Update delivered packages',
+        name: 'Update delivered  packages',
         text: `UPDATE "SUT".trip_details SET delivered_packages = delivered_packages + 1
         WHERE trip_id = $1`,
         values: [ tripId ],
@@ -119,7 +119,7 @@ const incrementTripPackageDelivered = async tripId => {
 
 const incrementTripPackageTotal = async tripId => {
     const query = {
-        name: 'Update delivered packages',
+        name: 'Update Total packages',
         text: `UPDATE "SUT".trip_details SET total_packages = total_packages + 1
         WHERE trip_id = $1`,
         values: [ tripId ],

@@ -37,7 +37,7 @@ const getPackageWithDetails = async details => {
 
 async function getPackageReceivingDetails (mobileNum) {
     const query = {
-        name: 'get receiving packages',
+        name: 'get receiving packages for customer',
         text: 'SELECT * FROM "SUT".package_details WHERE receiving_person_mobile_no = $1',
         values: [ mobileNum ],
     };
@@ -53,7 +53,7 @@ async function getPackageReceivingDetails (mobileNum) {
 
 async function getAllCustomerPackages (mobileNum) {
     const query = {
-        name: 'get receiving packages',
+        name: 'get customer packages',
         text: 'SELECT * FROM "SUT".package_details WHERE customer_mobile_num = $1',
         values: [ mobileNum ],
     };
@@ -69,7 +69,7 @@ async function getAllCustomerPackages (mobileNum) {
 
 async function insertPackage (packageDetails) {
     const query = {
-        name: 'insert user in db',
+        name: 'insert package in db',
         text: `INSERT INTO "SUT".package_details (package_name, customer_mobile_num, package_type,
             package_weight, package_space, package_value, pickup_point, 
             drop_point, pickup_date, booked_entire_truck, package_receiving_person,
@@ -123,7 +123,7 @@ const updatePackageReachDate = updatedValues => {
 
 const getAllTripPackages = tripId => {
     const query = {
-        name: 'get trip packages',
+        name: 'get trip packages with tripId',
         text: 'SELECT package_id FROM "SUT".truck_package_mapping WHERE trip_id = $1',
         values: [ tripId ],
     };
