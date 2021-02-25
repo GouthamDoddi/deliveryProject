@@ -9,6 +9,8 @@ const getListOfTrucks = async (req, res) => {
 
     const trips = await getTrips(tripInfo);
 
+    console.log(trips);
+
     if (!trips.rowCount) {
         return res.json({
             statusCode: 400,

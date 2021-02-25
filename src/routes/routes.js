@@ -61,8 +61,8 @@ router.post('/getCompanyTrucks', verifyToken, getCompanyTrucks);
 router.post('/getTruck2', verifyToken, getTruckWithDocs);
 router.post('/getTruckList', verifyToken, getListOfTrucks);
 router.post('/getTripByTruckNo', verifyToken, getTripWTruckNo);
-router.post('/getpackageByRoute', verifyToken, getPackageByRoute);
-router.post('/getpackageByTruckNo', verifyToken, getPackageByTruckNo);
+router.post('/getPackageByRoute', verifyToken, getPackageByRoute);
+router.post('/getPackageByTruckNo', verifyToken, getPackageByTruckNo);
 
 
 // router.post('/verifyJWT', verifyToken);

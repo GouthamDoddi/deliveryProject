@@ -30,8 +30,6 @@ const insertTruck = async truckDetails => {
     try {
         const result = await pool.query(query);
 
-        console.log(result);
-
         return result;
     } catch (error) {
         console.error(`error at service ${error}`);
@@ -134,7 +132,13 @@ const updateTruckWeightandSpace = updatedValues => {
 function getTransportCompanyTrucks (mobileNum) {
     const query = {
         name: 'Check transport owner exist',
-        text: 'SELECT * FROM "SUT".truckdetails WHERE transport_company_mobile_num = $1',
+        text: `SELECT truck_id, truck_name,
+        truck_no, truck_model, chasis_no,
+        capacity_inkgs, capacity_inspace,
+        booked_weight, booked_space,
+        truckowner_mobile_num,
+        transport_company_name,
+        driver_name, transport_company_mobile_num FROM "SUT".truckdetails WHERE transport_company_mobile_num = $1`,
         values: [ mobileNum ],
     };
 

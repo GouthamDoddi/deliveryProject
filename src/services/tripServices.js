@@ -6,7 +6,7 @@ async function getTrips (tripDetails) {
     const query = {
         name: 'Check truckowner exists',
         text: `SELECT * FROM "SUT".trip_details WHERE (source = $1
-            AND destination = $2 AND start_date = $3)`,
+            AND destination = $2 AND start_date::date = $3)`,
         values: [
             tripDetails.source,
             tripDetails.destination,

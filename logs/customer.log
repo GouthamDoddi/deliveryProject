@@ -146,3 +146,16 @@
 {"message":"received register request from customer with mobile number 7981075481,1232343454 \n    and id address = ::1 ","level":"info","timestamp":"2021-02-24T07:50:18.390Z"}
 {"message":"received register request from customer with mobile number 1232343454 \n    and id address = ::1 ","level":"info","timestamp":"2021-02-24T07:52:07.443Z"}
 {"message":"Customer with mobile number  1232343454 registered","level":"info","timestamp":"2021-02-24T07:52:07.535Z"}
+{"message":"received register request from customer with mobile number 9098989980 \n    and id address = ::1 ","level":"info","timestamp":"2021-02-25T00:19:05.416Z"}
+{"message":"received register request from customer with mobile number 9098989980 \n    and id address = ::1 ","level":"info","timestamp":"2021-02-25T00:24:21.911Z"}
+{"message":"received register request from customer with mobile number 9098989981 \n    and id address = ::1 ","level":"info","timestamp":"2021-02-25T00:24:40.231Z"}
+{"message":"Customer with mobile number  9098989981 registered","level":"info","timestamp":"2021-02-25T00:24:40.266Z"}
+{"message":"received register request from customer with mobile number 9098989981 \n    and id address = ::1 ","level":"info","timestamp":"2021-02-25T00:25:31.111Z"}
+{"message":"received register request from customer with mobile number 9098989981 \n    and id address = ::1 ","level":"info","timestamp":"2021-02-25T00:25:45.181Z"}
+{"message":"received register request from customer with mobile number 9098989981 \n    and id address = ::1 ","level":"info","timestamp":"2021-02-25T00:28:20.964Z"}
+{"message":"received register request from customer with mobile number 9098989981 \n    and id address = ::1 ","level":"info","timestamp":"2021-02-25T00:28:35.523Z"}
+{"message":"received register request from customer with mobile number 9098989985 \n    and id address = ::1 ","level":"info","timestamp":"2021-02-25T00:28:50.185Z"}
+{"message":"Customer with mobile number  9098989985 registered","level":"info","timestamp":"2021-02-25T00:28:50.217Z"}
+{"message":"received register request from customer with mobile number 9098989985 \n    and id address = ::1 ","level":"info","timestamp":"2021-02-25T00:35:28.364Z"}
+{"message":"received register request from customer with mobile number 7981075434 \n    and id address = ::1 ","level":"info","timestamp":"2021-02-25T06:49:29.131Z"}
+{"message":"Customer with mobile number  7981075434 registered","level":"info","timestamp":"2021-02-25T06:49:29.180Z"}

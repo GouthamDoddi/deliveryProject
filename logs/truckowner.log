@@ -116,3 +116,5 @@
 {"message":"received package register request for customer 999999999 \n    and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-02-23T05:31:50.332Z"}
 {"message":"received package register request for customer 999999999 \n    and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-02-23T05:33:50.781Z"}
 {"message":"received package register request for customer 999999999 \n    and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-02-23T05:35:30.069Z"}
+{"message":"received package register request for customer 7981075434,7981075481 \n    and id address = ::1 ","level":"info","timestamp":"2021-02-25T07:13:00.772Z"}
+{"message":"received package register request for customer 7981075434,7981075481 \n    and id address = ::1 ","level":"info","timestamp":"2021-02-25T07:13:59.278Z"}

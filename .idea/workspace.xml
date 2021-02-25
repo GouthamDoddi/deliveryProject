@@ -3,21 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ab2135b9-672e-44c1-a177-f2aa9ef9a004" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/JWT.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/JWT.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/OTP.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/OTP.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/customer.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/customer.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/truckowner.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/truckowner.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/tables.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/tables.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/assignPackage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/assignPackage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/getPackages.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/getPackages.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/sendSms.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/sendSms.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/updatePackageMapping.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/updatePackageMapping.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/customerServices.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/customerServices.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/packageServices.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/packageServices.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/tripServices.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/tripServices.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/truckPackageMappingServices.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/truckPackageMappingServices.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/truckServices.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/truckServices.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +41,7 @@
       <workItem from="1613537625067" duration="14901000" />
       <workItem from="1613702661522" duration="2036000" />
       <workItem from="1613897714611" duration="414000" />
-      <workItem from="1614153540433" duration="7644000" />
+      <workItem from="1614153540433" duration="8217000" />
     </task>
     <servers />
   </component>

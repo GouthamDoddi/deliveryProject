@@ -91,7 +91,7 @@ const getCompanyTrucks = async (req, res) => {
     if (trucks.rowCount) {
         return res.json({
             statusCode: 200,
-            trucks,
+            truckDetails: trucks.rows,
             ipAddress: parseIp(req),
         });
     }

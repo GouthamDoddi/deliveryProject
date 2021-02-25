@@ -84,6 +84,9 @@ const getPackageByRoute = async (req, res) => {
     if (!result.rowCount) {
         return res.json({
             statusCode: 400,
+            error: result.rowCount === 0
+                ? 'no erros found'
+                : result,
             message: 'Could not find any matching packages!',
         });
     }
@@ -102,10 +105,11 @@ const getPackageByTruckNo = async (req, res) => {
     const result = await getPackageByTruck(truckNo);
 
     console.log(result);
-    if (!result) {
+    if (!result.length) {
         return res.json({
             statusCode: 400,
             message: 'Could not find any matching packages!',
+            ipAddress: parseIp(req),
         });
     }
 

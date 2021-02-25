@@ -79,7 +79,9 @@ const customerRegister = async (req, res) => {
 
     return res.status(400)
         .json({ statusCode: 400,
-            message: addCustomer.detail,
+            errorMessage: addCustomer.detail
+                ? addCustomer.detail
+                : addCustomer,
             ipAddress: parseIp(req) });
 
 
