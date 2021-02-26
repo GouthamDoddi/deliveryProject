@@ -159,3 +159,7 @@
 {"message":"received register request from customer with mobile number 9098989985 \n    and id address = ::1 ","level":"info","timestamp":"2021-02-25T00:35:28.364Z"}
 {"message":"received register request from customer with mobile number 7981075434 \n    and id address = ::1 ","level":"info","timestamp":"2021-02-25T06:49:29.131Z"}
 {"message":"Customer with mobile number  7981075434 registered","level":"info","timestamp":"2021-02-25T06:49:29.180Z"}
+{"message":"received register request from customer with mobile number 7981075481 \n    and id address = ::1 ","level":"info","timestamp":"2021-02-25T11:47:35.225Z"}
+{"message":"received register request from customer with mobile number 9898909898 \n    and id address = ::1 ","level":"info","timestamp":"2021-02-26T05:45:25.556Z"}
+{"message":"received register request from customer with mobile number 9898909898 \n    and id address = ::1 ","level":"info","timestamp":"2021-02-26T05:46:02.780Z"}
+{"message":"received register request from customer with mobile number 9898909898 \n    and id address = ::1 ","level":"info","timestamp":"2021-02-26T05:46:59.997Z"}
