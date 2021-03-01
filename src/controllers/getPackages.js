@@ -2,7 +2,7 @@ const parseIp = require('../middleware/praseIp');
 
 
 const { getPackageReceivingDetails, getAllCustomerPackages,
-    getAllTripPackages, getPackageWithDetails } = require('../services/packageServices');
+    getAllTripPackages, getPackageWithDetails, getPackage } = require('../services/packageServices');
 const { getPackageByTruck } = require('../services/truckPackageMappingServices');
 
 
@@ -10,6 +10,27 @@ const getReceivingPackages = async (req, res) => {
     const { mobileNum } = req.body;
 
     const result = await getPackageReceivingDetails(mobileNum);
+
+
+    if (!result.rowCount) {
+        return res.json({
+            statusCode: 400,
+            message: 'Could not find any matching packages!',
+        });
+    }
+
+    return res.json({
+        statusCode: 200,
+        numberOfpackages: result.rowCount,
+        packageDetails: result.rows,
+        ipAddress: parseIp(req),
+    });
+};
+
+const getPackageById = async (req, res) => {
+    const { packageId } = req.body;
+
+    const result = await getPackage(packageId);
 
 
     if (!result.rowCount) {
@@ -125,4 +146,5 @@ module.exports = { getReceivingPackages,
     getCustomerPackages,
     getAllPackagesForTrip,
     getPackageByRoute,
-    getPackageByTruckNo };
+    getPackageByTruckNo,
+    getPackageById };

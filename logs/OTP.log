@@ -504,3 +504,9 @@
 {"message":"undefined received and OTP 5210","level":"info","timestamp":"2021-02-25T05:48:33.509Z"}
 {"message":"7981075481 requested an otp.","level":"info","timestamp":"2021-02-26T04:29:31.367Z"}
 {"message":"undefined received and OTP 9434","level":"info","timestamp":"2021-02-26T04:29:31.490Z"}
+{"message":"undefined requested an otp.","level":"info","timestamp":"2021-03-01T03:27:30.143Z"}
+{"message":"undefined does not exist in either\n                customer or truckowner database","level":"info","timestamp":"2021-03-01T03:27:30.258Z"}
+{"message":"7981075481 requested an otp.","level":"info","timestamp":"2021-03-01T03:27:47.562Z"}
+{"message":"undefined received and OTP 1252","level":"info","timestamp":"2021-03-01T03:27:47.609Z"}
+{"message":"7981075481 requested an otp.","level":"info","timestamp":"2021-03-01T03:28:05.705Z"}
+{"message":"undefined received and OTP 4462","level":"info","timestamp":"2021-03-01T03:28:05.869Z"}
