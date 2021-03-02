@@ -152,15 +152,30 @@ const updatePackageReachDate = updatedValues => {
     }
 };
 
-const getAllTripPackages = tripId => {
+const getAllTripPackages = async tripId => {
     const query = {
         name: 'get trip packages with tripId',
-        text: 'SELECT * FROM "SUT".truck_package_mapping WHERE trip_id = $1',
+        text: 'SELECT package_id FROM "SUT".truck_package_mapping WHERE trip_id = $1',
         values: [ tripId ],
     };
 
     try {
-        return pool.query(query);
+        const result = await pool.query(query);
+
+        const result2 = result.rows
+            ? await Promise.all(result.rows.map(async data => {
+                const resultData = await getPackage(data.package_id);
+
+                // some packages are not present in package mapping
+                const result1 = resultData.rows[0]
+                    ? resultData.rows[0]
+                    : 'package deleted';
+
+                return result1;
+            }))
+            : 0;
+
+        return result2;
     } catch (error) {
         console.log(error);
 

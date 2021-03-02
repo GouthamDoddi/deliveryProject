@@ -76,7 +76,7 @@ const getAllPackagesForTrip = async (req, res) => {
     const result = await getAllTripPackages(tripId);
 
     console.log(result);
-    if (!result.rowCount) {
+    if (!result.length) {
         return res.json({
             statusCode: 400,
             message: 'Could not find any matching packages!',
@@ -85,8 +85,8 @@ const getAllPackagesForTrip = async (req, res) => {
 
     return res.json({
         statusCode: 200,
-        numberOfpackages: result.rowCount,
-        packageDetails: result.rows,
+        numberOfpackages: result.length,
+        packageDetails: result,
         ipAddress: parseIp(req),
     });
 };
