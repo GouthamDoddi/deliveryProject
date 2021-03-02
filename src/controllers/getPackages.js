@@ -12,7 +12,7 @@ const getReceivingPackages = async (req, res) => {
     const result = await getPackageReceivingDetails(mobileNum);
 
 
-    if (!result.rowCount) {
+    if (!result.length) {
         return res.json({
             statusCode: 400,
             message: 'Could not find any matching packages!',
@@ -21,8 +21,8 @@ const getReceivingPackages = async (req, res) => {
 
     return res.json({
         statusCode: 200,
-        numberOfpackages: result.rowCount,
-        packageDetails: result.rows,
+        numberOfpackages: result.length,
+        packageDetails: result,
         ipAddress: parseIp(req),
     });
 };
@@ -55,7 +55,7 @@ const getCustomerPackages = async (req, res) => {
     const result = await getAllCustomerPackages(mobileNum);
 
 
-    if (!result.rowCount) {
+    if (!result.length) {
         return res.json({
             statusCode: 400,
             message: 'Could not find any matching packages!',
@@ -64,8 +64,8 @@ const getCustomerPackages = async (req, res) => {
 
     return res.json({
         statusCode: 200,
-        numberOfpackages: result.rowCount,
-        packageDetails: result.rows,
+        numberOfpackages: result.length,
+        packageDetails: result,
         ipAddress: parseIp(req),
     });
 };

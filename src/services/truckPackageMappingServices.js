@@ -68,13 +68,14 @@ const getPackageByTruck = async truckNo => {
         values: [ truckNo ],
     };
 
-    const result = await pool.query(query);
 
     try {
         // console.log(result.rows);
+        const result = await pool.query(query);
+
 
         const result2 = result.rows
-            ? await Promise.all(result.rows.map(async (data, index) => {
+            ? await Promise.all(result.rows.map(async data => {
                 const resultData = await getPackage(data.package_id);
 
                 return [ resultData.rows[0], data ];
@@ -89,8 +90,25 @@ const getPackageByTruck = async truckNo => {
     }
 };
 
+const getPackageMappingWithPagageId = async pacakageId => {
+    const query = {
+        name: 'Update package mapping',
+        text: 'SELECT * FROM "SUT".truck_package_mapping WHERE package_id=$1',
+        values: [ pacakageId ],
+    };
+
+
+    try {
+        return await pool.query(query);
+    } catch (error) {
+        console.log(error);
+
+        return error;
+    }
+};
 
 module.exports = { insertMapping,
     updatePackageTruck,
     updatePackageDeliveryStatus,
-    getPackageByTruck };
+    getPackageByTruck,
+    getPackageMappingWithPagageId };

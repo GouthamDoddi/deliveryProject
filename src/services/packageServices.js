@@ -1,4 +1,5 @@
 const pool = require('../config/db');
+const { getPackageMappingWithPagageId } = require('./truckPackageMappingServices');
 
 function getPackage (packageId) {
     const query = {
@@ -43,7 +44,21 @@ async function getPackageReceivingDetails (mobileNum) {
     };
 
     try {
-        return await pool.query(query);
+        const result = await pool.query(query);
+        const result2 = result.rows
+            ? await Promise.all(result.rows.map(async data => {
+                const resultData = await getPackageMappingWithPagageId(data.package_id);
+
+                // some packages are not present in package mapping
+                const result1 = resultData.rows[0]
+                    ? [ resultData.rows[0], data ]
+                    : [ 'unassigned', data ];
+
+                return result1;
+            }))
+            : 0;
+
+        return result2;
     } catch (error) {
         console.log(error);
 
@@ -59,7 +74,23 @@ async function getAllCustomerPackages (mobileNum) {
     };
 
     try {
-        return await pool.query(query);
+        const result = await pool.query(query);
+
+
+        const result2 = result.rows
+            ? await Promise.all(result.rows.map(async data => {
+                const resultData = await getPackageMappingWithPagageId(data.package_id);
+
+                // some packages are not present in package mapping
+                const result1 = resultData.rows[0]
+                    ? [ resultData.rows[0], data ]
+                    : [ 'unassigned', data ];
+
+                return result1;
+            }))
+            : 0;
+
+        return result2;
     } catch (error) {
         console.log(error);
 
@@ -124,7 +155,7 @@ const updatePackageReachDate = updatedValues => {
 const getAllTripPackages = tripId => {
     const query = {
         name: 'get trip packages with tripId',
-        text: 'SELECT package_id FROM "SUT".truck_package_mapping WHERE trip_id = $1',
+        text: 'SELECT * FROM "SUT".truck_package_mapping WHERE trip_id = $1',
         values: [ tripId ],
     };
 
