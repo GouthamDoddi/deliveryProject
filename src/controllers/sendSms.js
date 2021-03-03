@@ -36,11 +36,11 @@ const sendSMS = async (req, res) => {
 
     const result2 = await getTruckowner(req.body.mobileNum);
 
-    console.log(`result2 = ${result2.rowCount}`);
+    console.log(`result2 = ${JSON.stringify(result2)}`);
 
     // console.log(`trunk driver ${JSON.stringify(result2)}`);
 
-    if (result2.rowCount === 0) {
+    if (result2.length !== 2) {
         const result3 = await getTransportCompany(req.body.mobileNum);
 
         console.log(`result3 = ${result3.rowCount}`);

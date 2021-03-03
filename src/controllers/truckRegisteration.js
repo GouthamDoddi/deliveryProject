@@ -3,7 +3,7 @@ const winston = require('winston');
 const { insertTruck } = require('../services/truckServices');
 const parseIp = require('../middleware/praseIp');
 const createOTP = require('../utils/createOTP');
-const fs = require('fs');
+// const fs = require('fs');
 
 
 // define the logger function

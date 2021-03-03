@@ -3,10 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="ab2135b9-672e-44c1-a177-f2aa9ef9a004" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/JWT.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/JWT.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/db.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/db.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/getPackages.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/getPackages.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/packageServices.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/packageServices.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/OTP.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/OTP.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/sendSms.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/sendSms.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/truckRegisteration.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/truckRegisteration.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +50,8 @@
       <workItem from="1614650495800" duration="6837000" />
       <workItem from="1614679220207" duration="1442000" />
       <workItem from="1614680892955" duration="1092000" />
+      <workItem from="1614734814600" duration="2261000" />
+      <workItem from="1614737092126" duration="386000" />
     </task>
     <servers />
   </component>
