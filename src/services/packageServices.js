@@ -168,14 +168,14 @@ const getAllTripPackages = async tripId => {
 
                 // some packages are not present in package mapping
                 const result1 = resultData.rows[0]
-                    ? resultData.rows[0]
+                    ? [ data, resultData.rows[0] ]
                     : 'package deleted';
 
                 return result1;
             }))
             : 0;
 
-        return [ result, result2 ];
+        return [ result2 ];
     } catch (error) {
         console.log(error);
 
