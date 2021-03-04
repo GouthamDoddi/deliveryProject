@@ -171,7 +171,7 @@ const getAllTripPackages = async tripId => {
                     ? [ data, resultData.rows[0] ]
                     : 'package deleted';
 
-                return result1[0];
+                return result1;
             }))
             : 0;
 
