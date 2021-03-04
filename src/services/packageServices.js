@@ -155,7 +155,7 @@ const updatePackageReachDate = updatedValues => {
 const getAllTripPackages = async tripId => {
     const query = {
         name: 'get trip packages with tripId',
-        text: 'SELECT package_id FROM "SUT".truck_package_mapping WHERE trip_id = $1',
+        text: 'SELECT * FROM "SUT".truck_package_mapping WHERE trip_id = $1',
         values: [ tripId ],
     };
 
@@ -175,7 +175,7 @@ const getAllTripPackages = async tripId => {
             }))
             : 0;
 
-        return result2;
+        return [ result, result2 ];
     } catch (error) {
         console.log(error);
 
