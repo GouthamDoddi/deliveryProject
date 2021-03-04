@@ -5,13 +5,14 @@ const { getPackage } = require('./packageServices');
 async function insertMapping (mappingDetails) {
     const query = {
         name: 'mapping trucck and package',
-        text: `INSERT INTO "SUT".truck_package_mapping (truck_no, package_id, date, trip_id) 
-                VALUES($1, $2, $3, $4) RETURNING *`,
+        text: `INSERT INTO "SUT".truck_package_mapping (truck_no, package_id, date, trip_id, status) 
+                VALUES($1, $2, $3, $4, $5) RETURNING *`,
         values: [
             mappingDetails.truckNo,
             mappingDetails.packageId,
             mappingDetails.date,
             mappingDetails.tripId,
+            mappingDetails.status,
         ],
     };
 
