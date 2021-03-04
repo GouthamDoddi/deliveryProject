@@ -100,3 +100,4 @@
 {"message":"added truck with no = Ap31E10937 by user with mobileNo=7981075481\n        and id address = ::1 ","level":"info","timestamp":"2021-03-04T03:53:36.623Z"}
 {"message":"Failed! Couldn't add added truck with no = Ap31E10937 by user with mobileNo=7981075481","level":"info","timestamp":"2021-03-04T03:54:02.140Z"}
 {"message":"added truck with no = Ap31E10934 by user with mobileNo=7981075481\n        and id address = ::1 ","level":"info","timestamp":"2021-03-04T03:54:08.692Z"}
+{"message":"Failed! Couldn't add added truck with no = Ap31E10934 by user with mobileNo=7981075481","level":"info","timestamp":"2021-03-04T05:22:53.928Z"}
