@@ -55,3 +55,48 @@
 {"message":"added truck with no = AP31EJ001 by user with mobileNo=7981075488\n        and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-02-19T03:30:16.331Z"}
 {"message":"added truck with no = AP31EJ002 by user with mobileNo=7981075489\n        and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-02-19T03:36:17.586Z"}
 {"message":"added truck with no = AP31EJ009 by user with mobileNo=9898909898\n        and id address = ::1 ","level":"info","timestamp":"2021-02-26T06:49:23.226Z"}
+{"message":"Failed! Couldn't add added truck with no = undefined by user with mobileNo=undefined","level":"info","timestamp":"2021-03-04T03:03:34.888Z"}
+{"message":"Failed! Couldn't add added truck with no = undefined by user with mobileNo=7981075481","level":"info","timestamp":"2021-03-04T03:06:33.437Z"}
+{"message":"added truck with no = Ap31EJ0007 by user with mobileNo=7981075481\n        and id address = ::1 ","level":"info","timestamp":"2021-03-04T03:07:03.989Z"}
+{"message":"Failed! Couldn't add added truck with no = Ap31EJ0007 by user with mobileNo=7981075481","level":"info","timestamp":"2021-03-04T03:07:59.811Z"}
+{"message":"Failed! Couldn't add added truck with no = Ap31EJ0007 by user with mobileNo=7981075481","level":"info","timestamp":"2021-03-04T03:08:06.317Z"}
+{"message":"added truck with no = Ap31EJ007 by user with mobileNo=7981075481\n        and id address = ::1 ","level":"info","timestamp":"2021-03-04T03:08:14.971Z"}
+{"message":"Failed! Couldn't add added truck with no = Ap31EJ007 by user with mobileNo=7981075481","level":"info","timestamp":"2021-03-04T03:08:22.211Z"}
+{"message":"added truck with no = Ap31EJ1007 by user with mobileNo=7981075481\n        and id address = ::1 ","level":"info","timestamp":"2021-03-04T03:08:42.129Z"}
+{"message":"Failed! Couldn't add added truck with no = Ap31EJ1007 by user with mobileNo=7981075481","level":"info","timestamp":"2021-03-04T03:11:32.451Z"}
+{"message":"added truck with no = Ap31EJ1001 by user with mobileNo=7981075481\n        and id address = ::1 ","level":"info","timestamp":"2021-03-04T03:11:40.701Z"}
+{"message":"Failed! Couldn't add added truck with no = Ap31EJ1001 by user with mobileNo=7981075481","level":"info","timestamp":"2021-03-04T03:11:49.932Z"}
+{"message":"added truck with no = Ap31EJ1002 by user with mobileNo=7981075481\n        and id address = ::1 ","level":"info","timestamp":"2021-03-04T03:11:55.393Z"}
+{"message":"added truck with no = Ap31EJ1003 by user with mobileNo=7981075481\n        and id address = ::1 ","level":"info","timestamp":"2021-03-04T03:13:20.845Z"}
+{"message":"added truck with no = Ap31EJ1004 by user with mobileNo=7981075481\n        and id address = ::1 ","level":"info","timestamp":"2021-03-04T03:14:21.042Z"}
+{"message":"Failed! Couldn't add added truck with no = Ap31EJ1004 by user with mobileNo=7981075481","level":"info","timestamp":"2021-03-04T03:15:25.440Z"}
+{"message":"added truck with no = Ap31EJ1005 by user with mobileNo=7981075481\n        and id address = ::1 ","level":"info","timestamp":"2021-03-04T03:15:30.989Z"}
+{"message":"Failed! Couldn't add added truck with no = Ap31EJ1005 by user with mobileNo=7981075481","level":"info","timestamp":"2021-03-04T03:15:55.267Z"}
+{"message":"added truck with no = Ap31EJ1000 by user with mobileNo=7981075481\n        and id address = ::1 ","level":"info","timestamp":"2021-03-04T03:16:01.389Z"}
+{"message":"Failed! Couldn't add added truck with no = Ap31EJ1000 by user with mobileNo=7981075481","level":"info","timestamp":"2021-03-04T03:18:23.220Z"}
+{"message":"Failed! Couldn't add added truck with no = Ap31EJ1001 by user with mobileNo=7981075481","level":"info","timestamp":"2021-03-04T03:18:33.829Z"}
+{"message":"Failed! Couldn't add added truck with no = Ap31EJ1005 by user with mobileNo=7981075481","level":"info","timestamp":"2021-03-04T03:18:40.627Z"}
+{"message":"added truck with no = Ap31EJ1006 by user with mobileNo=7981075481\n        and id address = ::1 ","level":"info","timestamp":"2021-03-04T03:18:48.667Z"}
+{"message":"added truck with no = Ap31EJ1099 by user with mobileNo=7981075481\n        and id address = ::1 ","level":"info","timestamp":"2021-03-04T03:23:43.421Z"}
+{"message":"added truck with no = Ap31EJ1091 by user with mobileNo=7981075481\n        and id address = ::1 ","level":"info","timestamp":"2021-03-04T03:23:52.212Z"}
+{"message":"added truck with no = Ap31EJ1093 by user with mobileNo=7981075481\n        and id address = ::1 ","level":"info","timestamp":"2021-03-04T03:25:07.468Z"}
+{"message":"Failed! Couldn't add added truck with no = Ap31EJ1093 by user with mobileNo=7981075481","level":"info","timestamp":"2021-03-04T03:31:04.233Z"}
+{"message":"added truck with no = Ap31EJ1094 by user with mobileNo=7981075481\n        and id address = ::1 ","level":"info","timestamp":"2021-03-04T03:31:10.246Z"}
+{"message":"Failed! Couldn't add added truck with no = Ap31EJ1094 by user with mobileNo=7981075481","level":"info","timestamp":"2021-03-04T03:42:54.951Z"}
+{"message":"added truck with no = Ap31EJ1095 by user with mobileNo=7981075481\n        and id address = ::1 ","level":"info","timestamp":"2021-03-04T03:43:01.251Z"}
+{"message":"Failed! Couldn't add added truck with no = Ap31EJ1095 by user with mobileNo=7981075481","level":"info","timestamp":"2021-03-04T03:46:23.421Z"}
+{"message":"Failed! Couldn't add added truck with no = Ap31EJ1099 by user with mobileNo=7981075481","level":"info","timestamp":"2021-03-04T03:46:29.084Z"}
+{"message":"Failed! Couldn't add added truck with no = Ap31EJ10932 by user with mobileNo=7981075481","level":"info","timestamp":"2021-03-04T03:46:35.005Z"}
+{"message":"added truck with no = Ap31E10932 by user with mobileNo=7981075481\n        and id address = ::1 ","level":"info","timestamp":"2021-03-04T03:47:33.167Z"}
+{"message":"Failed! Couldn't add added truck with no = Ap31E10932 by user with mobileNo=7981075481","level":"info","timestamp":"2021-03-04T03:48:00.882Z"}
+{"message":"added truck with no = Ap31E10931 by user with mobileNo=7981075481\n        and id address = ::1 ","level":"info","timestamp":"2021-03-04T03:48:08.140Z"}
+{"message":"Failed! Couldn't add added truck with no = Ap31E10931 by user with mobileNo=7981075481","level":"info","timestamp":"2021-03-04T03:48:54.266Z"}
+{"message":"added truck with no = Ap31E10933 by user with mobileNo=7981075481\n        and id address = ::1 ","level":"info","timestamp":"2021-03-04T03:49:02.578Z"}
+{"message":"Failed! Couldn't add added truck with no = Ap31E10931 by user with mobileNo=7981075481","level":"info","timestamp":"2021-03-04T03:49:21.248Z"}
+{"message":"added truck with no = Ap31E10930 by user with mobileNo=7981075481\n        and id address = ::1 ","level":"info","timestamp":"2021-03-04T03:49:27.021Z"}
+{"message":"Failed! Couldn't add added truck with no = Ap31E10930 by user with mobileNo=7981075481","level":"info","timestamp":"2021-03-04T03:51:33.716Z"}
+{"message":"added truck with no = Ap31E10935 by user with mobileNo=7981075481\n        and id address = ::1 ","level":"info","timestamp":"2021-03-04T03:51:41.029Z"}
+{"message":"Failed! Couldn't add added truck with no = Ap31E10935 by user with mobileNo=7981075481","level":"info","timestamp":"2021-03-04T03:53:13.627Z"}
+{"message":"added truck with no = Ap31E10937 by user with mobileNo=7981075481\n        and id address = ::1 ","level":"info","timestamp":"2021-03-04T03:53:36.623Z"}
+{"message":"Failed! Couldn't add added truck with no = Ap31E10937 by user with mobileNo=7981075481","level":"info","timestamp":"2021-03-04T03:54:02.140Z"}
+{"message":"added truck with no = Ap31E10934 by user with mobileNo=7981075481\n        and id address = ::1 ","level":"info","timestamp":"2021-03-04T03:54:08.692Z"}
