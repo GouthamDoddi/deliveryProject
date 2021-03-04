@@ -25,14 +25,15 @@ const packageRegister = async (req, res) => {
 
     // using jwt let's get  the user's mobile no
 
-    const mobileNum = await getMobileNumber(req.headers.authorization);
-
+    const mobileNum2 = await getMobileNumber(req.headers.authorization);
 
     // after extracting the mobile number lets call the insert qurrey
 
     const packageDetails = {
         packageName: req.body.packageName,
-        mobileNum,
+        mobileNum: req.body.mobileNum
+            ? req.body.mobileNum
+            : mobileNum2,
         packageType: req.body.packageType,
         pickUpPoint: req.body.pickUpPoint,
         dropPoint: req.body.dropPoint,
