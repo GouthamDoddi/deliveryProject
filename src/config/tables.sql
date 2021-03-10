@@ -54,6 +54,8 @@ CREATE TABLE "SUT".trip_details
     total_packages NUMERIC DEFAULT 0,
     delivered_packages INTEGER DEFAULT 0,
     trip_duration_in_hours character varying,
+    truck_mobile_num numeric,
+    truck_driver varchar,
     CONSTRAINT trip_details_pkey PRIMARY KEY (trip_id)
 );
 

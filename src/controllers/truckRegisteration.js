@@ -23,7 +23,7 @@ const logger = winston.createLogger({
 const truckRegister = async (req, res) => {
     // getting mobile number from decoding the token
 
-    const { companyMobileNum, mobileNum } = req.body;
+    const { companyMobileNum, mobileNum, truckMobileNum } = req.body;
 
     console.log(req.body);
 
@@ -51,6 +51,7 @@ const truckRegister = async (req, res) => {
         bookedWeight,
         bookedSpace,
         mobileNum,
+        truckMobileNum,
         rc: req.files[0].buffer,
         license: req.files[1].buffer,
         companyName: req.body.companyName,

@@ -52,7 +52,8 @@ const insertTrip = async tripDetails => {
     const query = {
         name: 'insert Trip in db',
         text: `INSERT INTO "SUT".trip_details (truck_no, source, destination, start_date,
-                 reach_date, trip_duration_in_hours) VALUES($1, $2, $3, $4, $5, $6) RETURNING *`,
+                 reach_date, trip_duration_in_hours, truck_mobile_num, truck_driver) VALUES($1, $2, $3, $4, $5, $6, $7, $8)
+                  RETURNING *`,
 
         values: [ tripDetails.truckNo,
             tripDetails.source,
@@ -61,7 +62,9 @@ const insertTrip = async tripDetails => {
             tripDetails.reachDate,
             // tripDetails.totalPackages,
             // tripDetails.deliveredPackages,
-            tripDetails.tripDurationInHours ],
+            tripDetails.tripDurationInHours,
+            tripDetails.truckMobileNum,
+            tripDetails.truckDriver ],
     };
 
     try {

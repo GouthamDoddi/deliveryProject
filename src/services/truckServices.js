@@ -6,9 +6,9 @@ const insertTruck = async truckDetails => {
         name: 'Add truck',
         text: `INSERT INTO "SUT".truckdetails (truck_name, truck_no,
          truck_model, chasis_no, capacity_inkgs, capacity_inspace,
-          booked_weight, booked_space, truckowner_mobile_num, rc,
-          license, transport_company_name, driver_name, transport_company_mobile_num)
-           VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14)`,
+          booked_weight, booked_space, truckowner_mobile_num, truck_mobile_num,
+           rc, license, transport_company_name, driver_name, transport_company_mobile_num)
+           VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15)`,
         values: [
             truckDetails.truckName,
             truckDetails.truckNo,
@@ -19,6 +19,7 @@ const insertTruck = async truckDetails => {
             truckDetails.bookedWeight,
             truckDetails.bookedSpace,
             truckDetails.mobileNum,
+            truckDetails.truckMobileNum,
             truckDetails.rc,
             truckDetails.license,
             truckDetails.companyName,
@@ -49,6 +50,7 @@ const getTruck = truckNo => {
         booked_weight, booked_space,
         truckowner_mobile_num,
         transport_company_name,
+        truck_mobile_num
         driver_name, transport_company_mobile_num
         FROM "SUT".truckdetails WHERE truck_no = $1`,
         values: [ truckNo ],
@@ -92,7 +94,7 @@ const getTrucksForOwner = async mobileNum => {
           booked_weight, booked_space,
           truckowner_mobile_num,
           transport_company_name,
-          driver_name, transport_company_mobile_num
+          driver_name, transport_company_mobile_num, truck_mobile_num,
           FROM "SUT".truckdetails WHERE truckowner_mobile_num = $1
              OR transport_company_mobile_num = $2`,
         values: [ mobileNum, mobileNum ],
@@ -138,6 +140,7 @@ function getTransportCompanyTrucks (mobileNum) {
         booked_weight, booked_space,
         truckowner_mobile_num,
         transport_company_name,
+        truck_mobile_num,
         driver_name, transport_company_mobile_num FROM "SUT".truckdetails WHERE transport_company_mobile_num = $1`,
         values: [ mobileNum ],
     };
