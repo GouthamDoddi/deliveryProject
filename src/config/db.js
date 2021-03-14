@@ -8,7 +8,7 @@ const pool = new Pool({ user: 'eyutqxfmgrdeqr',
     ssl: true,
     dialect: 'postgres',
     dialectOptions: {
-        ssl: { require: true },
+        ssl: { rejectUnauthorized: false },
     } });
 
 // const pool = new Pool({
