@@ -8,6 +8,7 @@ const pool = new Pool({
     database: 'd1qoulkt024fo0',
     ssl: true,
     sslfactory: 'org.postgresql.ssl.NonValidatingFactory',
+    sslmode: 'require',
 });
 
 // const pool = new Pool({
