@@ -6,9 +6,9 @@ const pool = new Pool({
     host: 'ec2-18-215-99-63.compute-1.amazonaws.com',
     port: 5432,
     database: 'd1qoulkt024fo0',
-    ssl: true,
-    sslfactory: 'org.postgresql.ssl.NonValidatingFactory',
-    sslmode: 'require',
+    ssl: {
+        rejectUnauthorized: true,
+    },
 });
 
 // const pool = new Pool({
