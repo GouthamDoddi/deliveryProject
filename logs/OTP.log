@@ -583,3 +583,6 @@
 {"message":"7981075481 requested an otp.","level":"info","timestamp":"2021-03-15T10:11:32.406Z"}
 {"message":"7981075482 requested an otp.","level":"info","timestamp":"2021-03-15T10:11:43.870Z"}
 {"message":"7981075482 does not exist in either\n                customer or truckowner database","level":"info","timestamp":"2021-03-15T10:11:44.191Z"}
+{"message":"7981075481 requested an otp.","level":"info","timestamp":"2021-03-16T05:10:05.507Z"}
+{"message":"7981075481 requested an otp.","level":"info","timestamp":"2021-03-16T05:10:52.497Z"}
+{"message":"7981075481 requested an otp.","level":"info","timestamp":"2021-03-16T05:24:46.804Z"}
