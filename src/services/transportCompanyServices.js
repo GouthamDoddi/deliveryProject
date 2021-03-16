@@ -1,5 +1,7 @@
 const pool = require('../config/db');
 const { getTrucksForOwner } = require('../services/truckServices');
+const { getTransportCompanyTrucks } = require('../services/truckServices');
+
 
 async function getTransportCompany (mobileNumber) {
     const query = {
@@ -8,7 +10,7 @@ async function getTransportCompany (mobileNumber) {
         values: [ mobileNumber ],
     };
 
-    const truckDetails = await getTrucksForOwner(mobileNumber);
+    const truckDetails = await getTransportCompanyTrucks(mobileNumber);
 
     try {
         const result = await pool.query(query);

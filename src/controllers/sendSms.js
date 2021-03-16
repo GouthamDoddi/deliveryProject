@@ -45,7 +45,7 @@ const sendSMS = async (req, res) => {
 
         console.log(`result3 = ${result3.rowCount}`);
 
-        if (result3.rowCount === 0 && result1.rowCount === 0) {
+        if (result3[0].rowCount === 0 && result1.rowCount === 0) {
             console.log('No user found');
             logger.info(`${req.body.mobileNum} does not exist in either
                 customer or truckowner database`);
@@ -61,7 +61,7 @@ const sendSMS = async (req, res) => {
         return res.json({
             statusCode: 200,
             customerDetails: result1.rows,
-            transportOwner: result3.rows,
+            transportOwner: result3[0].rows,
             truckDetails: result3[1],
             otp,
             token,

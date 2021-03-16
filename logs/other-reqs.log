@@ -1,2 +1,3 @@
 {"message":"Received get customer details req from ip=::1 with the following\n    params mobileNum = undefined or customerId = 2","level":"info","timestamp":"2021-02-03T05:28:59.034Z"}
 {"message":"Received get customer details req from ip=::1 with the following\n    params mobileNum = undefined or customerId = 3","level":"info","timestamp":"2021-02-03T05:34:27.370Z"}
+{"message":"Received get customer details req from ip=::1 with the following\n    params mobileNum = 7981075433 or customerId = undefined","level":"info","timestamp":"2021-03-16T08:27:13.048Z"}
