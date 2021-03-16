@@ -121,3 +121,10 @@
 {"message":"received package register request for customer undefined \n    and id address = ::1 ","level":"info","timestamp":"2021-03-01T03:28:34.781Z"}
 {"message":"received package register request for customer undefined \n    and id address = ::1 ","level":"info","timestamp":"2021-03-01T03:28:46.644Z"}
 {"message":"received package register request for customer undefined \n    and id address = ::1 ","level":"info","timestamp":"2021-03-01T03:43:42.794Z"}
+{"message":"received package register request for customer undefined \n    and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-03-15T09:55:42.436Z"}
+{"message":"received package register request for customer undefined \n    and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-03-15T10:00:09.366Z"}
+{"message":"received package register request for customer undefined \n    and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-03-15T10:00:16.608Z"}
+{"message":"received package register request for customer undefined \n    and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-03-15T10:01:16.834Z"}
+{"message":"received package register request for customer undefined \n    and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-03-15T10:05:21.939Z"}
+{"message":"recived register request from truck owner with mobile number 1111111111\n    and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-03-15T10:14:10.394Z"}
+{"message":"truckowner with no 1111111111 is registered","level":"info","timestamp":"2021-03-15T10:14:10.477Z"}

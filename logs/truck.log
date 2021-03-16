@@ -101,3 +101,9 @@
 {"message":"Failed! Couldn't add added truck with no = Ap31E10937 by user with mobileNo=7981075481","level":"info","timestamp":"2021-03-04T03:54:02.140Z"}
 {"message":"added truck with no = Ap31E10934 by user with mobileNo=7981075481\n        and id address = ::1 ","level":"info","timestamp":"2021-03-04T03:54:08.692Z"}
 {"message":"Failed! Couldn't add added truck with no = Ap31E10934 by user with mobileNo=7981075481","level":"info","timestamp":"2021-03-04T05:22:53.928Z"}
+{"message":"Failed! Couldn't add added truck with no = Dju68 by user with mobileNo=72849393003","level":"info","timestamp":"2021-03-15T01:10:47.255Z"}
+{"message":"added truck with no = Dju68 by user with mobileNo=undefined\n        and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-03-15T01:14:24.709Z"}
+{"message":"added truck with no = Hith5 by user with mobileNo=undefined\n        and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-03-15T01:24:35.628Z"}
+{"message":"added truck with no = Kkgfv6 by user with mobileNo=undefined\n        and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-03-15T01:45:57.986Z"}
+{"message":"added truck with no = Kkgfv3 by user with mobileNo=undefined\n        and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-03-15T01:49:16.828Z"}
+{"message":"added truck with no = Ap58 by user with mobileNo=1111111111\n        and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-03-15T10:14:11.087Z"}

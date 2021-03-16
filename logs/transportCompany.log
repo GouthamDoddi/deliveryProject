@@ -22,3 +22,20 @@
 {"message":"received register request from transportCompany Nice transports6\n    and id address = ::1 ","level":"info","timestamp":"2021-02-04T15:58:19.531Z"}
 {"message":"received register request from transportCompany Nice transports6\n    and id address = ::1 ","level":"info","timestamp":"2021-02-04T15:59:33.173Z"}
 {"message":"Transport company Nice transports6 is registered","level":"info","timestamp":"2021-02-04T15:59:33.218Z"}
+{"message":"received register request from transportCompany Good\n    and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-03-15T01:08:22.024Z"}
+{"message":"received register request from transportCompany Good\n    and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-03-15T01:10:05.066Z"}
+{"message":"Transport company Good is registered","level":"info","timestamp":"2021-03-15T01:10:05.254Z"}
+{"message":"received register request from transportCompany Jsp\n    and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-03-15T01:21:27.238Z"}
+{"message":"Transport company Jsp is registered","level":"info","timestamp":"2021-03-15T01:21:27.371Z"}
+{"message":"received register request from transportCompany &yjf\n    and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-03-15T01:23:02.047Z"}
+{"message":"Transport company &yjf is registered","level":"info","timestamp":"2021-03-15T01:23:02.184Z"}
+{"message":"received register request from transportCompany &yjf\n    and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-03-15T01:23:08.587Z"}
+{"message":"received register request from transportCompany &yjfh\n    and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-03-15T01:23:27.198Z"}
+{"message":"received register request from transportCompany &yjfh\n    and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-03-15T01:23:37.841Z"}
+{"message":"Transport company &yjfh is registered","level":"info","timestamp":"2021-03-15T01:23:37.961Z"}
+{"message":"received register request from transportCompany Gks to\n    and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-03-15T01:31:35.459Z"}
+{"message":"Transport company Gks to is registered","level":"info","timestamp":"2021-03-15T01:31:35.561Z"}
+{"message":"received register request from transportCompany Hkbsy56\n    and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-03-15T01:37:34.141Z"}
+{"message":"Transport company Hkbsy56 is registered","level":"info","timestamp":"2021-03-15T01:37:34.327Z"}
+{"message":"received register request from transportCompany Fjkucv I\n    and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-03-15T01:45:22.320Z"}
+{"message":"Transport company Fjkucv I is registered","level":"info","timestamp":"2021-03-15T01:45:22.447Z"}

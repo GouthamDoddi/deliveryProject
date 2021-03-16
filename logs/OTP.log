@@ -568,3 +568,18 @@
 {"message":"7981075481 requested an otp.","level":"info","timestamp":"2021-03-03T02:11:26.400Z"}
 {"message":"7981075481 requested an otp.","level":"info","timestamp":"2021-03-03T02:11:52.735Z"}
 {"message":"7981075481 requested an otp.","level":"info","timestamp":"2021-03-04T03:03:09.410Z"}
+{"message":"7981075491 requested an otp.","level":"info","timestamp":"2021-03-15T02:29:28.942Z"}
+{"message":"7981075491 does not exist in either\n                customer or truckowner database","level":"info","timestamp":"2021-03-15T02:29:29.109Z"}
+{"message":"7981075433 requested an otp.","level":"info","timestamp":"2021-03-15T02:34:49.335Z"}
+{"message":"7981075433 requested an otp.","level":"info","timestamp":"2021-03-15T02:36:05.563Z"}
+{"message":"7981075433 requested an otp.","level":"info","timestamp":"2021-03-15T02:36:30.183Z"}
+{"message":"79810754833 requested an otp.","level":"info","timestamp":"2021-03-15T02:41:55.245Z"}
+{"message":"79810754833 does not exist in either\n                customer or truckowner database","level":"info","timestamp":"2021-03-15T02:41:55.356Z"}
+{"message":"7981075433 requested an otp.","level":"info","timestamp":"2021-03-15T02:42:24.964Z"}
+{"message":"7981075481 requested an otp.","level":"info","timestamp":"2021-03-15T09:30:57.839Z"}
+{"message":"7981075481 requested an otp.","level":"info","timestamp":"2021-03-15T09:31:39.095Z"}
+{"message":"7981075481 requested an otp.","level":"info","timestamp":"2021-03-15T09:39:47.773Z"}
+{"message":"7981075481 requested an otp.","level":"info","timestamp":"2021-03-15T10:11:31.496Z"}
+{"message":"7981075481 requested an otp.","level":"info","timestamp":"2021-03-15T10:11:32.406Z"}
+{"message":"7981075482 requested an otp.","level":"info","timestamp":"2021-03-15T10:11:43.870Z"}
+{"message":"7981075482 does not exist in either\n                customer or truckowner database","level":"info","timestamp":"2021-03-15T10:11:44.191Z"}
