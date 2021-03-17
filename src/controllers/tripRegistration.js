@@ -4,7 +4,7 @@ const parseIp = require('../middleware/praseIp');
 
 const tripRegister = async (req, res) => {
     const { truckNo, source, destination, startDate, reachDate,
-        tripDurationInHours, truckMobileNum, truckDriver } = req.body;
+        tripDurationInHours, truckDriverNum, truckDriver } = req.body;
 
     // placing all trip details in one object so we can pass them as
     // parameters
@@ -17,7 +17,7 @@ const tripRegister = async (req, res) => {
         // totalPackages,
         // deliveredPackages,
         tripDurationInHours,
-        truckMobileNum,
+        truckDriverNum,
         truckDriver,
     };
 

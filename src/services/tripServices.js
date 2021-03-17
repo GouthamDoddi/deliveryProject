@@ -63,7 +63,7 @@ const insertTrip = async tripDetails => {
             // tripDetails.totalPackages,
             // tripDetails.deliveredPackages,
             tripDetails.tripDurationInHours,
-            tripDetails.truckMobileNum,
+            tripDetails.truckDriverNum,
             tripDetails.truckDriver ],
     };
 
