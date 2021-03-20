@@ -36,16 +36,16 @@ const sendSMS = async (req, res) => {
 
     const result2 = await getTruckowner(req.body.mobileNum);
 
-    console.log(`result2 = ${JSON.stringify(result2)}`);
+    console.log(`result2 = ${JSON.stringify(result2[1])}`);
 
     // console.log(`trunk driver ${JSON.stringify(result2)}`);
 
-    if (result2.length !== 2) {
+    if (!result2) {
         const result3 = await getTransportCompany(req.body.mobileNum);
 
         console.log(`result3 = ${result3.rowCount}`);
 
-        if (result3[0].rowCount === 0 && result1.rowCount === 0) {
+        if (!result3) {
             console.log('No user found');
             logger.info(`${req.body.mobileNum} does not exist in either
                 customer or truckowner database`);
@@ -61,7 +61,7 @@ const sendSMS = async (req, res) => {
         return res.json({
             statusCode: 200,
             customerDetails: result1.rows,
-            transportOwner: result3[0].rows,
+            transportOwner: result3[0],
             truckDetails: result3[1],
             otp,
             token,
@@ -87,7 +87,7 @@ const sendSMS = async (req, res) => {
     return res.json({
         statusCode: 200,
         customerDetails: result1.rows,
-        truckOwner: result2[0].rows,
+        truckOwner: result2[0],
         truckDetails: result2[1],
         otp,
         token,

@@ -5,7 +5,11 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/JWT.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/JWT.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/OTP.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/OTP.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/truckowner.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/truckowner.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/getTrucks.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/getTrucks.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/sendSms.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/sendSms.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/transportCompanyServices.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/transportCompanyServices.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/truckServices.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/truckServices.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/truckownerServices.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/truckownerServices.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +67,8 @@
       <workItem from="1615800612454" duration="6876000" />
       <workItem from="1615882925304" duration="2751000" />
       <workItem from="1615944259612" duration="8319000" />
-      <workItem from="1616036402317" duration="3831000" />
+      <workItem from="1616036402317" duration="5688000" />
+      <workItem from="1616220421884" duration="3718000" />
     </task>
     <servers />
   </component>

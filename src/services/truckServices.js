@@ -85,7 +85,7 @@ const getTruck2 = truckNo => {
 
 const getTrucksForOwner = async mobileNum => {
     // use truckNo to get the total space
-
+    console.log(mobileNum);
     const query = {
         name: 'Get truck details fro owner',
         text: `SELECT truck_id, truck_name,
@@ -94,7 +94,7 @@ const getTrucksForOwner = async mobileNum => {
           booked_weight, booked_space,
           truckowner_mobile_num,
           transport_company_name,
-          driver_name, transport_company_mobile_num, truck_mobile_num,
+          driver_name, transport_company_mobile_num, truck_mobile_num
           FROM "SUT".truckdetails WHERE truckowner_mobile_num = $1
              OR transport_company_mobile_num = $2`,
         values: [ mobileNum, mobileNum ],

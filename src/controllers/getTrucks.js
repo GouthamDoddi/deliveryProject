@@ -10,9 +10,9 @@ const getTrucks = async (req, res) => {
     // destination and during the given data.
 
 
-    const mobileNum = await getMobileNumber(req.headers.authorization);
+    // const mobileNum = await getMobileNumber(req.headers.authorization);
 
-    const { truckNo } = req.body;
+    const { truckNo, mobileNum } = req.body;
 
     /* _______Trucks for trip_________*/
 
@@ -38,7 +38,9 @@ const getTrucks = async (req, res) => {
 
     const trucks = await getTrucksForOwner(mobileNum);
 
-    if (trucks.rowCount) {
+    console.log(trucks);
+
+    if (trucks.rows) {
         return res.json({
             statusCode: 200,
             message: trucks.rows,

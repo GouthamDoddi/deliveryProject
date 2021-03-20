@@ -14,9 +14,13 @@ async function getTransportCompany (mobileNumber) {
 
     try {
         const result = await pool.query(query);
-        const finalResult = truckDetails.rowCount
-            ? [ result, truckDetails.rows ]
-            : result;
+        const finalResult = result.rowCount && truckDetails.rowCount
+            ? [ result.rows, truckDetails.rows ]
+            // eslint-disable-next-line no-negated-condition
+            : !result.rowCount
+                ? 0
+                : [ result.rows ];
+
 
         return finalResult;
     } catch (error) {
