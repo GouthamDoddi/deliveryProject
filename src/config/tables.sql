@@ -47,6 +47,7 @@ CREATE TABLE "SUT".trip_details
 (
     trip_id SERIAL,
     truck_no character varying NOT NULL,
+    truck_model varchar,
     source character varying,
     destination character varying NOT NULL,
     start_date TIMESTAMP NOT NULL,
@@ -110,6 +111,7 @@ CREATE TABLE "SUT".truckdetails
     owned_by_transport_company BOOLEAN,
     truckowner_mobile_num numeric,
     transport_company_mobile_num numeric,
+    truck_mobile_num numeric,
     CONSTRAINT truckdetails_pkey PRIMARY KEY (truck_id),
     CONSTRAINT truckdetails_chasis_no_key UNIQUE (chasis_no),
     CONSTRAINT truckdetails_truck_no_key UNIQUE (truck_no)
@@ -137,7 +139,7 @@ CREATE TABLE "SUT".delivery_partner_rating
     rating integer NOT NULL,
     comment character varying(100),
     customer_mobile_num numeric,
-    package_id numeric,
+    package_id integer,
     CONSTRAINT delivery_partner_rating_pkey PRIMARY KEY (rating_id)
 );
 

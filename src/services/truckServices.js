@@ -160,9 +160,27 @@ function getTransportCompanyTrucks (mobileNum) {
     }
 }
 
+const deleteTruck = async truckDetails => {
+    const query = {
+        name: 'Get truck',
+        text: 'SELECT * FROM "SUT".truckdetails WHERE truck_no = $1 AND transport_company_mobile_num = $2',
+        values: [ truckDetails.truckNo,
+            truckDetails.mobileNum ],
+    };
+
+    try {
+        return await pool.query(query);
+    } catch (error) {
+        console.error(error);
+
+        return error;
+    }
+};
+
 module.exports = { insertTruck,
     getTrucksForOwner,
     updateTruckWeightandSpace,
     getTruck,
     getTransportCompanyTrucks,
-    getTruck2 };
+    getTruck2,
+    deleteTruck };

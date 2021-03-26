@@ -23,25 +23,27 @@ const logger = winston.createLogger({
 const sendSMS = async (req, res) => {
     const secret = '!@#DWe$%^gge&&**';
 
-    logger.info(`${req.body.mobileNum} requested an otp.`);
+    const { mobileNum } = req.body;
+
+    logger.info(`${mobileNum} requested an otp.`);
 
     /* _______try to find if the user already exists________ */
 
-    const result1 = await getCustomer(req.body.mobileNum);
+    const result1 = await getCustomer(mobileNum);
 
-    // console.log(result1);
+    console.log(mobileNum);
 
-    // console.log(result1);
+    console.log(result1.rows);
 
 
-    const result2 = await getTruckowner(req.body.mobileNum);
+    const result2 = await getTruckowner(mobileNum);
 
     console.log(`result2 = ${JSON.stringify(result2[1])}`);
 
     // console.log(`trunk driver ${JSON.stringify(result2)}`);
 
     if (!result2) {
-        const result3 = await getTransportCompany(req.body.mobileNum);
+        const result3 = await getTransportCompany(mobileNum);
 
         console.log(`result3 = ${result3.rowCount}`);
 
@@ -73,11 +75,11 @@ const sendSMS = async (req, res) => {
 
     const otp = createOTP();
 
-    logger.info(`${req.body.mobileNo} received and OTP ${otp}`);
+    logger.info(`${mobileNum} received and OTP ${otp}`);
 
     // also sending JWT token
 
-    const token = jwt.sign({ sub: req.body.mobileNum }, secret, {
+    const token = jwt.sign({ sub: mobileNum }, secret, {
         expiresIn: 86400, // expires in 24 hours
     });
 

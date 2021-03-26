@@ -5,11 +5,16 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/JWT.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/JWT.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/OTP.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/OTP.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/getTrucks.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/getTrucks.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/truck.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/truck.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/truckowner.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/truckowner.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/tables.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/tables.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/getTruckRating.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/getTruckRating.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/sendSms.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/sendSms.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/transportCompanyServices.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/transportCompanyServices.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/tripRegistration.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/tripRegistration.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/ratingServices.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/ratingServices.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/tripServices.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/tripServices.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/truckServices.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/truckServices.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/truckownerServices.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/truckownerServices.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,10 +34,13 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -68,7 +76,11 @@
       <workItem from="1615882925304" duration="2751000" />
       <workItem from="1615944259612" duration="8319000" />
       <workItem from="1616036402317" duration="5688000" />
-      <workItem from="1616220421884" duration="3718000" />
+      <workItem from="1616220421884" duration="4060000" />
+      <workItem from="1616465787685" duration="9539000" />
+      <workItem from="1616509887226" duration="6496000" />
+      <workItem from="1616641942894" duration="2614000" />
+      <workItem from="1616722578913" duration="5592000" />
     </task>
     <servers />
   </component>
@@ -76,6 +88,10 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="640" y="332" key="#ESLint" timestamp="1616490345757">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="640" y="332" key="#ESLint/0.0.1536.864@0.0.1536.864" timestamp="1616490345757" />
     <state x="192" y="276" key="#SQL_Dialects" timestamp="1614153933277">
       <screen x="0" y="0" width="1536" height="864" />
     </state>

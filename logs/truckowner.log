@@ -136,3 +136,26 @@
 {"message":"received package register request for customer 6003938487 \n    and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-03-18T03:16:44.567Z"}
 {"message":"received package register request for customer 7981075481 \n    and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-03-18T03:17:05.989Z"}
 {"message":"received package register request for customer 7981075481 \n    and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-03-18T05:33:32.611Z"}
+{"message":"recived register request from truck owner with mobile number 7981075433\n    and id address = ::1 ","level":"info","timestamp":"2021-03-23T02:17:17.780Z"}
+{"message":"truckowner with no 7981075433 is registered","level":"info","timestamp":"2021-03-23T02:17:17.939Z"}
+{"message":"recived register request from truck owner with mobile number 7981075433\n    and id address = ::1 ","level":"info","timestamp":"2021-03-23T02:18:13.985Z"}
+{"message":"recived register request from truck owner with mobile number 7981075434\n    and id address = ::1 ","level":"info","timestamp":"2021-03-23T02:18:24.356Z"}
+{"message":"truckowner with no 7981075434 is registered","level":"info","timestamp":"2021-03-23T02:18:24.480Z"}
+{"message":"received package register request for customer 7881075482 \n    and id address = ::ffff:192.168.2.3 ","level":"info","timestamp":"2021-03-23T03:18:09.278Z"}
+{"message":"received package register request for customer 7981075482 \n    and id address = ::ffff:192.168.2.3 ","level":"info","timestamp":"2021-03-23T03:18:25.531Z"}
+{"message":"received package register request for customer 7981075483 \n    and id address = ::ffff:192.168.2.3 ","level":"info","timestamp":"2021-03-23T03:18:52.513Z"}
+{"message":"received package register request for customer 7981075484 \n    and id address = ::ffff:192.168.2.3 ","level":"info","timestamp":"2021-03-23T03:19:03.259Z"}
+{"message":"received package register request for customer 7918075482 \n    and id address = ::ffff:192.168.2.3 ","level":"info","timestamp":"2021-03-23T03:21:59.185Z"}
+{"message":"received package register request for customer 7918075482 \n    and id address = ::ffff:192.168.2.3 ","level":"info","timestamp":"2021-03-23T03:23:43.553Z"}
+{"message":"received package register request for customer 7918075482 \n    and id address = ::ffff:192.168.2.3 ","level":"info","timestamp":"2021-03-23T03:23:58.144Z"}
+{"message":"received package register request for customer 7918075481 \n    and id address = ::ffff:192.168.2.3 ","level":"info","timestamp":"2021-03-23T03:24:08.458Z"}
+{"message":"received package register request for customer 7918075481 \n    and id address = ::ffff:192.168.2.3 ","level":"info","timestamp":"2021-03-23T03:24:36.056Z"}
+{"message":"received package register request for customer 79180743314 \n    and id address = ::ffff:192.168.2.3 ","level":"info","timestamp":"2021-03-23T03:26:32.731Z"}
+{"message":"received package register request for customer 79180743311 \n    and id address = ::ffff:192.168.2.3 ","level":"info","timestamp":"2021-03-23T03:26:51.311Z"}
+{"message":"received package register request for customer 7918075434 \n    and id address = ::ffff:192.168.2.3 ","level":"info","timestamp":"2021-03-23T03:27:34.449Z"}
+{"message":"received package register request for customer 7918075434 \n    and id address = ::ffff:192.168.2.3 ","level":"info","timestamp":"2021-03-23T03:29:54.637Z"}
+{"message":"received package register request for customer 7918075481 \n    and id address = ::ffff:192.168.2.3 ","level":"info","timestamp":"2021-03-23T03:30:04.206Z"}
+{"message":"received package register request for customer 9999999991 \n    and id address = ::ffff:192.168.2.3 ","level":"info","timestamp":"2021-03-23T03:30:29.525Z"}
+{"message":"received package register request for customer 7981075482 \n    and id address = ::ffff:192.168.2.3 ","level":"info","timestamp":"2021-03-23T14:38:31.024Z"}
+{"message":"received package register request for customer 7981075483 \n    and id address = ::ffff:192.168.2.3 ","level":"info","timestamp":"2021-03-23T14:38:40.359Z"}
+{"message":"received package register request for customer 7981075484 \n    and id address = ::ffff:192.168.2.3 ","level":"info","timestamp":"2021-03-23T14:38:47.203Z"}

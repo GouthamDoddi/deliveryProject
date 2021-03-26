@@ -22,13 +22,14 @@ const { getTrip, getTripWTruckNo } = require('../controllers/getTrips');
 const { updateTrip, incrementDeliveredPackages,
     incrementTotalPackages } = require('../controllers/updateTrip');
 const updatePackageMaping = require('../controllers/updatePackageMapping');
-const getTruckRating = require('../controllers/getTruckRating');
+const getTruckDriverRating = require('../controllers/getTruckRating');
 const addRating = require('../controllers/addRating');
 const { getCustomerDetails, getTruckOwnerDetails,
     getTransportCompanyDetails } = require('../controllers/getDetails');
 const { getReceivingPackages, getCustomerPackages,
     getAllPackagesForTrip, getPackageByRoute, getPackageByTruckNo, getPackageById } = require('../controllers/getPackages');
 const getListOfTrucks = require('../controllers/getListOfTrucks');
+const deleteTruck = require('../controllers/deleteTruck');
 
 
 router.post('/customerRegister', customerRegister);
@@ -50,7 +51,7 @@ router.post('/updatePackageMapping', verifyToken, updatePackageMaping);
 router.post('/incrementDeliveredPackages', verifyToken, incrementDeliveredPackages);
 router.post('/incrementTotalPackages', verifyToken, incrementTotalPackages);
 router.post('/addRating', verifyToken, addRating);
-router.post('/getTruckRating', verifyToken, getTruckRating);
+router.post('/getDriverRating', verifyToken, getTruckDriverRating);
 router.post('/getCustomer', verifyToken, getCustomerDetails);
 router.post('/getTruckOwner', verifyToken, getTruckOwnerDetails);
 router.post('/getTransportCompany', verifyToken, getTransportCompanyDetails);
@@ -65,6 +66,7 @@ router.post('/getTripByTruckNo', verifyToken, getTripWTruckNo);
 router.post('/getPackageByRoute', verifyToken, getPackageByRoute);
 router.post('/getPackageByTruckNo', verifyToken, getPackageByTruckNo);
 router.post('/getPackageById', verifyToken, getPackageById);
+router.post('/deleteTruck', verifyToken, deleteTruck);
 
 
 // router.post('/verifyJWT', verifyToken);

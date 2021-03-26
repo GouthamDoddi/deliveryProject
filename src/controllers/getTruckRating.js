@@ -2,8 +2,8 @@ const { getRating } = require('../services/ratingServices');
 const parseIp = require('../middleware/praseIp');
 
 
-const getTruckRating = async (req, res) => {
-    const result = await getRating(req.body.truckNo);
+const getTruckDriverRating = async (req, res) => {
+    const result = await getRating(req.body.mobileNum);
 
     if (!result.rowCount) {
         return res.json({
@@ -29,4 +29,4 @@ const getTruckRating = async (req, res) => {
     });
 };
 
-module.exports = getTruckRating;
+module.exports = getTruckDriverRating;
