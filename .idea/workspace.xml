@@ -3,18 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ab2135b9-672e-44c1-a177-f2aa9ef9a004" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/JWT.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/JWT.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/OTP.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/OTP.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/truck.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/truck.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/truckowner.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/truckowner.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/tables.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/tables.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/getTruckRating.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/getTruckRating.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/sendSms.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/sendSms.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/tripRegistration.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/tripRegistration.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/ratingServices.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/ratingServices.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/tripServices.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/tripServices.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/truckServices.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/truckServices.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +68,7 @@
       <workItem from="1616465787685" duration="9539000" />
       <workItem from="1616509887226" duration="6496000" />
       <workItem from="1616641942894" duration="2614000" />
-      <workItem from="1616722578913" duration="5592000" />
+      <workItem from="1616722578913" duration="5963000" />
     </task>
     <servers />
   </component>
