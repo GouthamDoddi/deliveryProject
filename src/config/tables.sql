@@ -28,7 +28,7 @@ CREATE TABLE "SUT".package_details
     pickup_point VARCHAR NOT NULL,
     drop_point VARCHAR NOT NULL,
     pickup_date TIMESTAMP NOT NULL,
-    drop_date TIMESTAMP,
+    reach_date TIMESTAMP,
     status character varying(20),
     package_name character varying(50),
     package_type character varying,

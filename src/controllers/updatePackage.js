@@ -1,10 +1,12 @@
 const { updatePackageReachDate } = require('../services/packageServices');
 const parseIp = require('../middleware/praseIp');
 
-const updatePackage = (req, res) => {
+const updatePackage = async (req, res) => {
     const { reachDate, packageId } = req.body;
 
-    const result = updatePackageReachDate({ reachDate, packageId });
+    const result = await updatePackageReachDate({ reachDate, packageId });
+
+    console.log(result);
 
 
     if (!result.rowCount) {

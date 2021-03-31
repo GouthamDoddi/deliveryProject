@@ -45,6 +45,7 @@ async function getPackageReceivingDetails (mobileNum) {
 
     try {
         const result = await pool.query(query);
+        console.log(result);
         const result2 = result.rows
             ? await Promise.all(result.rows.map(async data => {
                 const resultData = await getPackageMappingWithPagageId(data.package_id);
@@ -137,7 +138,7 @@ const updatePackageReachDate = updatedValues => {
     const query = {
         name: 'Update package reach date',
         text: `UPDATE "SUT".package_details
-              SET  react_date = $1
+              SET  reach_date = $1
               WHERE package_id = $2`,
         values: [ updatedValues.reachDate,
             updatedValues.packageId ],

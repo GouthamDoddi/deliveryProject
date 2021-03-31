@@ -5,9 +5,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/JWT.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/JWT.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/OTP.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/OTP.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/customer.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/customer.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/truckowner.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/truckowner.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/sendSms.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/sendSms.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/tables.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/tables.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/packageServices.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/packageServices.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +75,8 @@
       <workItem from="1616641942894" duration="2614000" />
       <workItem from="1616722578913" duration="5963000" />
       <workItem from="1616740107800" duration="3404000" />
-      <workItem from="1616991201901" duration="6131000" />
+      <workItem from="1616991201901" duration="8467000" />
+      <workItem from="1617109646920" duration="2942000" />
     </task>
     <servers />
   </component>
