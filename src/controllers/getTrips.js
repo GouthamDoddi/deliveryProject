@@ -1,4 +1,4 @@
-const { getTrips, getTripByTruckNo } = require('../services/tripServices');
+const { getTrips, getTripByTruckNo, getTripById } = require('../services/tripServices');
 const parseIp = require('../middleware/praseIp');
 
 const getTrip = async (req, res) => {
@@ -7,7 +7,7 @@ const getTrip = async (req, res) => {
     // destination and during the given data.
 
 
-    const { source, destination, startDate } = req.body;
+    const { source, destination, startDate, tripId } = req.body;
 
     const tripDetails = {
         source,
@@ -17,7 +17,11 @@ const getTrip = async (req, res) => {
 
     /* ______Trips that match_______*/
 
-    const trips = await getTrips(tripDetails);
+
+    const trips = tripId
+        ? await getTripById(tripId)
+        : await getTrips(tripDetails);
+
 
     // console.log(tripDetails);
 

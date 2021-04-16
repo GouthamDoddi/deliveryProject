@@ -45,7 +45,6 @@ async function getPackageReceivingDetails (mobileNum) {
 
     try {
         const result = await pool.query(query);
-        console.log(result);
         const result2 = result.rows
             ? await Promise.all(result.rows.map(async data => {
                 const resultData = await getPackageMappingWithPagageId(data.package_id);

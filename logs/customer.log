@@ -166,3 +166,4 @@
 {"message":"received register request from customer with mobile number 7982075481 \n    and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-03-30T06:16:51.808Z"}
 {"message":"Customer with mobile number  7982075481 registered","level":"info","timestamp":"2021-03-30T06:16:51.978Z"}
 {"message":"received register request from customer with mobile number 7982075481 \n    and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-03-30T06:23:19.323Z"}
+{"message":"received register request from customer with mobile number 7982075481 \n    and id address = ::ffff:192.168.2.2 ","level":"info","timestamp":"2021-04-02T08:10:25.017Z"}

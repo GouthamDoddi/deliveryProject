@@ -51,7 +51,7 @@ router.post('/updatePackageMapping', verifyToken, updatePackageMaping);
 router.post('/incrementDeliveredPackages', verifyToken, incrementDeliveredPackages);
 router.post('/incrementTotalPackages', verifyToken, incrementTotalPackages);
 router.post('/addRating', verifyToken, addRating);
-router.post('/getDriverRating', verifyToken, getTruckDriverRating);
+router.post('/getTruckRating', verifyToken, getTruckDriverRating);
 router.post('/getCustomer', verifyToken, getCustomerDetails);
 router.post('/getTruckOwner', verifyToken, getTruckOwnerDetails);
 router.post('/getTransportCompany', verifyToken, getTransportCompanyDetails);

@@ -162,7 +162,7 @@ function getTransportCompanyTrucks (mobileNum) {
 
 const deleteTruck = async truckDetails => {
     const query = {
-        name: 'Get truck',
+        name: 'Delete truck',
         text: 'SELECT * FROM "SUT".truckdetails WHERE truck_no = $1 AND transport_company_mobile_num = $2',
         values: [ truckDetails.truckNo,
             truckDetails.mobileNum ],

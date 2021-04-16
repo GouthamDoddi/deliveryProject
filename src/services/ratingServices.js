@@ -29,12 +29,12 @@ const insertRating = async details => {
 };
 
 
-const getRating = async mobileNum => {
+const getRating = async truckno => {
     const query = {
         name: 'Insert customer rating',
-        text: 'SELECT * FROM "SUT".delivery_partner_rating WHERE truck_owner_mobile_num = $1 OR company_mobile_num = $1 ',
+        text: 'SELECT * FROM "SUT".delivery_partner_rating WHERE truck_no = $1',
         values: [
-            mobileNum,
+            truckno,
         ],
     };
 

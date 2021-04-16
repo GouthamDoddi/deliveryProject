@@ -23,6 +23,25 @@ async function getTrips (tripDetails) {
     }
 }
 
+async function getTripById (tripId) {
+    // wrong code, search trip with tripId
+    const query = {
+        name: 'Check truckowner exists',
+        text: 'SELECT * FROM "SUT".trip_details WHERE trip_id = $1',
+        values: [
+            tripId,
+        ],
+    };
+
+    try {
+        return await pool.query(query);
+    } catch (error) {
+        console.log(error);
+
+        return error;
+    }
+}
+
 async function getTripByTruckNo (truckNo) {
     // wrong code, search trip with tripId
 
@@ -141,4 +160,5 @@ module.exports = { getTrips,
     updateTripDetails,
     incrementTripPackageDelivered,
     incrementTripPackageTotal,
-    getTripByTruckNo };
+    getTripByTruckNo,
+    getTripById };

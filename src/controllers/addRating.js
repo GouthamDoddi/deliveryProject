@@ -20,6 +20,8 @@ const addRating = async (req, res) => {
         packageId,
     };
 
+    console.log(details);
+
 
     const result = await insertRating(details);
 

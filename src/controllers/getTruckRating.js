@@ -3,7 +3,7 @@ const parseIp = require('../middleware/praseIp');
 
 
 const getTruckDriverRating = async (req, res) => {
-    const result = await getRating(req.body.mobileNum);
+    const result = await getRating(req.body.truckNo);
 
     if (!result.rowCount) {
         return res.json({
