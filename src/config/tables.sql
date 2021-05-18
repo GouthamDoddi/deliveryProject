@@ -209,3 +209,19 @@ ADD CONSTRAINT delivery_partner_rating_receiving_person_mobile_no_fkey FOREIGN K
     REFERENCES "SUT".customer (mobile_num) MATCH SIMPLE
     ON UPDATE CASCADE
     ON DELETE NO ACTION;
+
+
+-- documents
+
+CREATE TABLE documents
+(
+    id SERIAL,
+    name varchar NOT NULL,
+    framework VARCHAR NOT NULL,
+    file_location VARCHAR NOT NULL,
+    upload_date TIMESTAMP DEFAULT Now(),
+    uploaded_by INTEGER NOT NULL,
+    version INTEGER,
+    size integer
+)
+

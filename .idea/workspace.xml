@@ -2,18 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ab2135b9-672e-44c1-a177-f2aa9ef9a004" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/config/recources and grounds services.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/JWT.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/JWT.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/OTP.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/OTP.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/customer.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/customer.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/truck.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/truck.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/addRating.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/addRating.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/getTrips.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/getTrips.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/getTruckRating.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/getTruckRating.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/packageServices.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/packageServices.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/ratingServices.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/ratingServices.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/tripServices.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/tripServices.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/tables.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/tables.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +77,9 @@
       <workItem from="1617247384233" duration="5872000" />
       <workItem from="1617328879710" duration="6898000" />
       <workItem from="1617596168456" duration="74000" />
-      <workItem from="1618572075710" duration="7231000" />
+      <workItem from="1618572075710" duration="7844000" />
+      <workItem from="1618904717139" duration="5263000" />
+      <workItem from="1618979979025" duration="2017000" />
     </task>
     <servers />
   </component>
@@ -110,5 +103,9 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="936" y="190" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1618572544871" />
+    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1618981144199">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1618981144199" />
   </component>
 </project>
